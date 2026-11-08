@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Denní journal A4</title>
+<style>
+  /* Fonty: EB Garamond a Montserrat (SIL Open Font License), podsady latin + latin-ext kvůli češtině */
+  @font-face { font-family: "Garamond"; font-style: normal; font-weight: 400; src: url(fonts/eb-garamond-latin-400-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: "Garamond"; font-style: normal; font-weight: 400; src: url(fonts/eb-garamond-latin-ext-400-normal.woff2) format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: "Garamond"; font-style: italic; font-weight: 400; src: url(fonts/eb-garamond-latin-400-italic.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: "Garamond"; font-style: italic; font-weight: 400; src: url(fonts/eb-garamond-latin-ext-400-italic.woff2) format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family: "Sans"; font-style: normal; font-weight: 500; src: url(fonts/montserrat-latin-500-normal.woff2) format("woff2"); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family: "Sans"; font-style: normal; font-weight: 500; src: url(fonts/montserrat-latin-ext-500-normal.woff2) format("woff2"); unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+
+  :root {
+    --ink: #2a2a2a;
+    --rule: #8c8c8c;
+    --rule-w: 0.2mm;
+    --row: 8.5mm;           /* rozestup linek */
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; color: var(--ink); }
+
+  .page {
+    width: 210mm; height: 297mm;
+    padding: 14mm 20mm 16mm 20mm;   /* symetrické okraje: funguje pro jakoukoli vazbu */
+    display: flex; flex-direction: column;
+    page-break-after: always; break-after: page;
+    overflow: hidden;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+
+  header { position: relative; height: 14mm; display: flex; align-items: center; justify-content: center; }
+  header svg { position: absolute; left: 0; top: 1mm; width: 9mm; height: 9mm; }
+  .date { font-family: "Sans"; font-weight: 500; font-size: 9pt; letter-spacing: .04em; color: var(--ink); }
+  .date i { display: inline-block; width: 13mm; border-bottom: .2mm dotted #777; margin: 0 1.2mm; transform: translateY(-.6mm); }
+  .date i.y { width: 9mm; margin-left: .3mm; }
+
+  section { display: flex; flex-direction: column; }
+  h2 {
+    font-family: "Garamond"; font-style: italic; font-weight: 400;
+    font-size: 17pt; text-align: center; line-height: 1.15;
+    margin-bottom: 1.5mm;
+  }
+  .sub {
+    font-family: "Sans"; font-weight: 500; font-size: 7pt; letter-spacing: .18em;
+    text-transform: uppercase; text-align: center; margin-top: -0.3mm; margin-bottom: 1mm;
+  }
+  .row { height: var(--row); border-bottom: var(--rule-w) solid var(--rule); display: flex; align-items: flex-end; }
+  .num { font-family: "Sans"; font-weight: 500; font-size: 8.5pt; width: 6mm; padding-bottom: 1.2mm; }
+  .box { width: 3.3mm; height: 3.3mm; border: .22mm solid #555; border-radius: 50%; margin: 0 2.5mm 1.3mm 0; flex: none; }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 0; }
+  .cols > div:first-child { padding-right: 6mm; border-right: var(--rule-w) solid var(--rule); }
+  .cols > div:last-child { padding-left: 6mm; }
+
+  .gap { flex: 1 1 0; min-height: 4mm; }   /* rovnoměrně rozdělí volné místo mezi sekce */
+</style>
+</head>
+<body>
+
+<!-- ============ STRANA 1: RÁNO ============ -->
+<div class="page">
+  <header>
+    <svg viewBox="0 0 40 40" aria-hidden="true">
+      <g fill="#2a2a2a">
+        <circle cx="20" cy="20" r="8.2"/>
+        <circle cx="20" cy="20" r="6.4" fill="#fff"/>
+        <g id="ray"><path d="M20 2.5 L22.6 9.2 L17.4 9.2 Z"/></g>
+        <use href="#ray" transform="rotate(45 20 20)"/>
+        <use href="#ray" transform="rotate(90 20 20)"/>
+        <use href="#ray" transform="rotate(135 20 20)"/>
+        <use href="#ray" transform="rotate(180 20 20)"/>
+        <use href="#ray" transform="rotate(225 20 20)"/>
+        <use href="#ray" transform="rotate(270 20 20)"/>
+        <use href="#ray" transform="rotate(315 20 20)"/>
+      </g>
+    </svg>
+    <div class="date"><i></i>/<i></i>/ 20<i class="y"></i></div>
+  </header>
+
+  <div class="gap"></div>
+  <section>
+    <h2>Dnes jsem vděčná za…</h2>
+    <div class="row"><span class="num">1.</span></div>
+    <div class="row"><span class="num">2.</span></div>
+    <div class="row"><span class="num">3.</span></div>
+  </section>
+
+  <div class="gap"></div>
+  <section>
+    <h2>Denní afirmace</h2>
+    <div class="row"></div>
+    <div class="row"></div>
+  </section>
+
+  <div class="gap"></div>
+  <section>
+    <h2>Co by mi dneska udělalo dobře?</h2>
+    <div class="row"></div><div class="row"></div><div class="row"></div>
+    <div class="row"></div><div class="row"></div><div class="row"></div>
+  </section>
+
+  <div class="gap"></div>
+  <section class="cols">
+    <div>
+      <h2>Na co nesmím zapomenout</h2>
+      <div class="row"><span class="box"></span></div><div class="row"><span class="box"></span></div>
+      <div class="row"><span class="box"></span></div><div class="row"><span class="box"></span></div>
+      <div class="row"><span class="box"></span></div><div class="row"><span class="box"></span></div>
+      <div class="row"><span class="box"></span></div><div class="row"><span class="box"></span></div>
+      <div class="row"><span class="box"></span></div>
+    </div>
+    <div>
+      <h2>Wish list</h2>
+      <div class="row"><span class="box"></span></div><div class="row"><span class="box"></span></div>
+      <div class="row"><span class="box"></span></div><div class="row"><span class="box"></span></div>
+      <div class="row"><span class="box"></span></div><div class="row"><span class="box"></span></div>
+      <div class="row"><span class="box"></span></div><div class="row"><span class="box"></span></div>
+      <div class="row"><span class="box"></span></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ STRANA 2: VEČER ============ -->
+<div class="page">
+  <header>
+    <svg viewBox="0 0 40 40" aria-hidden="true">
+      <path d="M24 4.5 A15.5 15.5 0 1 0 35.5 27 A13 13 0 1 1 24 4.5 Z" fill="#2a2a2a"/>
+    </svg>
+    <div class="date"><i></i>/<i></i>/ 20<i class="y"></i></div>
+  </header>
+
+  <div class="gap"></div>
+  <section>
+    <h2>Co bylo na dnešku nejlepší<br>a co jsem se dnes naučila?</h2>
+    <div class="sub">anebo brain dump</div>
+    <div class="row"></div><div class="row"></div><div class="row"></div><div class="row"></div>
+    <div class="row"></div><div class="row"></div><div class="row"></div><div class="row"></div>
+    <div class="row"></div><div class="row"></div><div class="row"></div><div class="row"></div>
+    <div class="row"></div><div class="row"></div><div class="row"></div><div class="row"></div>
+    <div class="row"></div><div class="row"></div>
+  </section>
+
+  <div class="gap"></div>
+  <section>
+    <h2>Nějaké priority či přání pro zítřek?</h2>
+    <div class="row"></div><div class="row"></div><div class="row"></div>
+    <div class="row"></div><div class="row"></div><div class="row"></div>
+  </section>
+  <div class="gap"></div>
+</div>
+
+</body>
+</html>

@@ -1,33 +1,157 @@
 [
-{"cs":"Deník už neopustím.","author":"Franz Kafka","year":"1910"},
-{"cs":"Za úsvitu, když se ti nechce vstávat, měj po ruce tuto myšlenku: vstávám k dílu člověka.","author":"Marcus Aurelius","year":""},
-{"cs":"Nacházej krásu, kolik jen dokážeš, většina lidí jí nenachází dost.","author":"Vincent van Gogh","year":"1874"},
-{"cs":"Kdo hledí ven, sní; kdo hledí dovnitř, procitá.","author":"C. G. Jung","year":"1916"},
-{"cs":"Všechno, Lucilie, je cizí, jen čas je náš.","author":"Seneca","year":""},
-{"cs":"Nohy, k čemu vás potřebuju, když mám křídla k létání.","author":"Frida Kahlo","year":"1953"},
-{"cs":"Pozornost je nejvzácnější a nejčistší podoba velkorysosti.","author":"Simone Weil","year":"1942"},
-{"cs":"Umění nepodává viditelné, nýbrž zviditelňuje.","author":"Paul Klee","year":"1920"},
-{"cs":"My zahradníci žijeme jaksi do budoucnosti. (…) To pravé, to nejlepší je před námi.","author":"Karel Čapek","year":"1929"},
-{"cs":"Od jistého bodu už není návratu. Tohoto bodu je třeba dosáhnout.","author":"Franz Kafka","year":"1917"},
-{"cs":"Nikdo doopravdy nevidí květinu, je tak malá, nemáme čas. A vidět vyžaduje čas, tak jako mít přítele vyžaduje čas.","author":"Georgia O'Keeffe","year":"1939"},
-{"cs":"Naším velkým a slavným mistrovským dílem je žít náležitě.","author":"Michel de Montaigne","year":""},
-{"cs":"Nové nevzniká z intelektu, nýbrž z pudu hry, který jedná z vnitřní nutnosti. Tvořivý duch si hraje s předměty, které miluje.","author":"C. G. Jung","year":"1921"},
-{"cs":"Návod, jak žít život: Všímej si. Žasni. Vyprávěj o tom.","author":"Mary Oliver","year":"2008"},
-{"cs":"Je docela pravda, co říká filosofie, že život je třeba chápat zpětně. Zapomíná se ale na druhou větu: že žít se musí dopředu.","author":"Søren Kierkegaard","year":"1843"},
-{"cs":"Strome naděje, stůj pevně.","author":"Frida Kahlo","year":"1946"},
-{"cs":"…kde jsme mysleli, že putujeme ven, dojdeme do středu vlastní existence; kde jsme mysleli, že budeme sami, budeme s celým světem.","author":"Joseph Campbell","year":"1949"},
-{"cs":"Láska je nesmírně nesnadné poznání, že skutečné je i něco jiného než my sami.","author":"Iris Murdoch","year":"1959"},
-{"cs":"Pořád dělám to, co ještě neumím, abych se to naučil umět.","author":"Vincent van Gogh","year":"1885"},
-{"cs":"Naděje (…) není přesvědčení, že něco dobře dopadne, ale jistota, že má něco smysl, bez ohledu na to, jak to dopadne.","author":"Václav Havel","year":"1986"},
-{"cs":"Pokud dokážeme rozeznat, je jediným smyslem lidské existence zažehnout světlo v temnotě pouhého bytí.","author":"C. G. Jung","year":"1962"},
-{"cs":"Umění je zárukou duševního zdraví.","author":"Louise Bourgeois","year":"1999"},
-{"cs":"Navrať se, odkuds vyšel, do domu srdce svého, a zavři po sobě dvéře.","author":"Jan Amos Komenský","year":"1623"},
-{"cs":"Umělec musí vidět všechny věci, jako by je viděl poprvé: celý život je třeba vidět tak, jako když jsme byli dětmi.","author":"Henri Matisse","year":"1953"},
-{"cs":"Rozhodující okamžik lidského vývoje je ustavičný.","author":"Franz Kafka","year":"1917"},
-{"cs":"Bota, která jednomu padne, druhého tlačí; neexistuje recept na život, který by se hodil pro všechny.","author":"C. G. Jung","year":"1929"},
-{"cs":"Mějte trpělivost se vším, co je ve vašem srdci nevyřešené, a zkuste milovat samy otázky. (…) Žijte teď ty otázky.","author":"Rainer Maria Rilke","year":"1903"},
-{"cs":"Nejsem nemocná. Jsem zlomená. Ale jsem šťastná, že jsem naživu, dokud můžu malovat.","author":"Frida Kahlo","year":"1953"},
-{"cs":"Znát vlastní temnotu je nejlepší způsob, jak se vypořádat s temnotami druhých lidí.","author":"C. G. Jung","year":"1937"},
-{"cs":"Čím víc o tom přemýšlím, tím víc cítím, že není nic skutečně umělečtějšího než mít rád lidi.","author":"Vincent van Gogh","year":"1888"},
-{"cs":"Lidé říkají, že všichni hledáme smysl života. Nemyslím si, že hledáme právě ten. Myslím, že hledáme prožitek toho, že jsme naživu…","author":"Joseph Campbell","year":"1988"}
+{
+"cs": "Deník už neopustím.",
+"author": "Franz Kafka",
+"year": "1910"
+},
+{
+"cs": "A v každém začátku dlí kouzlo, jež nás chrání a pomáhá nám žít.",
+"author": "Hermann Hesse",
+"year": "1941"
+},
+{
+"cs": "Za úsvitu, když se ti nechce vstávat, měj po ruce tuto myšlenku: vstávám k dílu člověka.",
+"author": "Marcus Aurelius",
+"year": ""
+},
+{
+"cs": "Kdo hledí ven, sní; kdo hledí dovnitř, procitá.",
+"author": "C. G. Jung",
+"year": "1916"
+},
+{
+"cs": "Všechno, Lucilie, je cizí, jen čas je náš.",
+"author": "Seneca",
+"year": ""
+},
+{
+"cs": "Nohy, k čemu vás potřebuju, když mám křídla k létání.",
+"author": "Frida Kahlo",
+"year": "1953"
+},
+{
+"cs": "Pozornost je nejvzácnější a nejčistší podoba velkorysosti.",
+"author": "Simone Weil",
+"year": "1942"
+},
+{
+"cs": "Jak trávíme své dny, tak samozřejmě trávíme svůj život.",
+"author": "Annie Dillard",
+"year": "1989"
+},
+{
+"cs": "My zahradníci žijeme jaksi do budoucnosti. (…) To pravé, to nejlepší je před námi.",
+"author": "Karel Čapek",
+"year": "1929"
+},
+{
+"cs": "Od jistého bodu už není návratu. Tohoto bodu je třeba dosáhnout.",
+"author": "Franz Kafka",
+"year": "1917"
+},
+{
+"cs": "Ne proto, že jsou věci těžké, se neodvažujeme; jsou těžké proto, že se neodvažujeme.",
+"author": "Seneca",
+"year": ""
+},
+{
+"cs": "Nikdo doopravdy nevidí květinu, je tak malá, nemáme čas. A vidět vyžaduje čas, tak jako mít přítele vyžaduje čas.",
+"author": "Georgia O'Keeffe",
+"year": "1939"
+},
+{
+"cs": "Nestačí vědět, je třeba také použít; nestačí chtít, je třeba také konat.",
+"author": "Johann Wolfgang Goethe",
+"year": "1829"
+},
+{
+"cs": "Návod, jak žít život: Všímej si. Žasni. Vyprávěj o tom.",
+"author": "Mary Oliver",
+"year": "2008"
+},
+{
+"cs": "Je docela pravda, co říká filosofie, že život je třeba chápat zpětně. Zapomíná se ale na druhou větu: že žít se musí dopředu.",
+"author": "Søren Kierkegaard",
+"year": "1843"
+},
+{
+"cs": "Strome naděje, stůj pevně.",
+"author": "Frida Kahlo",
+"year": "1946"
+},
+{
+"cs": "Má-li člověk své ‚proč‘ života, snese se téměř s každým ‚jak‘.",
+"author": "Friedrich Nietzsche",
+"year": "1889"
+},
+{
+"cs": "Když ti něco v tobě samém říká ‚nejsi malíř‘, právě tehdy maluj, kamaráde; i ten hlas se ztiší, ale jedině tak.",
+"author": "Vincent van Gogh",
+"year": "1883"
+},
+{
+"cs": "Pořád dělám to, co ještě neumím, abych se to naučil umět.",
+"author": "Vincent van Gogh",
+"year": "1885"
+},
+{
+"cs": "Naděje (…) není přesvědčení, že něco dobře dopadne, ale jistota, že má něco smysl, bez ohledu na to, jak to dopadne.",
+"author": "Václav Havel",
+"year": "1986"
+},
+{
+"cs": "Pokud dokážeme rozeznat, je jediným smyslem lidské existence zažehnout světlo v temnotě pouhého bytí.",
+"author": "C. G. Jung",
+"year": "1962"
+},
+{
+"cs": "Musíš změnit svůj život.",
+"author": "Rainer Maria Rilke",
+"year": "1908"
+},
+{
+"cs": "Nežij, jako bys měl žít deset tisíc let. Nad tebou visí, co přijít musí; dokud žiješ, dokud můžeš, staň se dobrým.",
+"author": "Marcus Aurelius",
+"year": ""
+},
+{
+"cs": "Umělec musí vidět všechny věci, jako by je viděl poprvé: celý život je třeba vidět tak, jako když jsme byli dětmi.",
+"author": "Henri Matisse",
+"year": "1953"
+},
+{
+"cs": "Už samotný zápas o vrcholky stačí, aby naplnil lidské srdce. Sisyfa si musíme představit šťastného.",
+"author": "Albert Camus",
+"year": "1942"
+},
+{
+"cs": "Bota, která jednomu padne, druhého tlačí; neexistuje recept na život, který by se hodil pro všechny.",
+"author": "C. G. Jung",
+"year": "1929"
+},
+{
+"cs": "Mějte trpělivost se vším, co je ve vašem srdci nevyřešené, a zkuste milovat samy otázky. (…) Žijte teď ty otázky.",
+"author": "Rainer Maria Rilke",
+"year": "1903"
+},
+{
+"cs": "Nejsem nemocná. Jsem zlomená. Ale jsem šťastná, že jsem naživu, dokud můžu malovat.",
+"author": "Frida Kahlo",
+"year": "1953"
+},
+{
+"cs": "Člověku lze vzít všechno kromě jediného: poslední z lidských svobod, zvolit si svůj postoj k jakýmkoli okolnostem, zvolit si vlastní cestu.",
+"author": "Viktor E. Frankl",
+"year": "1946"
+},
+{
+"cs": "Čím víc o tom přemýšlím, tím víc cítím, že není nic skutečně umělečtějšího než mít rád lidi.",
+"author": "Vincent van Gogh",
+"year": "1888"
+},
+{
+"cs": "Lidé říkají, že všichni hledáme smysl života. Nemyslím si, že hledáme právě ten. Myslím, že hledáme prožitek toho, že jsme naživu…",
+"author": "Joseph Campbell",
+"year": "1988"
+}
 ]

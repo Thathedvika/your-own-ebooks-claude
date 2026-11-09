@@ -33,13 +33,12 @@ const label = (t) => `<div class="label"><span>${t}</span></div>`;
 
 // ---------- mini tracker (slovně) ----------
 const trRow = (label) => `<div class="row tr"><span class="tl">${label}</span></div>`;
-const trHalf = (a, b) => `<div class="tr-2">${a}${b}</div>`;
-const tracker = () => `
+const tracker = (title = 'Jak jsem na tom dnes') => `
 <div class="tracker">
-  ${label('Jak jsem na tom dnes')}
+  ${label(title)}
+  ${trRow('Spánek')}
   ${trRow('Nálada')}
   ${trRow('Energie')}
-  ${trHalf(trRow('Spánek'), trRow('Pohyb'))}
 </div>`;
 
 // ---------- strany ----------
@@ -111,7 +110,8 @@ const weekRight = () => page('recto', `
   ${label('Studium')}
   ${q('Co jsem se o víkendu naučila?', 8)}
   ${q('Úkoly a termíny do příštího víkendu', 0, dueRows(8))}
-  ${q('Co mi není jasné, na co se zeptat?', 4)}
+  ${gap()}
+  ${tracker('Jak jsem na tom byla tento týden')}
   ${gap()}
   ${label('Příští týden')}
   ${q('Na co se těším?', 4)}

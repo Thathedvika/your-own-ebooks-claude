@@ -34,14 +34,12 @@ const label = (t) => `<div class="label"><span>${t}</span></div>`;
 // ---------- mini tracker (slovně) ----------
 const trRow = (label) => `<div class="row tr"><span class="tl">${label}</span></div>`;
 const trHalf = (a, b) => `<div class="tr-2">${a}${b}</div>`;
-const habit = () => `<div class="row tr"><span class="box"></span></div>`;
 const tracker = () => `
 <div class="tracker">
   ${label('Jak jsem na tom dnes')}
   ${trRow('Nálada')}
   ${trRow('Energie')}
   ${trHalf(trRow('Spánek'), trRow('Pohyb'))}
-  ${trHalf(habit(), habit())}
 </div>`;
 
 // ---------- strany ----------
@@ -56,7 +54,13 @@ const morning = (q) => page('verso', `
   <section><h2>Co by mi dneska udělalo dobře?</h2>${rows(7)}</section>
   ${gap()}
   <section class="cols">
-    <div><h2>Na co nesmím zapomenout</h2>${checkRows(10)}</div>
+    <div class="habits"><h2>Moje návyky</h2>
+      <div class="row"><span class="tl">Kým se stávám</span></div>
+      ${checkRows(7)}
+      <div class="row"><span class="tl">Po</span><span class="mid"></span><span class="tl">udělám</span></div>
+      <div class="row"><span class="tl">Po</span><span class="mid"></span><span class="tl">udělám</span></div>
+      <div class="foot">nevynechat dvakrát po sobě</div>
+    </div>
     <div><h2>Wish list</h2>${checkRows(10)}</div>
   </section>
   ${gap()}`);
@@ -71,7 +75,7 @@ const evening = () => page('recto', `
   <section>
     <h2>Co bylo na dnešku nejlepší a co jsem se dnes naučila?</h2>
     <div class="sub">anebo brain dump</div>
-    ${rows(18)}
+    ${rows(19)}
   </section>
   ${gap()}
   <section>

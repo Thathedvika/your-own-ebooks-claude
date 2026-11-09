@@ -52,7 +52,7 @@ const tracker = () => `
 // ---------- strany ----------
 const morning = (q) => page('verso', `
   <header>${SUN}${dateField()}</header>
-  <blockquote><p>${q.cs}</p><cite>${q.author}</cite></blockquote>
+  <blockquote><p>${q.cs}</p><cite>${q.author}${q.year ? " &middot; " + q.year : ""}</cite></blockquote>
   ${gap()}
   <section><h2>Dnes jsem vděčná za…</h2>${numRows(3)}</section>
   ${gap()}

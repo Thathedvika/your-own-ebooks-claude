@@ -2,7 +2,7 @@
 // Spuštění: NODE_PATH=/opt/node-tools/node_modules node journal/build.js
 //
 // Pořadí stran (tisk oboustranně, převracet podél dlouhé strany):
-//   s. 1 (líc, vpravo)  měsíční přehled
+//   s. 1 (líc, vpravo)  prázdná (místo pro vlastní titul)
 //   s. 2 (rub, vlevo)   den 1 - ráno     | s. 3 (líc, vpravo) den 1 - večer
 //   ... po každých 7 dnech dvojstrana týdenní reflexe (rub vlevo + líc vpravo)
 //   poslední strana (rub) poznámky
@@ -29,24 +29,19 @@ const STAR = `<svg class="star" viewBox="0 0 20 20"><path d="M10 1.5 L12.4 7.6 L
 
 const page = (side, inner) => `<div class="page ${side}">${inner}</div>`;
 const gap = () => `<div class="gap"></div>`;
+const label = (t) => `<div class="label"><span>${t}</span></div>`;
 
-// ---------- mini tracker ----------
-const DROP = `<svg class="drop" viewBox="0 0 12 16"><path d="M6 1 C6 1 1.2 7.2 1.2 10.3 A4.8 4.8 0 0 0 10.8 10.3 C10.8 7.2 6 1 6 1 Z" fill="none" stroke="#555" stroke-width="0.8" stroke-linejoin="round"/></svg>`;
-const dots = (n) => DROP.repeat(n);
-const scale = () => [1, 2, 3, 4, 5].map(i => `<span class="sc">${i}</span>`).join('');
+// ---------- mini tracker (slovně) ----------
+const trRow = (label) => `<div class="row tr"><span class="tl">${label}</span></div>`;
+const trHalf = (a, b) => `<div class="tr-2">${a}${b}</div>`;
+const habit = () => `<div class="row tr"><span class="box"></span></div>`;
 const tracker = () => `
 <div class="tracker">
-  <div class="tr-row">
-    <span class="tl">Spánek</span><span class="blank s"></span><span class="unit">h</span>
-    <span class="tl">Voda</span>${dots(8)}
-    <span class="tl">Pohyb</span><span class="blank s"></span><span class="unit">min</span>
-  </div>
-  <div class="tr-row">
-    <span class="tl">Nálada</span>${scale()}
-    <span class="tl">Energie</span>${scale()}
-    <span class="box sm"></span><span class="blank m"></span>
-    <span class="box sm"></span><span class="blank m"></span>
-  </div>
+  ${label('Jak jsem na tom dnes')}
+  ${trRow('Nálada')}
+  ${trRow('Energie')}
+  ${trHalf(trRow('Spánek'), trRow('Pohyb'))}
+  ${trHalf(habit(), habit())}
 </div>`;
 
 // ---------- strany ----------
@@ -68,21 +63,21 @@ const morning = (q) => page('verso', `
 
 const evening = () => page('recto', `
   <header>${MOON}${dateField()}</header>
+  <div class="keep">
+    <div class="keep-label">${STAR}<span>Tohle si chci zapamatovat</span></div>
+    ${rows(3, 'in')}
+  </div>
+  ${gap()}
   <section>
     <h2>Co bylo na dnešku nejlepší a co jsem se dnes naučila?</h2>
     <div class="sub">anebo brain dump</div>
-    ${rows(19)}
+    ${rows(18)}
   </section>
-  <div class="keep">
-    <div class="keep-label">${STAR}<span>Tohle si chci zapamatovat</span></div>
-    ${rows(2, 'in')}
-  </div>
   ${gap()}
   <section>
     <h2>Nějaké priority či přání pro zítřek?</h2>
     <div class="sub">top 3</div>
     ${top3()}
-    ${rows(2)}
   </section>
   ${gap()}
   ${tracker()}`);
@@ -91,7 +86,6 @@ const weekHeader = (title) => `
   <header class="wk"><h1>${title}</h1>
     <div class="date">Týden <i class="s"></i> &nbsp; od <i></i>/<i></i> &nbsp; do <i></i>/<i></i></div>
   </header>`;
-const label = (t) => `<div class="label"><span>${t}</span></div>`;
 const q = (t, n, extra = '') => `<section class="wq"><h3>${t}</h3>${extra || rows(n)}</section>`;
 
 const weekLeft = () => page('verso', `
@@ -123,35 +117,13 @@ const weekRight = () => page('recto', `
   </div>
   ${gap()}`);
 
-const monthGrid = () => {
-  const head = `<tr><th></th>${Array.from({ length: DAYS }, (_, i) => `<td class="h">${i + 1}</td>`).join('')}</tr>`;
-  const lines = ['Nálada', 'Energie', 'Spánek', 'Voda', 'Pohyb', '', '', '']
-    .map(l => `<tr><th>${l || '<span class="blank xs"></span>'}</th>${'<td></td>'.repeat(DAYS)}</tr>`).join('');
-  return `<table class="grid">${head}${lines}</table>`;
-};
-const dateRows = (n) => Array.from({ length: n }, () => `<div class="row dated"><span class="dd"></span></div>`).join('');
-const monthPage = () => page('recto', `
-  <header class="wk"><h1>Měsíc</h1>
-    <div class="date"><i class="l"></i> 20<i class="y"></i></div>
-  </header>
-  ${gap()}
-  <section><h2>Na co se chci tento měsíc soustředit?</h2>${rows(6)}</section>
-  ${gap()}
-  <section><h2>Přehled měsíce</h2>
-    <div class="sub">nálada a energie 1-5, spánek v hodinách, voda a pohyb odškrtnout</div>
-    ${monthGrid()}
-  </section>
-  ${gap()}
-  <section><h2>Důležité termíny</h2>${dateRows(14)}</section>
-  ${gap()}`);
-
 const notesPage = () => page('verso', `
   <header class="wk"><h1>Poznámky</h1></header>
   ${rows(32)}
   ${gap()}`);
 
 // ---------- sestavení ----------
-const pages = [monthPage()];
+const pages = [page('recto', '')];   // první strana prázdná (líc), aby ráno vycházelo vlevo
 let weekNo = 0;
 for (let d = 1; d <= DAYS; d++) {
   pages.push(morning(quotes[(d - 1) % quotes.length]), evening());

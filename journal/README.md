@@ -12,7 +12,7 @@ Soubor k tisku: `denni-journal-31-dni-A4.pdf` (74 stran = 37 listů A4).
 
 | Dvojstrana | Vlevo | Vpravo |
 |---|---|---|
-| první strana | - | Měsíc (záměr, přehled trackeru, termíny) |
+| první strana | - | prázdná (místo pro vlastní titul) |
 | den 1-31 | Ráno | Večer |
 | po dnech 7, 14, 21, 28, 31 | Týdenní ohlédnutí (osobně, práce) | Studium, příští týden |
 | poslední strana | Poznámky | - |

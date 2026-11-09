@@ -60,27 +60,20 @@ h2 { font-family: "Garamond"; font-style: italic; font-weight: 400; font-size: 1
 .gap { flex: 1 1 0; min-height: 2.5mm; }
 
 /* rámeček "Tohle si chci zapamatovat" */
-.keep { flex: none; margin-top: 4mm; border: .3mm solid #4a4a4a; border-radius: 2mm; padding: 2mm 4mm 2.5mm; }
+.keep { flex: none; margin-top: 2mm; border: .3mm solid #4a4a4a; border-radius: 2mm; padding: 2mm 4mm 2.5mm; }
 .keep-label { display: flex; align-items: center; gap: 1.8mm; font-family: "Sans"; font-weight: 500; font-size: 6.3pt;
   letter-spacing: .16em; text-transform: uppercase; }
 .keep .star { width: 3.6mm; height: 3.6mm; }
 .keep .row.in:last-child { border-bottom: none; }
 .keep.word { margin-top: 3mm; }
 
-/* mini tracker */
-.tracker { flex: none; border-top: var(--rule-w) solid var(--rule); padding-top: 2.6mm; display: flex; flex-direction: column; gap: 3mm; }
-.tr-row { display: flex; align-items: center; gap: 1.6mm; font-family: "Sans"; font-weight: 500; font-size: 6.3pt; letter-spacing: .12em; text-transform: uppercase; }
-.tl { margin-left: 4.5mm; margin-right: .6mm; }
-.tr-row > .tl:first-child { margin-left: 0; }
-.unit { letter-spacing: .04em; text-transform: none; font-size: 7pt; }
-.blank { display: inline-block; border-bottom: .2mm solid #777; height: 4mm; }
-.blank.s { width: 10mm; } .blank.m { width: 24mm; } .blank.xs { width: 20mm; height: 3mm; }
-.drop { width: 3.3mm; height: 4.4mm; display: inline-block; }
-.sc { width: 4.2mm; height: 4.2mm; border: .22mm solid #555; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
-  font-size: 5.6pt; letter-spacing: 0; color: #666; }
-.box.sm { margin: 0 0 0 4.5mm; width: 3.2mm; height: 3.2mm; }
+/* mini tracker (slovně) */
+.tracker { flex: none; }
+.tracker .label { margin-top: 0; margin-bottom: -1mm; }
+.row.tr .tl { font-family: "Sans"; font-weight: 500; font-size: 6.3pt; letter-spacing: .12em; text-transform: uppercase; padding-bottom: 1.3mm; width: 19mm; }
+.tr-2 { display: grid; grid-template-columns: 1fr 1fr; column-gap: 6mm; }
 
-/* týdenní reflexe a měsíc */
+/* týdenní reflexe */
 header.wk { justify-content: space-between; align-items: flex-end; height: 13mm; border-bottom: .3mm solid #4a4a4a; padding-bottom: 1.8mm; margin-bottom: 1mm; }
 .recto header.wk { flex-direction: row-reverse; }
 h1 { font-family: "Garamond"; font-style: italic; font-weight: 400; font-size: 20pt; line-height: 1; }
@@ -91,9 +84,4 @@ h3 { font-family: "Garamond"; font-style: italic; font-weight: 400; font-size: 1
 .row.due { justify-content: flex-start; }
 .row.due .dl { margin-left: auto; width: 32mm; font-family: "Sans"; font-size: 6.3pt; letter-spacing: .12em; text-transform: uppercase;
   padding-bottom: 1.2mm; border-left: var(--rule-w) solid var(--rule); padding-left: 2mm; height: 100%; display: flex; align-items: flex-end; }
-.row.dated .dd { width: 22mm; height: 100%; border-right: var(--rule-w) solid var(--rule); }
 
-table.grid { border-collapse: collapse; width: 100%; table-layout: fixed; margin-top: 1.5mm; font-family: "Sans"; font-weight: 500; }
-table.grid th { width: 22mm; text-align: left; font-size: 6.3pt; letter-spacing: .12em; text-transform: uppercase; font-weight: 500; padding-right: 1mm; height: 6.2mm; }
-table.grid td { border: var(--rule-w) solid #a8a8a8; height: 6.2mm; }
-table.grid td.h { border: none; font-size: 5.6pt; text-align: center; color: #666; height: 4mm; }

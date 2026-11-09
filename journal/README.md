@@ -13,7 +13,7 @@ Soubor k tisku: `denni-journal-31-dni-A4.pdf` (74 stran = 37 listů A4).
 | Dvojstrana | Vlevo | Vpravo |
 |---|---|---|
 | první strana | - | prázdná (místo pro vlastní titul) |
-| den 1-31 | Ráno | Večer |
+| den 1-31 | Ráno: citát, vděčnost, afirmace, co by mi udělalo dobře, moje návyky, wish list | Večer: tohle si chci zapamatovat, nejlepší z dneška / brain dump, top 3 na zítřek, spánek / nálada / energie |
 | po dnech 7, 14, 21, 28, 31 | Týdenní ohlédnutí (osobně, práce) | Studium, příští týden |
 | poslední strana | Poznámky | - |
 

@@ -108,13 +108,11 @@ const dueRows = (n) => Array.from({ length: n }, () => `<div class="row due"><sp
 const weekRight = () => page('recto', `
   <header class="wk"><h1>&nbsp;</h1></header>
   ${label('Studium')}
-  ${q('Co jsem se o víkendu naučila?', 8)}
-  ${q('Úkoly a termíny do příštího víkendu', 0, dueRows(8))}
-  ${gap()}
-  ${tracker('Jak jsem na tom byla tento týden')}
+  ${q('Co jsem se o víkendu naučila?', 10)}
+  ${q('Úkoly a termíny do příštího víkendu', 0, dueRows(9))}
   ${gap()}
   ${label('Příští týden')}
-  ${q('Na co se těším?', 4)}
+  ${q('Na co se těším?', 5)}
   <div class="keep word">
     <div class="keep-label">${STAR}<span>Jedno slovo nebo záměr pro příští týden</span></div>
     ${rows(2, 'in')}

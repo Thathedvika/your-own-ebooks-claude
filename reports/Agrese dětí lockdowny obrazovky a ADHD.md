@@ -267,7 +267,7 @@ Zkratky: IS = 95% interval spolehlivosti; RCT = randomizovaná kontrolovaná stu
 
 **Vzorec a obsah vážou víc než čas.** V kohortě ABCD (4 285 dětí, průměrný věk 10 let) se celkový čas u obrazovek na začátku s výsledky nepojil („Total screen time at baseline was not associated with outcomes“), zatímco rostoucí návykové užívání sociálních sítí se pojilo s vyšším externalizujícím T-skóre o 1,05 (0,54-1,56) a s více než dvojnásobným rizikem sebevražedného chování (RR 2,14) (Xiao a kol. 2025). Systematický přehled 28 longitudinálních studií popisuje obousměrné souvislosti, konzistentnější pro problematické užívání než pro čas (Thorell a kol. 2024, online 2022). V kohortě ABCD (8 324 dětí, 4 roky, s úpravou o polygenní skóre ADHD) předpovídaly sociální sítě nárůst nepozornosti β = 0,03 ročně (kumulativně 0,15 za 4 roky), hry ani televize a videa nikoli a nepozornost nepředpovídala pozdější užívání sítí (Nivins a kol. 2026). V kanadské kohortě asi 4 000 středoškoláků se meziroční nárůst času u obrazovek pojil se zhoršením příznaků ADHD uvnitř jedince a jen sociální sítě měly zpožděný účinek zprostředkovaný impulzivitou a inhibicí (Wallace a kol. 2023). U dětí do 6 let se s horšími kognitivními a psychosociálními výsledky pojí obsah nevhodný věku (r = -0,11), televize běžící v pozadí (r = -0,10 pro kognici) a užívání telefonu pečovatelem během denních rutin (r = -0,11), zatímco společné sledování s dospělým se pojí s lepší kognicí (r = 0,14) (Mallawaarachchi a kol. 2024).
 
-**Krátká videa.** Metaanalýza v Psychological Bulletin (Nguyen a kol. 2025) zahrnuje 71 studií v systematickém přehledu, z toho 70 v metaanalýze, s 98 299 účastníky. Celková souvislost užívání krátkých videí s kognicí je **r = -0,34 (IS -0,42 až -0,26)**, ověřeno ve výňatku plného textu. Hodnoty pro pozornost **r = -0,38** a inhibiční kontrolu **r = -0,41** jsou **[neověřeno v plném textu]**: soubor o obrazovkách je uvádí jako hodnoty z abstraktu, soubory o neurobiologii a o předchůdcích je však přebírají z tiskového zpravodajství (PsyPost, Reason). Pro duševní zdraví práce uvádí r = -0,21. Podle souboru o neurobiologii pochází 74 % studií z Asie a 87 % je korelačních; komentář v Reason uvádí, že analýza pozornosti stojí na 14 studiích, všech z Číny, a převážně na škálách problematického užívání **[neověřeno v plném textu: tisk]**. Systematický přehled 42 studií mládeže (46 912 účastníků, průměrný věk 16,8 roku) uvádí, že **88 % studií je průřezových**, 2 jsou longitudinální a po jedné studii EEG a MRI, a hodnotí důkazy jako „consistent, albeit preliminary“ (Ebster a kol. 2026). Jediná nalezená studie dětí mladšího školního věku (Thajsko, 528 dětí ve věku 6-12 let, průřezová) spojila krátká videa s nepozorností, silněji u mladších dětí, nikoli však s hyperaktivitou-impulzivitou ani s opozičním vzdorem, zatímco celkový čas u obrazovek s nimi souvisel (Chiencharoenthanakij a kol. 2025). Laboratorní experimenty jsou z dospělých: jen formát TikToku zhoršil prospektivní paměť (Chiossi a kol. 2023, N = 60) a přeskakování mezi videi zvyšovalo nudu a snižovalo pozornost (Tam a Inzlicht 2024, 7 experimentů, N = 1 223). Tři okolnosti oslabují kauzální výklad. Škály „závislosti na krátkých videích“ obsahují položky o narušení pozornosti, ztrátě kontroly a abstinenčních projevech (Shen a kol. 2026), takže korelace s nepozorností je zčásti překryvem měření. Jediná longitudinální neurozobrazovací studie (n = 280) ukázala, že výchozí negativní afekt, strach z promeškání a vlastnosti mozku **předpovídají pozdější** závislost na krátkých videích, nikoli naopak (Liu a kol. 2025). Přehled intervencí proti nadměrnému užívání digitálních technologií nenašel žádnou studii zaměřenou na krátká videa (Kim a kol. 2026).
+**Krátká videa.** Metaanalýza v Psychological Bulletin (Nguyen a kol. 2025) zahrnuje 71 studií v systematickém přehledu, z toho 70 v metaanalýze, s 98 299 účastníky. Celková souvislost užívání krátkých videí s kognicí je **r = -0,34 (IS -0,42 až -0,26)**, ověřeno ve výňatku plného textu. Hodnoty pro pozornost **r = -0,38** a inhibiční kontrolu **r = -0,41** jsou **[neověřeno v plném textu]**: soubor o obrazovkách je uvádí jako hodnoty z abstraktu, soubory o neurobiologii a o předchůdcích je však přebírají z tiskového zpravodajství (PsyPost, Reason). Pro duševní zdraví práce uvádí r = -0,21 **[neověřeno v plném textu]**. Podle souboru o neurobiologii pochází 74 % studií z Asie a 87 % je korelačních; komentář v Reason uvádí, že analýza pozornosti stojí na 14 studiích, všech z Číny, a převážně na škálách problematického užívání **[neověřeno v plném textu: tisk]**. Systematický přehled 42 studií mládeže (46 912 účastníků, průměrný věk 16,8 roku) uvádí, že **88 % studií je průřezových**, 2 jsou longitudinální a po jedné studii EEG a MRI, a hodnotí důkazy jako „consistent, albeit preliminary“ (Ebster a kol. 2026). Jediná nalezená studie dětí mladšího školního věku (Thajsko, 528 dětí ve věku 6-12 let, průřezová) spojila krátká videa s nepozorností, silněji u mladších dětí, nikoli však s hyperaktivitou-impulzivitou ani s opozičním vzdorem, zatímco celkový čas u obrazovek s nimi souvisel (Chiencharoenthanakij a kol. 2025). Laboratorní experimenty jsou z dospělých: jen formát TikToku zhoršil prospektivní paměť (Chiossi a kol. 2023, N = 60) a přeskakování mezi videi zvyšovalo nudu a snižovalo pozornost (Tam a Inzlicht 2024, 7 experimentů, N = 1 223). Tři okolnosti oslabují kauzální výklad. Škály „závislosti na krátkých videích“ obsahují položky o narušení pozornosti, ztrátě kontroly a abstinenčních projevech (Shen a kol. 2026), takže korelace s nepozorností je zčásti překryvem měření. Jediná longitudinální neurozobrazovací studie (n = 280) ukázala, že výchozí negativní afekt, strach z promeškání a vlastnosti mozku **předpovídají pozdější** závislost na krátkých videích, nikoli naopak (Liu a kol. 2025). Přehled intervencí proti nadměrnému užívání digitálních technologií nenašel žádnou studii zaměřenou na krátká videa (Kim a kol. 2026).
 
 **Malé děti a zařízení jako „dudlík“.** U 422 dětí ve věku 3-5 let předpovídalo časté uklidňování dítěte mobilním zařízením pozdější emoční reaktivitu u chlapců (β = 0,20; 0,10-0,30), zatímco opačný směr nebyl významný; u dětí s vysokou surgencí šlo o obousměrný vztah (Radesky a kol. 2023). V kanadské kohortě 315 dětí předpovídalo užívání tabletu ve 3,5 letech hněv a frustraci ve 4,5 letech (β = 0,22; 0,01-0,44) a hněv ve 4,5 letech užívání tabletu v 5,5 letech (β = 0,22; 0,01-0,43) (Fitzpatrick a kol. 2024). U 269 batolat se častější regulace emocí pomocí médií pojila s problematickým užíváním a „more extreme emotions when media was removed“ (Coyne a kol. 2021, průřezově). Užívání technologií rodiči v přítomnosti dítěte se pojí s externalizujícími potížemi dítěte r = 0,15 (0,09-0,21) (Toledo-Vargas a kol. 2025), velká mezinárodní studie SUNRISE (n = 2 232) však nenašla souvislost s inhibicí ani s pracovní pamětí (Toledo-Vargas a kol. 2026). Výklad „ztráty nácviku seberegulace“ je interpretace autorů, nikoli testovaný mediátor.
 
@@ -827,3 +827,799 @@ Tato část rozebírá logické vztahy mezi složkami hypotézy. Úsudky vycház
   - https://doi.org/10.1176/appi.ajp.2011.11060940
 - Kühn a kol. 2014, Molecular Psychiatry, Super Mario a šedá hmota
   - https://doi.org/10.1038/mp.2013.120
+
+## Rozpory mezi soubory poznámek a jejich řešení
+
+Sedm souborů poznámek vznikalo souběžně, a tutéž práci nebo tentýž ukazatel proto někdy popisují odlišně. Tato část uvádí rozpory, které mění citaci nebo výklad, a u každého stanoví verzi, kterou zpráva používá. Kde rozpor z poznámek rozhodnout nelze, je to výslovně uvedeno a položka je převzata do části Co ověřit před publikací. Soubor „kdo už o tom psal“ je dále označován jako soubor o předchůdcích.
+
+### Chaarani a kol. 2022 lze citovat jen v nahrazené verzi
+
+Soubor o obrazovkách uvádí, že průřezová studie z kohorty ABCD „Association of Video Gaming With Cognitive Performance Among Children“ (JAMA Network Open 2022;5(10):e2235721) byla stažena a nahrazena. Studie srovnávala 2 217 dětí ve věku 9-10 let; hráči s 21 a více hodinami týdně měli oproti nehrajícím lepší výsledky v úloze stop-signal (inhibice) a n-back (pracovní paměť) a odlišnou aktivaci BOLD. Oznámení o stažení a nahrazení vyšlo v JAMA Network Open 2023;6(4):e236895; poznámky je zachytily přes PubMed (PMID 37036710), kontrola Scite verify_papers je nezachytila. Text oznámení získán nebyl, takže povaha chyby a to, zda nahrazená verze mění výsledky, nejsou známy. Soubor o neurobiologii tutéž práci cituje bez upozornění jako nález „opačným směrem“ a opírá o ni závěr, že analýzy ABCD ukazují různými směry; jeho kontrola 40 DOI stažení nenašla a z poznámek nelze zjistit, zda do ní byl DOI této práce zahrnut.
+
+**Řešení.** Citovat lze pouze nahrazenou verzi spolu s oznámením o stažení a nahrazení, a to až po ověření, že nahrazená verze uvádí tytéž výsledky. Všechny údaje v poznámkách (N, směr účinku) pocházejí z abstraktu původní verze. Zpráva tuto práci v částech H1 až H7 ani v neurovědní tabulce jako doklad nepoužívá; poznámka o nesourodých výsledcích ABCD v tabulce stojí na pracech Paulus a kol. 2019, Shou a kol. 2025 a Nagata a kol. 2026. Navazující text téže skupiny z roku 2026 (N = 9 712; hraní kratší než 1 hodina denně s vyšším IQ a nižším externalizujícím a agresivním skóre než u nehrajících dětí, hraní 3 a více hodin denně s vyšším skóre problémů s pozorností a ADHD) je nerecenzovaný preprint a hodí se nanejvýš k formulaci hypotézy. Případ zároveň ukazuje, že automatická kontrola stažení ve Scite není spolehlivá; u klíčových citací je třeba zkontrolovat i záznam v PubMed a stránku vydavatele.
+
+### Metaanalýza krátkých videí má jediný údaj ověřený v plném textu
+
+Metaanalýzu Nguyen a kol. 2025 v Psychological Bulletin popisují tři soubory. Rozdíl 71 a 70 studií vysvětluje soubor o neurobiologii: 71 studií zahrnul systematický přehled, 70 z nich metaanalýza. Počet účastníků je ve všech třech souborech shodný (98 299); zaokrouhlená hodnota „asi 98 000“ se v poznámkách nevyskytuje. Soubory se rozcházejí v tom, odkud pocházejí dílčí hodnoty.
+
+| Údaj | Hodnota | Původ podle poznámek | Jak ho zpráva uvádí |
+|---|---|---|---|
+| Počet studií | 71 v přehledu, 70 v metaanalýze | soubor o neurobiologii; soubory o obrazovkách a o předchůdcích uvádějí jen 71 (abstrakt, PsyPost) | 71 a 70 s vysvětlením |
+| Účastníci | 98 299 | všechny tři soubory | 98 299 |
+| Kognice celkově | r = -0,34 (IS -0,42 až -0,26) | výňatek plného textu přes Scite (soubor o neurobiologii); interval jen tam | jediný údaj ověřený v plném textu, bez značky |
+| Pozornost | r = -0,38 | soubor o obrazovkách: abstrakt v PubMed; soubor o neurobiologii: tisk (PsyPost, Reason), v plném textu neověřeno; soubor o předchůdcích: PsyPost a stránka s abstraktem NYU IFP | se značkou [neověřeno v plném textu] |
+| Inhibiční kontrola | r = -0,41 | stejně jako u pozornosti | se značkou [neověřeno v plném textu] |
+| Duševní zdraví | r = -0,21 (stres -0,34, úzkost -0,33) | soubor o obrazovkách: abstrakt; soubor o neurobiologii: tisk | se značkou [neověřeno v plném textu] |
+| Asie a korelační design | 74 % studií z Asie, 87 % korelačních | soubor o neurobiologii, bez rozlišení abstraktu a výňatku | s odkazem na soubor |
+| Věk | souvislosti shodné u mládeže a dospělých, bez moderace věkem | abstrakt (soubor o obrazovkách); výňatky Scite (soubor o předchůdcích) | soubory se shodují |
+| Podklad 14 studií | analýza pozornosti stojí na 14 studiích, všech z Číny | komentář v Reason (tisk); soubor o neurobiologii přitom uvádí 14 studií pro podskupinu kognice | se značkou; rozpor nerozhodnut |
+
+**Jednotné uvádění.** Zpráva používá 71 studií v přehledu, 70 v metaanalýze a 98 299 účastníků, celkovou hodnotu r = -0,34 (IS -0,42 až -0,26) jako jediný údaj ověřený ve výňatku plného textu a hodnoty pro pozornost, inhibiční kontrolu a duševní zdraví vždy se značkou [neověřeno v plném textu]. Ke které analýze patří 14 studií (podskupina kognice podle výňatku plného textu, nebo analýza pozornosti podle komentáře v Reason), je nutné rozhodnout v plném textu. Intervaly spolehlivosti pro pozornost a inhibici ani podíl longitudinálních studií poznámky neobsahují.
+
+### Údaj NSZ o 40 % se týká násilných provinění, věkové vymezení je výklad
+
+Údaj, že násilná provinění, zejména ublížení na zdraví a loupeže, byla v letech 2024-2025 asi o 40 % častější než v průměru let 2015-2019, pochází ze zpravodajství o zprávě NSZ za rok 2025 (ČT24, ČTK a České noviny, Advokátní deník). Stručné shrnutí a tisková zpráva NSZ jsou v poznámkách odkázány, web verejnazaloba.cz však byl pro relaci blokovaný a jejich text nebyl čten; údaj je proto **[neověřeno v plném textu: tisk]**. ČTK cituje „násilná provinění“. Provinění je zákonný termín pro trestné činy mladistvých ve věku 15-17 let a vztažení údaje k této věkové skupině je výklad autora souboru o trendech, nikoli citace zprávy NSZ. ČT24 údaj parafrázuje jako „násilné trestné činy“ bez věkového vymezení. Shrnutí na začátku souboru o trendech uvádí +40 % jako údaj o mladistvých bez výhrady, podrobný záznam téhož souboru výhradu obsahuje; zpráva se drží podrobného záznamu. Z výňatku stručného shrnutí NSZ poznámky přebírají pro rok 2025 i 1 634 činů jinak trestných dětí do 15 let (2,24 %) a 2 174 činů mladistvých (2,98 %) s tím, že kontext není jasný. Tyto počty nejsou ve stejné jednotce jako řada ČSÚ (osoby) a nelze je s ní přímo srovnávat. **Řešení:** do ověření v plném textu zprávy NSZ psát „podle zpravodajství o zprávě NSZ“, uvádět srovnávací základ (průměr let 2015-2019) a věkovou skupinu neuvádět jako fakt.
+
+### Další rozpory a nejednoznačnosti
+
+| Téma | Co uvádějí poznámky | Řešení ve zprávě |
+|---|---|---|
+| Dánská studie SCREENS | Soubory ji citují jednou jako Pedersen a kol. 2022 (JAMA Pediatrics), jindy jako Schmidt-Persson a kol. 2024 (JAMA Network Open). Jde o jednu klastrovou RCT (NCT04098913; 89 rodin, 181 dětí ve věku 4-17 let; nábor od června 2019 do března 2021) se dvěma publikacemi: Pedersen a kol. 2022 uvádí primární výsledky (volnočasová nesedavá aktivita dětí +45,8 minuty denně, IS 27,9-63,6; spánek měřený EEG beze změny), Schmidt-Persson a kol. 2024 předem stanovenou sekundární analýzu duševního zdraví (SDQ -1,67; d = 0,53). Soubor o obrazovkách aktivitu zaokrouhluje na 46 minut; soubor o neurobiologii uvádí průměrný věk asi 9 let, ostatní 8,6 a 9,5 roku podle skupiny. | Citovat jako jednu studii: Pedersen a kol. 2022 pro pohyb a spánek, Schmidt-Persson a kol. 2024 pro duševní zdraví. Inference této zprávy: nábor zasahuje do období pandemie, což výklad dvoutýdenního účinku komplikuje. |
+| Fitzpatrick a kol., předškoláci a hněv | Soubor o lockdownech cituje práci v Pediatric Research 2023 (n = 315, Kanada, model CLPM): čas u obrazovek ve 3,5 letech předpovídal hněv a frustraci ve 4,5 letech (β = 0,14), hněv a frustrace pozdější čas u obrazovek nepředpovídaly. Soubor o obrazovkách cituje práci v JAMA Pediatrics 2024 (n = 315, Nové Skotsko, model RI-CLPM): užívání tabletu ve 3,5 letech předpovídalo hněv ve 4,5 letech (β = 0,22) a hněv ve 4,5 letech užívání tabletu v 5,5 letech (β = 0,22). Shodná velikost vzorku a země naznačují tentýž vzorek, poznámky to však výslovně nepotvrzují. Liší se expozice (celkový čas oproti tabletu), model i vlny měření. | Zpráva uvádí obousměrnost podle práce z roku 2024 (H3 a část o vnitřních napětích). Tvrzení o obousměrném vztahu v tomto vzorku závisí na zvolené analýze a mělo by se uvádět s odkazem na obě práce. |
+| Corrigan, Rokem a Kuhl 2024 | Soubor o neurobiologii: velikost vzorku v abstraktu není. Soubor o lockdownech: 160 dospívajících vyšetřených před covidem, z toho 130 i po lockdownu, podle komentáře Science Media Centre Spain dostupného jen přes souhrn vyhledávače. Dopis Brown a kol. 2025: podle podrobného záznamu ukázal přímý test pohlaví rozdíl v 1 oblasti (levá insula) místo 30, shrnutí souboru o neurobiologii uvádí „1 z 68 oblastí“; obojí je slučitelné, pokud bylo testováno 68 oblastí a původně jich vyšlo 30, poznámky to však neuvádějí. DOI dopisů: soubor o lockdownech přiřazuje 10.1073/pnas.2420724121 dopisu Fine a kol. a 10.1073/pnas.2421468121 odpovědi autorů; soubor o neurobiologii uvádí 10.1073/pnas.2421468121 a 10.1073/pnas.2426640122 jako další dopisy (Fine a kol., Rippon) s odpověďmi autorů. | Zpráva uvádí N se značkou [neověřeno v plném textu: souhrn vyhledávače] a cituje dopis Fine a kol. pod DOI 10.1073/pnas.2420724121. Přiřazení zbývajících DOI je třeba ověřit. |
+| Podíly dětí s potížemi v německé studii COPSY | Ravens-Sieberer a kol. 2022: v první vlně (květen a červen 2020) 17,8 % oproti 9,9 % v předpandemické kohortě BELLA. Ravens-Sieberer a kol. 2023: 18 % před pandemií, 30-31 % ve vlnách 1 a 2, 23 % na podzim 2022. Kaman a kol. 2025 podle souboru o trendech: 22 % na podzim 2024, vrchol 31 %, asi o 5 procentních bodů nad úrovní BELLA 2014-2017. Reiss a kol. 2026: před pandemií 6,2 % a 14,6 % ve dvou socioekonomických skupinách, vyšší hodnota u nižšího statusu. Táž první vlna tedy vychází 17,8 % nebo 30-31 % a předpandemický základ 9,9 %, 18 % nebo 6,2 a 14,6 %, zřejmě podle různých definic a nástrojů, které poznámky neuvádějí. Výňatek z dokumentu na d-nb.info (problémy s chováním u dětí na prvním stupni z 11,7 % na 24,6 %, hyperaktivita z 13,9 % na 34,0 %) nemá ověřenou publikaci. | Hodnoty z různých publikací COPSY nesrovnávat. Zpráva používá řadu z Ravens-Sieberer a kol. 2023 pro průběh a velikosti účinku f² z Ravens-Sieberer a kol. 2022; výňatek z d-nb.info nepoužívá. |
+| Česká čísla v různých jednotkách | Řada ČSÚ a Policejního prezidia uvádí stíhané a vyšetřované osoby (jeden výňatek je označil jako skutky). Zpráva MV za rok 2020 uvádí 1 069 skutků dětí a 1 817 skutků mladistvých, ČSÚ pro týž rok 1 636 dětí a 2 060 mladistvých jako osoby. ČT24 uvádí za rok 2025 přes 3 600 trestných činů nezletilých, asi o 130 více než v roce 2024, zatímco součet dětí a mladistvých v řadě ČSÚ klesl ze 4 056 (2024) na 4 030 (2025) (vlastní součet z tabulky v části H1). Výňatek NSZ uvádí za rok 2025 1 634 činů dětí a 2 174 činů mladistvých. | Srovnávat jen v rámci jedné řady a jedné jednotky. Pro trend zpráva používá řadu ČSÚ. Údaj ČT24 o meziročním nárůstu je v neuvedené jednotce a s řadou ČSÚ je v rozporu, dokud se jednotka neověří. |
+| Vraždy spáchané dětmi a mladistvými | IKSP (trendy kriminality 2024, policejní registrace): v roce 2024 3 vraždy spáchané osobami do 15 let a 5 mladistvými. ČT24: počet vražd spáchaných dětmi a mladistvými vzrostl meziročně z 8 na 12. Tisk citující ministerstvo spravedlnosti: soudy v roce 2025 řešily vraždy se 6 pachateli do 15 let, stejně jako v letech 2024 a 2022. | Policejní a soudní počty se liší časováním a jednotkou (registrovaný čin oproti pachateli u soudu). Součet 3 a 5 odpovídá hodnotě 8 pro rok 2024 v údaji ČT24; soudní údaj o 6 dětských pachatelích v roce 2024 s policejním údajem o 3 nesouhlasí. Zpráva uvádí zdroje odděleně a s tiskovou značkou. |
+| Jmenovatel pro rok 2019 | Počet dětí ve věku 10-14 let v roce 2019: 553 914 podle tabulky Národního registru výzkumů o dětech a mládeži, 578,0 tisíce podle publikace ČSÚ. Míra dětí stíhaných a vyšetřovaných proto vychází 33,9, nebo 32,5 na 10 000. | Závěr, že rok 2024 (asi 28,8 na 10 000) je v přepočtu pod rokem 2019, platí s oběma jmenovateli. Jmenovatel je třeba ověřit v ČSÚ. |
+| Hospitalizace na dětské psychiatrii v roce 2021 | ČTK: přes 2 600 hospitalizací. Tabulka ročenky ÚZIS podle poznámek: 3 201 akutních hospitalizací. | Nerozhodnuto; zpráva údaj nepoužívá. Ověřit v ročence ÚZIS. |
+| Počty dětí s ADHD v Česku | ÚZIS za rok 2022 podle Seznam Zpráv: přes 46 000 osob s ADHD jako hlavní nebo vedlejší diagnózou, z toho 38 500 dětí, včetně podezření. VZP: děti s „poruchou pozornosti“ 14 779 (2020) a 16 823 (2024), jen pojištěnci VZP do 18 let. Novinky.cz (asi 2019, s odkazem na SÚKL): přes 14 500 dětí s diagnózou ADHD, asi desetinásobek za 12 let. | Údaje mají různý rozsah a definici a netvoří časovou řadu. Zpráva je jako trend nepoužívá; jde o českou datovou mezeru (viz Co ověřit před publikací). |
+| Rogers a MacLean 2023 | Soubor o předchůdcích uvádí, že metaanalýzu v PubMed neověřil (vyhledávání podle názvu selhalo). Soubory o lockdownech a o genetice tentýž záznam získaly (18 studií, 6 491 účastníků, 10 zemí). | Záznam existuje. Souhrnná velikost účinku nebyla získána v žádném souboru. |
+| Vasconcellos a kol. 2025 | Soubor o obrazovkách: 132 longitudinálních studií v přehledu, 117 v metaanalýze. Soubor o předchůdcích uvádí jen 117. | Zpráva uvádí 117 studií v metaanalýze. |
+| Autoři práce v Translational Psychiatry 2025 | Soubor o neurobiologii: „autoři nezískáni“. Soubor o genetice: Shou a kol. 2025. | Zpráva používá Shou a kol. 2025; jméno je třeba ověřit u DOI 10.1038/s41398-025-03672-1. |
+| Shodná jména a roky | Takahashi a kol. 2023 jsou dvě různé práce: v JAMA Pediatrics (obrazovky v 1 roce a vývoj, n = 7 097) a v Psychiatry Research (genetické riziko a čas u obrazovek). Dále Nagata a kol. 2024 (BMC Public Health) a 2026 (NeuroImage), Li a kol. 2021 (JAMA Network Open) a Li X a kol. 2021 (Canadian Journal of Public Health), Pedersen a kol. 2022 (SCREENS) a Pedersen a kol. 2024 (léky na ADHD v Norsku, Švédsku a Itálii). Několik prací má jiný rok online a tištěného vydání: Thorell 2022 a 2024, Ferguson 2024 a 2025, Kühn 2018 a 2019, Ferguson a kol. 2021 a 2022. | Zpráva rozlišuje práce časopisem. Volba mezi rokem online a tištěného vydání není ve zprávě jednotná; před publikací sjednotit. |
+| Délka programu Dunckley | Podtitul knihy uvádí čtyřtýdenní plán, Publishers Weekly a shrnutí Shortform třítýdenní „elektronický půst“, blog z roku 2012 tří- až čtyřtýdenní půst s možným prodloužením. | Nejde o rozpor v datech; v textu uvádět „tří- až čtyřtýdenní“. |
+| Český název knihy Haidta | Katalog KJM a Jasminka.cz: Úzkostná generace. Echo24: „Úzkostlivá generace“. Rok českého vydání nezjištěn. | Zpráva používá název Úzkostná generace. |
+
+**Zdroje k části o rozporech**
+
+- Chaarani a kol. 2022, JAMA Network Open, hraní her a kognice (původní, stažená verze)
+  - https://doi.org/10.1001/jamanetworkopen.2022.35721
+- JAMA Network Open 2023, oznámení o stažení a nahrazení práce Chaarani a kol.
+  - https://doi.org/10.1001/jamanetworkopen.2023.6895
+- Chaarani a kol. 2026, preprint Research Square, umírněné a nadměrné hraní
+  - https://doi.org/10.21203/rs.3.rs-10468432/v1
+- Paulus a kol. 2019, NeuroImage, ABCD a struktura mozku
+  - https://doi.org/10.1016/j.neuroimage.2018.10.040
+- Shou a kol. 2025, Translational Psychiatry, čas u obrazovek, ADHD a struktura mozku
+  - https://doi.org/10.1038/s41398-025-03672-1
+- Nagata a kol. 2026, NeuroImage, sociální sítě a struktura mozku
+  - https://doi.org/10.1016/j.neuroimage.2026.121860
+- Nguyen a kol. 2025, Psychological Bulletin, metaanalýza krátkých videí
+  - https://doi.org/10.1037/bul0000498
+- PsyPost, zpravodajství o metaanalýze krátkých videí
+  - https://www.psypost.org/large-meta-analysis-links-tiktok-and-instagram-reels-to-poorer-cognitive-and-mental-health/
+- Reason, kritický komentář k metaanalýze krátkých videí
+  - https://reason.com/2025/12/31/study-short-form-video-isnt-rotting-your-brain
+- NYU IFP, stránka s abstraktem metaanalýzy krátkých videí
+  - https://ifp.nyu.edu/2025/journal-article-abstracts/bul0000498/
+- ČT24, zpráva NSZ za rok 2025
+  - https://ct24.ceskatelevize.cz/clanek/domaci/mira-kriminality-v-cesku-stagnuje-pribyva-agrese-u-deti-375069
+- ČTK / České noviny, zpráva NSZ za rok 2025
+  - https://www.ceskenoviny.cz/zpravy/pribyva-kriminality-s-vysokou-agresi-deti-uvadi-zprava-nsz/2845020
+- Advokátní deník, 17. 7. 2026, zpráva NSZ
+  - https://advokatnidenik.cz/2026/07/17/nsz-pocet-trestnych-cinu-stagnuje-roste-kyberkriminalita-a-agresivita-deti/
+- NSZ, stručné shrnutí za rok 2025 (PDF)
+  - https://verejnazaloba.cz/wp-content/uploads/2026/06/STRU%C4%8CN%C3%89-SHRNUT%C3%8D-ZA-ROK-2025.pdf
+- NSZ, tisková zpráva ke zprávě o činnosti za rok 2025
+  - https://verejnazaloba.cz/nsz/kriminalita-v-cesku-neroste-podle-aktualni-zpravy-o-cinnosti-statniho-zastupitelstvi-se-ale-meni-zpusoby-jejiho-pachani-a-pribyva-pripadu-s-vysokou-agresi/
+- Pedersen a kol. 2022, JAMA Pediatrics, SCREENS primární výsledky
+  - https://doi.org/10.1001/jamapediatrics.2022.1519
+- Schmidt-Persson a kol. 2024, JAMA Network Open, SCREENS a duševní zdraví
+  - https://doi.org/10.1001/jamanetworkopen.2024.19881
+- Fitzpatrick a kol. 2023, Pediatric Research, čas u obrazovek a hněv u předškoláků
+  - https://doi.org/10.1038/s41390-023-02485-6
+- Fitzpatrick a kol. 2024, JAMA Pediatrics, tablet a výbuchy hněvu
+  - https://doi.org/10.1001/jamapediatrics.2024.2511
+- Corrigan, Rokem a Kuhl 2024, PNAS, lockdown a struktura mozku
+  - https://doi.org/10.1073/pnas.2403200121
+- Science Media Centre Spain, komentář k Corrigan a kol. 2024
+  - https://sciencemediacentre.es/en/pandemic-related-isolation-accelerated-brain-maturation-adolescents-especially-girls
+- Brown a kol. 2025, PNAS, dopis ke sporu o rozdíly pohlaví
+  - https://doi.org/10.1073/pnas.2421462122
+- Fine a kol. 2024, PNAS, dopis o nejistotě rozdílů pohlaví
+  - https://doi.org/10.1073/pnas.2420724121
+- PNAS 2024, odpověď autorů nebo další dopis (přiřazení ověřit)
+  - https://doi.org/10.1073/pnas.2421468121
+- PNAS, další dopis nebo odpověď (přiřazení ověřit)
+  - https://doi.org/10.1073/pnas.2426640122
+- Ravens-Sieberer a kol. 2022, Eur Child Adolesc Psychiatry, COPSY vlna 1 oproti BELLA
+  - https://doi.org/10.1007/s00787-021-01726-5
+- Ravens-Sieberer a kol. 2023, Front Public Health, vlny COPSY
+  - https://doi.org/10.3389/fpubh.2023.1129073
+- Kaman a kol. 2025, Bundesgesundheitsblatt, COPSY 2020-2024
+  - https://doi.org/10.1007/s00103-025-04045-1
+- Reiss a kol. 2026, BMC Public Health, socioekonomický gradient v COPSY
+  - https://doi.org/10.1186/s12889-026-26577-0
+- Dokument na d-nb.info s výňatkem z hodnocení COPSY (publikace neověřena)
+  - https://d-nb.info/1372982507/34
+- ČSÚ, Kriminalita (časové řady)
+  - https://csu.gov.cz/kriminalita
+- MV, Zpráva o situaci v oblasti vnitřní bezpečnosti za rok 2020 (zrcadlo bezport.cz)
+  - https://www.bezport.cz/system/files/files/documents/zprava-o-situaci-v-oblasti-vnitrni-bezpecnosti-za-rok-2020.pdf
+- ČT24, kriminalita nezletilých a vraždy 2025
+  - https://ct24.ceskatelevize.cz/clanek/domaci/kriminalita-nezletilych-roste-pribylo-sexualnich-trestnych-cinu-i-vrazd-369900
+- IKSP, Trendy kriminality 2024: registrovaná kriminalita
+  - https://iksp.gov.cz/trendy-kriminality-registrovana-kriminalita-2024
+- iROZHLAS, Bradáčová o posunu k násilí (říjen 2026)
+  - https://www.irozhlas.cz/zpravy-domov/kriminalita-deti-se-posouva-k-nasilnym-trestnym-cinum-rika-bradacova-snizeni_2610251402_tec
+- České noviny, Bradáčová o kriminalitě dětí
+  - https://www.ceskenoviny.cz/zpravy/bradacova-kriminalita-deti-se-posouva-k-nasilnym-trestnym-cinum/2892837
+- Česká justice, říjen 2026, kriminalita dětí
+  - https://www.ceska-justice.cz/2026/10/bradacova-varuje-kriminalita-deti-roste/
+- Národní registr výzkumů o dětech a mládeži, počet dětí
+  - http://www.vyzkum-mladez.cz/cs/statistika/indikator/3-pocet-deti-a-mladych-lidi
+- ČSÚ, Vývoj obyvatelstva 2024
+  - https://csu.gov.cz/docs/107508/73bdd158-6b48-b352-a0ec-b5a3c000c681/13006925.pdf?version=1.2
+- ČTK / České noviny, dětská psychiatrie 2021
+  - https://www.ceskenoviny.cz/zpravy/2364338
+- ÚZIS, statistika dětské psychiatrie (PDF)
+  - https://psychiatrie.uzis.cz/res/file/oborove-statistiky/detska-psychiatrie.pdf
+- Seznam Zprávy, údaje ÚZIS o ADHD za rok 2022
+  - https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-neustaly-pocit-ze-je-neco-spatne-pribyva-dospelych-s-diagnozou-adhd-250203
+- VZP, tisková zpráva o dětech s poruchou pozornosti
+  - https://www.vzp.cz/o-nas/aktuality/vzp-za-5-let-pribylo-2-tisice-deti-s-poruchou-pozornosti
+- Novinky.cz, počty dětí s ADHD a spotřeba léků podle SÚKL
+  - https://www.novinky.cz/domaci/clanek/lecba-hyperaktivity-muze-skoncit-sebevrazdou-ditete-40297019
+- Rogers a MacLean 2023, J Atten Disord, příznaky ADHD během pandemie
+  - https://doi.org/10.1177/10870547231158750
+- Vasconcellos a kol. 2025, Psychological Bulletin, longitudinální metaanalýza
+  - https://doi.org/10.1037/bul0000468
+- Takahashi a kol. 2023, JAMA Pediatrics, obrazovky v 1 roce a vývoj
+  - https://doi.org/10.1001/jamapediatrics.2023.3057
+- Takahashi a kol. 2023, Psychiatry Research, genetické riziko a čas u obrazovek
+  - https://doi.org/10.1016/j.psychres.2023.115395
+- Nagata a kol. 2024, BMC Public Health, čas u obrazovek a duševní zdraví v ABCD
+  - https://doi.org/10.1186/s12889-024-20102-x
+- Li X a kol. 2021, Canadian Journal of Public Health, předškoláci v Torontu
+  - https://doi.org/10.17269/s41997-021-00549-w
+- Pedersen a kol. 2024, Paediatr Perinat Epidemiol, léky na ADHD v Norsku, Švédsku a Itálii
+  - https://doi.org/10.1111/ppe.13046
+- Publishers Weekly, záznam knihy Dunckley
+  - https://www.publishersweekly.com/9781608682843
+- Shortform, shrnutí knihy Dunckley
+  - https://www.shortform.com/pdf/reset-your-childs-brain-pdf-victoria-l-dunckley
+- Dunckley 2012, blog Psychology Today, Electronic Screen Syndrome
+  - https://www.psychologytoday.com/us/blog/mental-wealth/201207/electronic-screen-syndrome-an-unrecognized-disorder
+- Katalog KJM, záznam The Anxious Generation
+  - https://katalog.kjm.cz/arl-kjm/en/detail-kjm_us_cat-0130543-The-anxious-generation/
+- Echo24, esej o úzkostné generaci
+  - https://www.echo24.cz/a/HNUmv/tydenik-echo-esej-bellova-uzkostna-avsak-nikoli-ztracena-generace
+
+## Kdo už o tom psal: jednotlivé složky ano, celou hypotézu nikdo
+
+**V dohledaných zdrojích žádná práce, recenzovaná, populární ani úřední, nespojuje všech sedm složek hypotézy**: obrazovky a návykové užívání, krátká videa, lockdowny a ztrátu socializace, stav napodobující ADHD bez genetického podkladu, pojetí ADHD jako poruchy regulace, nárůst agrese dětí a časově citlivou vratnost. Jednotlivé složky předchůdce mají, některé dlouholeté: Barkley 1997 pro regulační pojetí ADHD, Hallowell 2005 pro environmentálně podmíněný stav podobný ADHD, Dunckley 2012 a 2015 pro obrazovkami vyvolaný obraz napodobující psychiatrické poruchy s nápravou po „elektronickém půstu“ a Spitzer 2012 pro tezi, že digitální média poškozují mozek a učení. Krátká videa v knihách téměř chybějí; objevují se v žurnalistice od roku 2022 („TikTok brain“) a v recenzované literatuře převážně z let 2023-2026. Hledání bylo široké, ne vyčerpávající. Nepřítomnost integrované práce v dohledaných zdrojích není důkazem, že neexistuje, zejména v neindexovaných médiích, podcastech, neanglických blozích a v českém tisku, který vyhledávač nepokryl (Respekt, Deník N, Aktuálně.cz, Český rozhlas).
+
+**Značení.** Každá položka nese typ: **[recenzované]**, **[preprint]** (bez recenzního řízení), **[populární]** (kniha pro veřejnost, blog, esej v časopise), **[úřední]** (dokument vlády, komise, úřadu nebo pojišťovny, případně zpráva zadaná vládou nebo určená pro veřejnou politiku) a **[média]** (žurnalistika, rozhovory). Populární knihy jsou zachyceny jako postoje, ne jako důkazy. Žádná kniha nebyla čtena v plném znění; jejich tvrzení pocházejí z anotací, recenzí a shrnutí. Značka **[jen ze sekundárních zdrojů]** označuje položky, u nichž nebyl k dispozici primární text ani abstrakt. Kódy složek: O = obrazovky a návykové užívání obecně, KV = krátká videa, L = lockdowny a ztráta socializace, N = napodobení ADHD (stav podobný ADHD bez neurovývojového podkladu), R = ADHD jako porucha regulace, A = agrese a násilí, P = vratnost, neuroplasticita a citlivá období.
+
+### Populární knihy tvoří dvě rodiny a lockdowny téměř neznají
+
+Populární literatura se dělí do dvou rodin. **Klinicko-anekdotická rodina** (Dunckley, Kardaras, Lembke) tvrdí, že obrazovky vyvolávají obraz podobný psychiatrickým poruchám a že půst nebo abstinence jej zvrátí; jen tato rodina výslovně spojuje napodobení ADHD s vratností. **Kulturně-neurovědní eseje** (Spitzer, Desmurget, Haidt, Hari) argumentují obecnou škodlivostí digitálního prostředí. Nejbližším populárním předchůdcem myšlenky environmentálního, negenetického stavu podobného ADHD je Hallowellův „Attention Deficit Trait“ (2005) a pozdější „VAST“ (2021), oba však míří na dospělé a pracovní prostředí. Hlavní knihy lockdownům buď předcházejí (Dunckley, Kardaras, Spitzer, te Wildt, Hallowell), nebo je nestaví do středu (Haidt, Hari, Mark). Toto rozdělení je inferencí souboru o předchůdcích.
+
+| Dílo | Typ a dostupnost | Složky | Jádro tvrzení | Kritika nebo poznámka |
+|---|---|---|---|---|
+| Hallowell, „Overloaded Circuits: Why Smart People Underperform“, Harvard Business Review 2005 | [populární] esej; abstrakt z PubMed, zbytek ze sekundárních shrnutí (hbr.org blokováno) | N, O částečně | ADT „isn't an illness; it's purely a response to the hyperkinetic environment in which we live“; podle sekundárních shrnutí na rozdíl od ADD s genetickou složkou „springs entirely from the environment“ | dospělí a pracoviště; bez dat, kritérií a validační studie |
+| Hallowell a Ratey, ADHD 2.0 (2021) | [populární] | O, N, R | VAST (Variable Attention Stimulus Trait) spojený se stálou stimulací ze smartphonů a sociálních sítí; ADHD podle nich „isn't actually a deficit of attention“, ale „a deficit of control over one's attention“ | advokační web pro ADD rámec VAST zpochybňuje |
+| Spitzer, Digitale Demenz (2012; česky Digitální demence, Host 2014) a Cyberkrank! (2015; česky Kybernemoc, Host 2016) | [populární] | O, P částečně, A částečně | digitální média poškozují mozek a učení; v Česku rozhovory v Echo24 | Appel a Schreiner 2014 [recenzované]: souvislosti v průměru slabé, nálezy o učení „digitální demenci“ odporují; Appel: teze „haben wenig mit dem wissenschaftlichen Kenntnisstand zu tun“; v duplice 2015 výtka selektivní citace |
+| te Wildt, Digital Junkies (2015) | [populární], autor psychiatr z Bochumi; známo z recenze | O, závislost | podle jeho odhadu je nejméně 1 % dospívajících a dospělých závislých na internetu, s rostoucím trendem | bez odborné kritiky v poznámkách |
+| Dunckley, Reset Your Child's Brain (2015); blog Psychology Today 2012 | [populární]; blog [jen ze sekundárních zdrojů] | O, N, R částečně, A částečně (výbuchy vzteku), P | Electronic Screen Syndrome „can mimic virtually any mental health disorder“ a zlepší se po striktním odstranění elektronických médií; podle autorky výrazné zlepšení u 80 % z více než 500 pacientů (vlastní klinická výpověď, ne studie) | Harriet Hall (Skeptic 2020) [populární]: autorka „has not published any scientific studies“, srovnávací studie chybějí; podle dalšího článku v Skeptic ESS není v doporučeních AAP |
+| Kardaras, Glow Kids (recenze 2016, brožované vydání 2017) | [populární] | O, N částečně (ADHD), A, závislost | text vydavatele: výzkum „correlates screen tech with disorders like ADHD, addiction, anxiety, depression, increased aggression, and even psychosis“ | kritizováno za alarmující tón; recenzované testy jeho tvrzení o agresi nenalezeny |
+| Desmurget, La Fabrique du crétin digital (2019; anglicky Screen Damage, uváděno 2022 a 2023) | [populární], autor neurovědec z Inserm | O | od 2 let přes 2,5 hodiny denně u obrazovek, ve 13 letech přes 7 hodin | Séverine Erhel: problém je ve způsobu užívání, varuje před „catastrophisme facile“ (blog) |
+| Lembke, Dopamine Nation (rok vydání neověřen) | [populární] | O, P | „The smartphone is the modern-day hypodermic needle, delivering digital dopamine 24/7 for a wired generation“; 30denní abstinence včetně všech obrazovek k obnovení rovnováhy systému odměny | dětský protokol ani odborná kritika nenalezeny |
+| Hari, Stolen Focus (2022; česky Ukradená pozornost, Noxi 2023) | [populární] | O, N částečně | problémy se soustředěním jsou environmentální, ne osobní | jen čtenářské a blogové recenze; jeden recenzent odmítá přímou linku mezi stravou, zařízeními a ADHD |
+| Mark, Attention Span (2023) | [populární], autorka výzkumnice v oboru interakce člověka s počítačem | O (dospělí) | průměrně asi 47 s na jedné obrazovce před přepnutím (data 2016-2020, medián 40 s) oproti asi 2,5 min v měřeních z let 2003-2004 | autorka zdůrazňuje, že jde o průměr, ne o klinický test pozornosti |
+| Haidt, The Anxious Generation (2024; česky Úzkostná generace, rok nezjištěn) | [populární] | O, KV částečně, sociální deprivace mimo lockdown | přechod od dětství „založeného na hře“ k dětství „založenému na telefonu“ na počátku 2010. let; čtyři „foundational harms“: sociální deprivace, nedostatek spánku, fragmentace pozornosti, závislost | Odgers 2024, Przybylski, Etchells, Ferguson; Dienlin 2024 [recenzované] |
+| Twenge, iGen (2017) a Generations (2023) | [populární] | O | smartphony jako příčina nárůstu duševních potíží dospívajících | Cavanagh: korelace vydávaná za kauzalitu a jediný faktor; Orben a Przybylski reagovali vlastními analýzami |
+| Etchells, Unlocked (2024) | [populární], protipozice | | kritika „technopaniky“ | ocenění BPS 2024 známé jen z blogu, neověřeno |
+| Jargon, Wall Street Journal 2022, „TikTok brain“ | [média]; text WSJ [jen ze sekundárních zdrojů] | KV | mladí s nadměrným sledováním krátkého obsahu hůře snášejí činnosti bez okamžité odměny; citovaný pediatr John Hutton: „TikTok is a dopamine machine“ | samo zpravodajství uvádí, že výzkum specificky o krátkých videích a pozornosti tehdy chyběl |
+
+### Recenzovaná literatura spojuje nanejvýš dvojice nebo trojice složek
+
+Každá složka má vlastní recenzovanou literaturu, rozebranou v částech H2 až H7: převážně observační, s malými průměrnými účinky a s obousměrnými vztahy. Explicitní rámec „pseudo-ADHD“ nebo fenokopie z obrazovek se objevuje hlavně v preprintu o dospělých (Tingate 2025), v průřezových studiích „ADHD-like symptoms“ a v paralelním konceptu „virtuálního autismu“, nikoli v potvrzujícím klinickém výzkumu. **Recenzovaná práce, která by spojovala krátká videa, lockdownovou deprivaci, fenokopii ADHD a agresi u dětí, nalezena nebyla.** Výzkum krátkých videí je nový (převážně 2023-2026), dominují v něm mladí dospělí a čínské vzorky a používá škály problematického užívání; dětská data jsou řídká. Tabulka uvádí práce, které se kombinaci složek blíží nejvíce.
+
+| Práce | Typ | Co spojuje | Co chybí |
+|---|---|---|---|
+| Li a kol. 2021, JAMA Network Open | [recenzované] | O + L + A + N částečně: během pandemie se u mladších dětí vyšší čas u televize a digitálních médií pojil s problémy s chováním a s hyperaktivitou a nepozorností, u starších hraní her s podrážděností, nepozorností a hyperaktivitou (2 026 dětí ve věku 2-18 let, Ontario); podle souboru o předchůdcích nejbližší jednotlivá recenzovaná práce | konstrukt napodobení, R, P; observační design |
+| Alonso-Martínez a kol. 2021, IJERPH | [recenzované] | L + R: španělští předškoláci měli v lockdownu o 43,3 minuty denně méně pohybu, o 50,2 minuty více sedavého času a větší internalizující i externalizující potíže se seberegulací | N, KV, P |
+| Alcon a kol. 2024, Psychology International | [recenzované] | L + A + N částečně: malé nárůsty problémů s pozorností a agresivního chování u předškoláků; podle výňatků Scite „many of these effects were not significant“ | O, KV, P |
+| Abdoli a kol. 2025, J Paediatr Child Health | [recenzované], systematický přehled | O + L u dětí s diagnostikovaným ADHD: nárůst času u obrazovek se během pandemie pojil se zhoršením podrážděnosti, nepozornosti, hyperaktivity a opozičního vzdoru | týká se zhoršení existujícího ADHD, ne napodobení |
+| Dessain a kol. 2023, Neurosci Biobehav Rev | [recenzované], systematický přehled | L + ADHD + spánek: mládež s ADHD měla během pandemie trvale zvýšené příznaky a delší čas u obrazovek se pojil s horším spánkem; kvalita studií převážně nízká | napodobení, A |
+| Pedrouzo a Krynski 2023, Arch Argent Pediatr | [recenzované], narativní přehled | L + KV: pandemie podle autorů zvýšila konzumaci s důsledky včetně poruch pozornosti a paměti a „problematic behaviors“; lajky na TikToku stimulují dopaminový systém odměny | jediný dohledaný text, který spojuje TikTok, pandemii a dopamin; bez vlastních dat, bez N a R |
+| Arouch, Edgcumbe a Pezaro 2026, BMJ Public Health | [recenzované], systematický přehled 17 studií, věk 18-29 let | KV + R: předběžné souvislosti s „attentional fragmentation, markers of lower executive control and emotional dysregulation“; možná obousměrnost, nízká kvalita důkazů | děti, L, A |
+| David 2024, Social Science Computer Review | [recenzované], dospělí | KV + R: sledování TikToku → nižší sebekontrola → více phubbingu; u Reels a Shorts nezjištěno | děti, L, A |
+| Chiencharoenthanakij a kol. 2025, Brain and Behavior | [recenzované], průřezová | KV + N částečně u dětí 6-12 let: souvislost s nepozorností ano, s hyperaktivitou-impulzivitou a opozičním vzdorem ne | jediná dětská studie krátkých videí; průřezová |
+| Tingate 2025, „Digital Hypervigilance“, OSF | [preprint] | O + N + P + R částečně: chronická digitální novost vyvolává kolísavou exekutivní dysfunkci odlišnou od neurovývojového ADHD; varuje, že stimulancia ji mohou zhoršit, a doporučuje intervence na spánek a digitální expozici | dospělí, L, A |
+| Al Zannati 2026, Research Square | [preprint], průřezová | KV + N: 43,3 % studentů ve věku 14-21 let (n = 305) pozitivních ve screeningu „ADHD-like symptoms“, od asi 15 % při méně než 1 hodině do přes 60 % při více než 4 hodinách krátkých videí denně | L, A, P |
+| Victor a kol. 2023, J Atten Disord | [recenzované], kazuistika | „Post-COVID-19 ADHD-like syndrome“ po infekci SARS-CoV-2 u dospělého | jiný pojem: infekce, ne lockdown |
+| Harlé 2019, Trends Neurosci Educ; Özyazıcı 2026, Acta Psychologica | [recenzované]; u Özyazıcı jen název a metadata | paralelní fenokopie pro autismus („virtuální autismus“) | viz H4: souvislost po korekci publikačního zkreslení nevýznamná |
+| Barkley 1997; Shaw a kol. 2014 | [recenzované] | R | spojení R s environmentální dysregulací z obrazovek v recenzované podobě nenalezeno |
+| Orben a kol. 2022, Nature Communications | [recenzované] | O + P: okna vývojové citlivosti na sociální sítě; od autorů obvykle řazených ke kritikům | N, A |
+
+Novější metaanalýzy dvojice obrazovky a ADHD doplňují obraz: Zhao a kol. 2026 [recenzované] uvádějí pro expozici obrazovkám a riziko ADHD OR 2,40 v předškolním věku a 1,16 nad 6 let při heterogenitě I² = 97,4 %; Gonçalves Júnior a kol. 2026 [recenzované; 22 studií, n = 235 283] zjistili, že děti s ADHD tráví u obrazovek více času, s nízkou až velmi nízkou jistotou; Fabio a Picciotto 2026 [recenzované; 25 studií] spojují problematické užívání sociálních sítí s nepozorností a impulzivitou, převážně průřezově. Experimentální a behaviorální studie převážně čínských studentů z roku 2026 (Xie a kol.; Qiu a kol.) [recenzované] popisují deficity inhibiční kontroly u problematických uživatelů krátkých videí. Americká vzdělávací žurnalistika (Education Week 2025) [média] spojuje pandemii, obrazovky a agresi a dysregulaci malých dětí podle učitelů, bez modelu napodobení ADHD; citovaná magisterská práce z Weber State uvádí u kohorty mateřské školy 2023-24 o 65 % více řešení konfliktů s fyzickou agresí (malá studie se sebevýpověďmi učitelů). Šetření NCES School Pulse Panel z května 2022 [úřední] uvádí, že 87 % amerických veřejných škol hlásilo negativní dopad pandemie na sociálně-emoční vývoj a 83 % na vývoj chování, 56 % více narušování výuky, 11 % více fyzických útoků na personál a 36 % více verbálního napadání personálu; v kole z roku 2025 uvedlo 76 % vedoucích základních škol, že pandemie vývoj chování nadále poškozuje **[neověřeno v plném textu: tisk]**. Soubor o předchůdcích z toho vyvozuje, že silný signál „pandemie → agrese“ pochází ze šetření mezi vedením škol a učiteli, tedy z vnímání, zatímco recenzovaná data ukazují malé, často nevýznamné účinky.
+
+### Kritici: malé účinky, obrácená kauzalita, slabé experimenty a technopanika
+
+Kritická škola je dobře organizovaná. **Candice Odgers** v recenzi Haidtovy knihy v časopise Nature (2024) [recenzované periodikum, recenze knihy; plný text nečten, nature.com blokováno, obsah [jen ze sekundárních zdrojů]] podle shrnutí uvádí, že většina empirického výzkumu velké účinky nenachází a že Haidtova ústřední teze „is not supported by science“; Haidt odpověděl, že s Rauschem shromáždili experimenty, které jeho tvrzení většinou podporují. Odgers a Jensen 2020 [recenzované] shrnují, že nejpřísnější velké předregistrované studie nacházejí malé souvislosti „unlikely to be of clinical or practical significance“, které „do not offer a way of distinguishing cause from effect“. Orben a Przybylski 2019 [recenzované] našli v analýze specifikačních křivek tří souborů dat (n = 355 358) nejvýše 0,4 % vysvětleného rozptylu pohody a Orben 2020 [recenzované] popisuje „Sisyphean Cycle of Technology Panics“, v němž se opakující se paniky (romány, rozhlas, smartphony) vracejí k výzkumu bez teoretického základu. Ferguson 2025 [recenzované, metaanalýza s publikovanou opravou] uvádí, že kauzální účinek experimentů se sociálními sítěmi byl „statistically no different than zero“, a Ferguson, Kaye, Branley-Bell a kol. 2025 [recenzované, metaanalýza 46 studií] píší: „There is no evidence that time spent on social media is correlated with adolescent mental health problems“. Przybylski označuje Haidtovu metodu za „vote counting“ a Etchells data o čase u obrazovek za „inconclusive“ [média]. Proti Spitzerovi vystoupili Appel a Schreiner [recenzované], proti Dunckley Harriet Hall [populární], proti Desmurgetovi Séverine Erhel [populární, blog] a proti Twenge Sarah Rose Cavanagh [populární]. Dienlin 2024 [recenzované, recenze knihy] upozorňuje, že Haidtova kniha stojí na „anecdotal evidence, individual empirical studies, and general theoretical analyses“. Protikritiku formulují Haidt a Rausch na blogu After Babel [populární]: Fergusonovy složené velikosti účinku jsou podle nich chybné a po opravě by výsledek vyšel významně; jde o jejich tvrzení. Část kritiků sama dodává doklady pro časovou citlivost: Orben, Przybylski, Blakemore a kol. 2022 popisují okna vývojové citlivosti na sociální sítě s malými účinky, které „can amplify over developmental time“.
+
+**Hlavní protiargumenty proti hypotéze** jsou podle souboru o předchůdcích šest: (a) selekce a obrácená kauzalita, tedy že děti s ADHD nebo s dysregulací obrazovky vyhledávají (Vasconcellos a kol. 2025: problémy → obrazovky b = 0,06; Werling a kol. 2022); (b) malé velikosti účinku; (c) heterogenita a problémy měření (sebehodnocení, složená skóre); (d) nulové nebo slabé experimenty; (e) historie morálních panik; (f) vysoká dědičnost ADHD (Faraone a Larsson 2019, asi 74 %, ADHD jako extrém spojitého rysu) jako protiváha převážně získanému výkladu. Soubor o předchůdcích dále vyvozuje, že kritici se zabývají hlavně vnitřními potížemi dospívajících (deprese, úzkost, pohoda), zatímco stav podobný ADHD, krátká videa a agresi malých dětí řeší jen málo kritických prací; zastánci a kritici se tak částečně míjejí ve sledovaných výsledcích i věkových skupinách. Kritická recenzovaná odpověď přímo na metaanalýzu krátkých videí nalezena nebyla, kromě komentáře v Reason [média].
+
+### České prostředí: spor o zákaz mobilů, ne o hypotézu
+
+Česká debata se v letech 2025-2026 točí kolem zákazu mobilů ve školách a dělí se do stejných dvou táborů. **Na straně varování** stojí NUDZ: ředitel Jiří Horáček hovoří o „devastujících dopadech“ sociálních sítí na děti [média], NUDZ podporuje zákonem umožněný plošný zákaz mobilů na základních školách během vyučování [média] a jeho odborným podkladem je článek pro časopis Psychiatrie „Generace v síti: Mechanismy a důkazy vlivu smartphonů a sociálních sítí na duševní zdraví dětí a dospívajících“, podle odpovědi NUDZ na žádost o informace v roce 2026 stále v recenzním řízení [úřední; text nezískán]. Zákaz podporují i odborníci ČLS JEP [média]. Překlady populárních knih vydaly Host (Spitzer: Digitální demence 2014, překlad František Ryčl; Kybernemoc 2016) a Noxi (Hari: Ukradená pozornost, 15. 5. 2023); Haidtova Úzkostná generace vyšla česky v nezjištěném roce. Recenze v Acta Informatica Pragensia 2014 Spitzera doporučuje, recenze v časopise Knihovna: knihovnická revue 2016 nesouhlasí s jeho kritikou digitálních médií ve výuce.
+
+**Na skeptické straně** stojí David Šmahel a IRTIS Masarykovy univerzity. Podle Šmahela je u „80 % a více“ dětí vliv sociálních sítí „naprosto minimální nebo žádný“ a nejsilnější ochranou je dobrý vztah rodiče a dítěte [média]; v šetření EU Kids Online (19 zemí) 56 % českých dětí uvedlo, že s nimi rodiče nikdy nebo téměř nikdy nemluví o jejich čase online [média, univerzitní zpravodajství]. Zpráva IRTIS 2026 „Zákazy mobilů ve školách: souvisí se znalostmi žáků, jejich duševní pohodou a kyberšikanou?“ (Juhaňák, Černický, Jaroň Bedrošová, Šmahel) [úřední: výzkumná zpráva pro veřejnou politiku] nenašla na datech PISA 2022 z 21 evropských systémů přímou souvislost zákazů s výsledky v matematice; v českých školách se přísné zákazy pojily s menším užíváním telefonu ve škole, ne však s pohodou, a autoři uzavírají: „Nedoporučujeme plošné zákazy mobilů“. Dětský ombudsman Martin Beneš návrh zákona kritizoval slovy „Zásadně pochybuji o tom, že je důvodné upravovat zákaz mobilních telefonů celostátně“ [média]. Komentář Seznam Zpráv „Nesvádějte problémy dětí na telefony, chyba je jinde“ [média] argumentuje malou nebo žádnou souvislostí a spornými Haidtovými závěry.
+
+**Mezi tábory** dokumentuje Kamil Kopecký (E-Bezpečí, UP Olomouc) užívání a design platforem: v roce 2022 používalo TikTok 68 % českých dětí, v šetření „Čeští žáci v online světě 2025“ jej pravidelně používalo 62 % 13-17letých, Instagram 81 % a YouTube 63 %, a „online agrese přibývá“ [média] **[neověřeno v plném textu: tisk]**. Kopecký popisuje ekosystém opakovaného obsahu navrženého tak, aby děti sledovaly co nejdéle; jeho studie o krátkých videích a pozornosti nalezena nebyla. Dětský psychiatr Michal Goetz v roce 2021 popsal rozpad rutin, zhoršení spánku a rodinných konfliktů a zhoršování pacientů s ADHD [média] a v roce 2026 publikoval úvodník o krizi dětského duševního zdraví v časopise Pediatrie pro praxi [recenzované, úvodník]. České odborné přehledy uvádějí jako pandemické faktory více času u obrazovek, nepravidelný spánek a horší stravu a zaznamenávají nárůst poruch chování a zhoršení pozornosti u dětí s ADHD (Psychiatrie pro praxi 2022; Pediatrie pro praxi 2021) [recenzované]. Psychiatrie pro praxi 2019 [recenzované] uvádí, že obavy, že obrazovky způsobují poruchy pozornosti a hyperaktivitu, „zatím světový výzkum nepotvrdil“, a že elektronická média zkracují spánek, jehož nedostatek napodobuje potíže s pozorností. Pediatrie pro praxi 2024 [recenzované] zmiňuje „virtuální autismus“. V Central European Journal of Public Health vyšel v roce 2026 článek „Digital dementia in adults: an assessment of digital generations“ [recenzované; získán jen název]. Data ČŠI o agresi ve školách rozebírá část H1. **Českého autora, který by formuloval integrovanou tezi** (krátká videa a lockdown → získaný stav podobný ADHD → agrese), poznámky nenašly; napodobení ADHD a agrese se v české debatě objevují jen implicitně.
+
+### Úřední dokumenty přejímají dílčí kroky, ne celý řetězec
+
+Politika se pohybuje rychleji než kauzální důkazy. Žádný úřední dokument nepřejímá integrovanou tezi, několik přejímá její části: citlivost raného věku, škody na pozornosti a soustředění a zesilování příznaků. Podle souboru o předchůdcích žádný z nich nejmenuje krátká videa jako příčinu příznaků podobných ADHD a žádný nespojuje lockdowny s agresí přes obrazovky; zdůvodnění školních zákazů stojí na soustředění, učení a sociálním klimatu.
+
+| Dokument | Co z hypotézy přejímá | Co odmítá nebo nepřejímá |
+|---|---|---|
+| WHO 2019, doporučení pro děti do 5 let [úřední] | obrazovky se nedoporučují do 2 let, ve 2 letech nejvýše 1 hodina („less is better“) | o ADHD a agresi nemluví |
+| Francie, komise „Enfants et écrans. À la recherche du temps perdu“ (Servane Mouton a Amine Benyamina, předáno 30. 4. 2024) [úřední] | žádné obrazovky do 3 let, silné omezení ve 3-6 letech, žádný telefon do 11 let, telefon bez internetu do 13 let; ostražitost před „l'amplification de symptômes“ ADHD a autismu; vyhláška z 27. 6. 2025 zakazuje obrazovky pro děti do 3 let v zařízeních péče | výslovně „les écrans ne sont pas à l'origine de troubles du neurodéveloppement“; komise přiznává metodologická zkreslení literatury |
+| USA, Surgeon General, „Social Media and Youth Mental Health“ (23. 5. 2023) [úřední; obsah [jen ze sekundárních zdrojů]] | cituje dvouletou studii Ra a kol. 2018 o vyšší šanci příznaků ADHD, zdůrazňuje vývojové okno 10-19 let a přestimulování systému odměny | „We do not yet have enough evidence to determine if social media is sufficiently safe for children and adolescents“ |
+| Austrálie, zákon o minimálním věku pro sociální sítě (přijat 29. 11. 2024, účinný od 10. 12. 2025) [úřední] | platformy musí bránit účtům osob mladších 16 let, pokuty až 49,5 milionu australských dolarů, bez sankcí pro děti a rodiče | nezávislé hodnocení do dvou let |
+| Nizozemsko, zákaz telefonů ve školách od roku 2024, hodnocení z července 2025 [úřední; čísla z tisku] | ze 317 středních škol tři čtvrtiny hlásily lepší soustředění, téměř dvě třetiny lepší sociální klima a třetina lepší studijní výsledky | na základních školách minimální účinky, žáci hodnotili opatření 4,8 z 10; podle českého sekundárního zdroje bez účinku na pohodu |
+| Québec, zvláštní komise k dopadům obrazovek a sociálních sítí (závěrečná zpráva konec května 2025, 56 doporučení) [úřední] | „digitální zletilost“ 14 let; průběžná zpráva z dubna 2025 doporučila zákaz telefonů ve třídách, protože škodí soustředění, učení a socializaci; zákaz telefonů ve školách platí od září 2025 | podání parlamentní komisi, podle něhož volnočasové obrazovky mohou vyvolat příznaky podobné ADHD, je známo jen ze souhrnu vyhledávače [jen ze sekundárních zdrojů] |
+| Německo, BLIKK-Medien (2017, studie zadaná spolkovou vládou) [úřední] | 5 573 rodičů a dětí; u dětí do asi 6 let při užívání přes 30 minut denně více poruch vývoje řeči a motorické hyperaktivity, u 8-13letých motorická hyperaktivita a slabší soustředění při více než 60 minutách denně; doporučení 2. 3. 2018 | kritici: směr vztahu je nejasný |
+| Německo, studie DAK a UKE (představena 12. 3. 2025) [úřední, studie pojišťovny a univerzity] | asi 1,3 milionu 10-17letých s rizikovým nebo patologickým užíváním médií, 4,7 % závislých na sociálních sítích, stále nad úrovní roku 2019 | o ADHD a agresi nemluví |
+| MŠMT, metodika k pravidlům používání mobilních telefonů ve školách (únor 2026) [úřední] | nadměrné nebo nevhodné užívání může škodit soustředění, učení, vztahům a pohodě; doporučuje úplné omezení v mateřských školách | základní a střední školy si pravidla určují samy; podle šetření MŠMT z 12. až 14. 5. 2026 má pravidla ve školním řádu 93 % škol (5 083) |
+| Vládní návrh zákona o zákazu mobilů ve školách (schválen vládou 20. 7. 2026, účinnost navržena od 1. 9. 2027) [úřední] | zákaz v mateřských a základních školách a v nižších ročnících víceletých gymnázií a konzervatoří včetně přestávek a družin, s výjimkami ze zdravotních důvodů; zdůvodněn doporučením NUDZ | kritika: ODS (Renata Zajíčková), dětský ombudsman Martin Beneš |
+
+### Které kombinace v dohledaných zdrojích chybějí
+
+Nejbližší dílčí syntézy pokrývají každá nanejvýš polovinu složek.
+
+| Dílčí syntéza | Typ | Pokrývá | Chybí |
+|---|---|---|---|
+| Dunckley 2015 | [populární] | O, N, výbuchy vzteku a dysregulace, P (půst) | L, KV, genetické vymezení, kontrolovaná data |
+| Kardaras 2016 | [populární] | O, ADHD, A, závislost | L, KV, P mimo odstoupení od obrazovek |
+| Hallowell 2005; Hallowell a Ratey 2021 | [populární] | negenetický stav podobný ADHD, „deficit of control over one's attention“ | děti, L, A |
+| Tingate 2025 | [preprint] | digitální přestimulace → neneurovývojový stav podobný ADHD, behaviorální náprava | děti, L, A |
+| Li a kol. 2021 | [recenzované] | pandemické obrazovky → problémy s chováním a hyperaktivita a nepozornost u dětí | N jako konstrukt, R, P |
+| Haidt 2024 | [populární] | O, sociální deprivace, fragmentace pozornosti, spánek | L jako ústřední složka, N, A |
+| Pedrouzo a Krynski 2023 | [recenzované] | pandemie, TikTok, dopamin, poruchy pozornosti, „problematic behaviors“ | N, R, P, vlastní data |
+| Education Week 2025 | [média] | pandemie, obrazovky, agrese a dysregulace malých dětí podle učitelů | model napodobení ADHD |
+
+**Chybějící kombinace.** V žádném dohledaném zdroji se nevyskytuje: (1) krátká videa + lockdown + agrese, tedy práce spojující krátká videa s postpandemickou agresí dětí; (2) krátká videa + napodobení ADHD u malých dětí jako negenetická fenokopie, protože jediná dětská studie krátkých videí (Thajsko, průřezová) uvádí „inattentive behaviors“ a výslovný rámec „ADHD-like“ existuje jen v preprintech o dospělých a studentech; (3) napodobení ADHD + regulační pojetí ADHD, tedy přeformulování ADHD jako poruchy seberegulace podle Barkleyho spojené s tvrzením, že environmentální dysregulace vytváří tentýž fenotyp, k čemuž se v populární podobě nejvíce blíží Hallowell a Ratey, bez dětských dat o obrazovkách a bez pandemie; (4) lockdown + napodobení + vratnost, tedy lockdownová deprivace vytvářející vratný stav podobný ADHD s časovým oknem pro nápravu, protože studie pandemického zhoršení (Li a kol. 2021; Alcon a kol. 2024; Goetz) trajektorie návratu nepopisují; (5) jakákoli česká syntéza těchto složek.
+
+**Novost, neutrálně formulováno.** Každá složka zvlášť má předchůdce, některé dlouholeté. Integrace krátkých videí, pandemie a agrese s výslovným modelem fenokopie a seberegulace se v dohledaných zdrojích jeví jako nepublikovaná. Kritická literatura (Odgers, Orben, Przybylski, Ferguson, Šmahel) by napadla několik článků řetězce: malé velikosti účinku, obrácenou kauzalitu, nulové experimenty a vysokou dědičnost ADHD.
+
+**Zdroje k části Kdo už o tom psal**
+
+- Hallowell 2005, Harvard Business Review, záznam v PubMed
+  - https://pubmed.ncbi.nlm.nih.gov/15697113/
+- Inverse, shrnutí konceptu Attention Deficit Trait
+  - https://inverse.com/mind-body/attention-deficit-trait-how-to-cure-a-mental-traffic-jam
+- Psychology Today, recenze knihy ADHD 2.0 (Hallowell a Ratey 2021)
+  - https://psychologytoday.com/au/blog/therapy-it-s-more-just-talk/202101/adhd-20-edward-h-hallowell-md-and-john-j-ratey-md
+- ADHD+ Substack, kritika rámce VAST
+  - https://adhdplus.substack.com/p/vast-adhd
+- Acta Informatica Pragensia 2014, recenze Digitální demence
+  - https://aip.vse.cz/artkey/aip-201401-0010_Digitalni-demence.php
+- Knihovna: knihovnická revue 2016, recenze
+  - https://knihovnarevue.nkp.cz/dokumenty/2016-2/recenze.pdf/at_download/file
+- Alza.cz, ukázka knihy Kybernemoc
+  - https://dwn.alza.cz/ebook/nahled/pdf/EK18912
+- Echo24, rozhovor se Spitzerem
+  - https://echo24.cz/a/Shpps
+- Appel a Schreiner 2014, Psychologische Rundschau, Digitale Demenz
+  - https://doi.org/10.1026/0033-3042/a000186
+- idw, tisková zpráva k Appel a Schreiner 2014
+  - https://idw-online.de/de/news579766
+- Appel a Schreiner 2015, duplika na Spitzerovu repliku (PDF)
+  - https://www.mcm.uni-wuerzburg.de/fileadmin/06110300/user_upload/Publikationen/Appel_-_Schreiner_2015_Stellungnahme_zu_Spitzers_Replik.pdf
+- Pharmazeutische Zeitung 2015, recenze Digital Junkies
+  - https://www.pharmazeutische-zeitung.de/ausgabe-172015/mehr-als-ein-nischenproblem/
+- Shortform, shrnutí knihy Dunckley
+  - https://www.shortform.com/pdf/reset-your-childs-brain-pdf-victoria-l-dunckley
+- Centre County Library, katalogový záznam knihy Dunckley
+  - https://search.centrecountylibrary.org/Record/371568/Description
+- Publishers Weekly, záznam knihy Dunckley
+  - https://www.publishersweekly.com/9781608682843
+- Dunckley 2012, blog Psychology Today, Electronic Screen Syndrome
+  - https://www.psychologytoday.com/us/blog/mental-wealth/201207/electronic-screen-syndrome-an-unrecognized-disorder
+- Harriet Hall, SkepDoc, kritika Electronic Screen Syndrome
+  - https://www.skepdoc.info/electronic-screen-syndrome-is-it-real/
+- Skeptic, článek o Electronic Screen Syndrome
+  - https://www.skeptic.com/?p=38727
+- Dan's Papers 2016, recenze Glow Kids
+  - https://www.danspapers.com/2016/08/by-the-book-glow-kids-links-screen-tech-to-addiction-adhd
+- WSHU 2016, recenze Glow Kids
+  - https://www.wshu.org/culture/2016-12-27/book-review-glow-kids
+- Kidslox, recenze Glow Kids
+  - https://kidslox.com/guide-to/glow-kids-how-screen-addiction-is-hijacking-our-kids/
+- Critiques Libres, recenze La Fabrique du crétin digital
+  - https://www.critiqueslibres.com/livre/61468-la-fabrique-du-cretin-digital-les-dangers-des-ecrans-pour-nos-enfants-desmurget-michel
+- Blog Lyonel Kaufmann 2019, stanovisko Séverine Erhel
+  - https://lyonelkaufmann.ch/histoire/2019/10/25/les-ecrans-rendent-ils-cretins-non-cest-lusage-que-lon-en-fait
+- Next Big Idea Club, Lembke, Dopamine Nation
+  - https://nextbigideaclub.com/magazine/dopamine-nation-finding-balance-age-indulgence-bookbite/30927/
+- Rosi Sexton, recenze Stolen Focus
+  - https://rosisexton.me/some-thoughts-about-stolen-focus-by-johann-hari/
+- Český vydavatelský záznam Ukradená pozornost
+  - https://czechmovie.com/products/9788081116261
+- UC Irvine, podcast s Gloria Mark
+  - https://news.uci.edu/2023/05/05/uci-podcast-if-you-cant-pay-attention-youre-not-alone
+- LitCharts, shrnutí kapitoly 5 knihy The Anxious Generation
+  - https://www.litcharts.com/lit/the-anxious-generation/chapter-5
+- Stránka knihy The Anxious Generation
+  - https://anxiousgeneration.com/book
+- Katalog KJM, záznam The Anxious Generation
+  - https://katalog.kjm.cz/arl-kjm/en/detail-kjm_us_cat-0130543-The-anxious-generation/
+- NetFamilyNews, kritika knihy iGen
+  - https://www.netfamilynews.org/generation-destroying-smartphone-researchers-push-back
+- Hachette, Etchells, Unlocked
+  - https://www.hachette.co.uk/titles/pete-etchells/unlocked/9780349432946/
+- The Week, shrnutí článku WSJ „TikTok brain“
+  - https://theweek.com/health-and-wellness/1025836/tiktok-brain-and-attention-spans
+- Li a kol. 2021, JAMA Network Open, obrazovky a duševní zdraví v Ontariu
+  - https://doi.org/10.1001/jamanetworkopen.2021.40875
+- Alonso-Martínez a kol. 2021, IJERPH, španělští předškoláci v lockdownu
+  - https://doi.org/10.3390/ijerph18020693
+- Alcon a kol. 2024, Psychology International, předškolní děti
+  - https://doi.org/10.3390/psycholint6040062
+- Waller a kol. 2021, Child Psychiatry Hum Dev, problémy s chováním během pandemie (abstrakt nezískán)
+  - https://doi.org/10.1007/s10578-020-01109-y
+- Abdoli a kol. 2025, J Paediatr Child Health, děti s ADHD během pandemie
+  - https://doi.org/10.1111/jpc.70003
+- Dessain a kol. 2023, Neurosci Biobehav Rev, mládež s ADHD během pandemie
+  - https://doi.org/10.1016/j.neubiorev.2023.105502
+- Pedrouzo a Krynski 2023, Arch Argent Pediatr, narativní přehled
+  - https://doi.org/10.5546/aap.2022-02674.eng
+- Arouch, Edgcumbe a Pezaro 2026, BMJ Public Health, krátká videa u mladých dospělých
+  - https://doi.org/10.1136/bmjph-2025-004086
+- David 2024, Social Science Computer Review, TikTok Brain
+  - https://doi.org/10.1177/08944393241279422
+- Chiencharoenthanakij a kol. 2025, Brain and Behavior, thajské děti 6-12 let
+  - https://doi.org/10.1002/brb3.70656
+- Tingate 2025, preprint OSF, Digital Hypervigilance
+  - https://doi.org/10.31219/osf.io/pt8em_v1
+- Al Zannati 2026, preprint Research Square
+  - https://doi.org/10.21203/rs.3.rs-9095165/v1
+- Victor a kol. 2023, J Atten Disord, post-COVID-19 ADHD-like syndrome
+  - https://doi.org/10.1177/10870547231168338
+- Harlé 2019, Trends Neurosci Educ, virtuální autismus
+  - https://doi.org/10.1016/j.tine.2019.100119
+- Özyazıcı 2026, Acta Psychologica, virtuální autismus (jen metadata)
+  - https://doi.org/10.1016/j.actpsy.2026.107285
+- Barkley 1997, Psychological Bulletin, teorie behaviorální inhibice
+  - https://doi.org/10.1037/0033-2909.121.1.65
+- Shaw, Stringaris, Nigg a Leibenluft 2014, Am J Psychiatry, emoční dysregulace v ADHD
+  - https://doi.org/10.1176/appi.ajp.2013.13070966
+- Orben a kol. 2022, Nature Communications, okna vývojové citlivosti
+  - https://doi.org/10.1038/s41467-022-29296-3
+- Zhao a kol. 2026, Front Pediatr, obrazovky a riziko ADHD
+  - https://doi.org/10.3389/fped.2026.1860549
+- Gonçalves Júnior a kol. 2026, Compr Child Adolesc Nurs, čas u obrazovek u dětí s ADHD
+  - https://doi.org/10.1080/24694193.2026.2640837
+- Fabio a Picciotto 2026, Res Dev Disabil, problematické užívání sociálních sítí
+  - https://doi.org/10.1016/j.ridd.2026.105237
+- Xie a kol. 2026, BMC Psychology, inhibice u problematických uživatelů krátkých videí
+  - https://doi.org/10.1186/s40359-026-04233-x
+- Qiu a kol. 2026, Computers in Human Behavior Reports, krátká videa a inhibice
+  - https://doi.org/10.1016/j.chbr.2026.101276
+- Education Week, červenec 2025, výbuchy vzteku v mateřských školách
+  - https://www.edweek.org/teaching-learning/crying-yelling-shutting-down-theres-a-surge-in-kindergarten-tantrums-why/2025/07
+- Weber State University, záznam magisterské práce
+  - https://digital.weber.edu/details?id=168378
+- THE Journal, shrnutí NCES School Pulse Panel 2022
+  - https://thejournal.com/Articles/2022/07/07/Majority-of-Schools-Say-Pandemic-Impacts-on-Students-Staffing-Worse-in-Most-Recent-School-Year.aspx
+- Carolina Journal, pandemie a chování žáků
+  - https://www.carolinajournal.com/pandemic-triggers-rise-in-student-misbehavior-threats-against-teachers/
+- Odgers 2024, Nature, recenze knihy The Anxious Generation
+  - https://doi.org/10.1038/d41586-024-00902-2
+- pxlnv, sekundární shrnutí recenze Odgers
+  - https://pxlnv.com/linklog/anxious-generation-review/
+- 3 Quarks Daily, odpověď Haidta
+  - https://3quarksdaily.com/?p=252281
+- Odgers a Jensen 2020, JCPP, přehled
+  - https://doi.org/10.1111/jcpp.13190
+- Orben a Przybylski 2019, Nature Human Behaviour
+  - https://doi.org/10.1038/s41562-018-0506-1
+- Orben 2020, Perspectives on Psychological Science, cyklus technologických panik
+  - https://doi.org/10.1177/1745691620919372
+- Ferguson 2024/2025, Psychology of Popular Media, metaanalýza experimentů se sítěmi
+  - https://doi.org/10.1037/ppm0000541
+- Ferguson 2025, odpověď na reanalýzu
+  - https://doi.org/10.1037/ppm0000592
+- Ferguson, Kaye, Branley-Bell a kol. 2025, Professional Psychology: Research and Practice
+  - https://doi.org/10.1037/pro0000589
+- After Babel, Haidt a Rausch, kritika Fergusonových metaanalýz
+  - https://www.afterbabel.com/p/fundamental-flaws-part-2
+- Platformer, debata o knize The Anxious Generation
+  - https://platformer.news/anxious-generation-jonathan-haidt-debate-critique/
+- Fortune, kritika knihy The Anxious Generation
+  - https://fortune.com/well/article/anxious-generation-researcher-social-media-youth-mental-health-crisis-criticism
+- Dienlin 2024, Journalism and Mass Communication Quarterly, recenze knihy
+  - https://doi.org/10.1177/10776990241268990
+- Vasconcellos a kol. 2025, Psychological Bulletin, longitudinální metaanalýza
+  - https://doi.org/10.1037/bul0000468
+- Werling a kol. 2022, J Behav Addict, problematické užívání u ADHD
+  - https://doi.org/10.1556/2006.2022.00007
+- Faraone a Larsson 2019, Molecular Psychiatry, genetika ADHD
+  - https://doi.org/10.1038/s41380-018-0070-0
+- Reason, kritický komentář k metaanalýze krátkých videí
+  - https://reason.com/2025/12/31/study-short-form-video-isnt-rotting-your-brain
+- Echo24, Horáček o zákazu sociálních sítí
+  - https://www.echo24.cz/a/HswJs/zpravy-domaci-zakaz-socialnich-siti-pro-deti-do-15-let-vlada-babis-nudz-prof-horacek-analyza
+- ČTK / České noviny, NUDZ a zákaz mobilů o přestávkách
+  - https://www.ceskenoviny.cz/zpravy/zakaz-mobilu-ve-skole-by-mel-platit-i-o-prestavkach-plyne-z-navrhu/2841932
+- NUDZ, odpověď na žádost o informace 2026
+  - https://www.nudz.cz/fileadmin/user_upload/Ke_stazeni/O_nas/Zadost_o_informace_2026_8.pdf
+- Advokátní deník, 23. 7. 2026, odborníci ČLS JEP k zákazu mobilů
+  - https://advokatnidenik.cz/2026/07/23/odbornici-zakaz-mobilu-ve-skolach-ma-chranit-dusevni-zdravi-deti/
+- MUNI 2020, výzkum EU Kids Online (PDF)
+  - https://is.muni.cz/do/fi/napsali_o_fi/rok_2020_int/2020-02-11-vyzkum-cesti-rodice-se-nebavi-s-detmi-o-tom-co-delaji-na-internetu.em.muni.cz.pdf?kod=IB015
+- Lupa.cz, rozhovor s Davidem Šmahelem
+  - https://www.lupa.cz/clanky/david-smahel-muni-neresme-zakazy-socialnich-siti-a-telefonu-ale-spis-to-proc-detem-neni-ve-skole-dobre/
+- Seznam Zprávy, rozhovor se Šmahelem o zákazu sociálních sítí
+  - https://www.seznamzpravy.cz/clanek/domaci-zivot-v-cesku-expert-zakaz-socialnich-siti-muze-mladym-i-uskodit-268251
+- IRTIS 2026, Zákazy mobilů ve školách (PDF)
+  - https://irtis.muni.cz/media/4116144/zakazy-mobilu-report.pdf
+- ČT24, experti z Masarykovy univerzity k zákazu sítí
+  - https://ct24.ceskatelevize.cz/clanek/domaci/nezakazujte-mladym-socialni-site-doporucuji-experti-z-masarykovy-univerzity-370157
+- Seznam Zprávy, komentář „Nesvádějte problémy dětí na telefony“
+  - https://www.seznamzpravy.cz/clanek/nazory-komentare-pod-carou-nesvadejte-problemy-deti-na-telefony-chyba-je-jinde-250262
+- Seznam Zprávy, Kopecký a TikTok 2022
+  - https://www.seznamzpravy.cz/clanek/302824
+- MediaGuru, Čeští žáci v online světě 2025
+  - https://www.mediaguru.cz/clanky/2025/12/u-deti-vede-instagram-a-yt-propada-facebook-online-agrese-pribyva/
+- 2. LF UK, rozhovor s Michalem Goetzem (2021)
+  - https://www.lf2.cuni.cz/files/documents/article/2021/special-rozhovory-brezen-goetz.pdf
+- Goetz 2026, Pediatrie pro praxi, úvodník o dětském duševním zdraví
+  - https://pediatriepropraxi.cz/artkey/ped-202602-0011_detske_dusevni_zdravi_v_krizi_zmeny_systemu_nelze_dale_odkladat.php?l=en
+- Psychiatrie pro praxi 2022, pandemie a děti
+  - https://psychiatriepropraxi.cz/pdfs/psy/2022/01/15.pdf
+- Pediatrie pro praxi 2021, pandemie a děti
+  - https://www.pediatriepropraxi.cz/pdfs/ped/2021/06/01.pdf
+- Psychiatrie pro praxi 2019, obrazovky a pozornost
+  - https://www.psychiatriepropraxi.cz/view/e2019/ePSY_02_19/files/assets/common/downloads/page0004.pdf
+- Pediatrie pro praxi 2024, zmínka o virtuálním autismu
+  - https://pediatriepropraxi.cz/view/e2024/ePED_04_24/files/assets/common/downloads/page0035.pdf
+- Central European Journal of Public Health 2026, Digital dementia in adults
+  - https://doi.org/10.21101/cejph.a8850
+- PAHO/WHO 2019, doporučení pro děti do 5 let
+  - https://www.paho.org/en/news/24-4-2019-grow-healthy-children-need-sit-less-and-play-more
+- Vie-publique, zpráva francouzské komise Enfants et écrans (PDF)
+  - https://www.vie-publique.fr/files/rapport/pdf/293978.pdf
+- Francouzské ministerstvo zdravotnictví, Enfants et écrans
+  - https://solidarites.gouv.fr/enfants-et-ecrans-des-risques-sanitaires-reels-un-accompagnement-necessaire
+- Psychiatrist.com, shrnutí doporučení US Surgeon General 2023
+  - https://www.psychiatrist.com/news/surgeon-general-advisory-social-media-poses-profound-risk-of-harm-to-kids
+- eSafety Commissioner, australský minimální věk pro sociální sítě
+  - https://www.esafety.gov.au/social-media-age-restrictions
+- Malay Mail / AFP, hodnocení nizozemského zákazu telefonů 2025
+  - https://malaymail.com/news/life/2025/07/06/study-finds-smartphone-bans-in-dutch-schools-improved-focus/182897
+- DutchNews 2024, zákaz telefonů ve školách
+  - https://www.dutchnews.nl/2024/05/school-ban-on-phones-results-in-concentration-and-conversation
+- Seznam Zprávy, nizozemský zákaz a pohoda dětí
+  - https://www.seznamzpravy.cz/clanek/kampus-zakladni-vzdelavani-tady-je-bezmobilova-zona-jak-mohou-skoly-omezit-telefony-293822
+- Vláda Québecu, závěrečná zpráva zvláštní komise 2025
+  - https://www.quebec.ca/nouvelles/actualites/details/impacts-des-ecrans-chez-les-jeunes-la-commission-speciale-depose-son-rapport-final-63234
+- BAnQ, podání parlamentní komisi v Québecu (jen ze souhrnu vyhledávače)
+  - https://collections.banq.qc.ca/document/s/t/UqN0ys43IcwkC18LaITXTA
+- Spolkové ministerstvo zdravotnictví, BLIKK-Medien 2017
+  - https://www.bundesgesundheitsministerium.de/service/publikationen/details/blikk-medien-kinder-und-jugendliche-im-umgang-mit-elektronischen-medien
+- Ärzteblatt, studie DAK a UKE 2025
+  - https://www.aerzteblatt.de/themen/kindergesundheit/wachsende-mediensucht-bei-kindern-und-jugendlichen-experten-zeigen-sich-besorgt-ad077aab-3476-45a9-9d7a-8f70fce069bd
+- MŠMT, metodika k pravidlům používání mobilních telefonů ve školách (únor 2026)
+  - https://edu.gov.cz/wp-content/uploads/2026/02/Metodika-k-nastavovani-pravidel-pouzivani-mobilinich-telefonu-a-jinych-el.-zarizeni-ve-skolach.pdf
+- MŠMT, dotazníkové šetření k regulaci mobilních telefonů (květen 2026)
+  - https://edu.gov.cz/wp-content/uploads/2026/05/Dotaznikove-setreni-regulace-MT-metodika.pdf
+- Lupa.cz, plošný zákaz mobilů prošel vládou
+  - https://www.lupa.cz/aktuality/plosny-zakaz-mobilu-ve-skolach-prosel-vladou-platit-ma-od-pristiho-zari/
+- Forbes CZ, zákaz mobilů ve školách
+  - https://forbes.cz/babis-prosadil-zakaz-mobilu-ve-skolach-platit-ma-od-zari-pristiho-roku/
+- Echo24, zákaz telefonů a opozice
+  - https://www.echo24.cz/a/HFfDs/zakaz-telefonu-mobily-smartphony-skoly-vzdelavani-deti-mladistvi-digitalni-zavislosti-ods-babis-krejci-smejkalova
+- CNN Prima, zákaz mobilů a opozice
+  - https://cnn.iprima.cz/zakaz-mobilu-ve-skolach-narazi-u-opozice-vedecka-data-jasny-prinos-neukazuji-518109
+- Echo24, ČŠI a agrese ve školách
+  - https://www.echo24.cz/a/HLF5N/zpravy-domov-roste-agrese-na-skolach-pribyva-slovni-utoky-i-zaskolactvi
+
+## Návrh přeformulované teze, kterou současná data unesou
+
+**Tato část je vlastní inferencí této zprávy.** Nevychází z jediné studie, ale skládá zjištění z částí H1 až H7 do formulace, kterou lze podle dohledaných dat obhájit v psychologické, biologické i neurovědní rovině. U každé části je uveden typ opory. Části označené jako hypotéza je nutné v textu jako hypotézu i formulovat.
+
+**Navržené znění (inference této zprávy).** Po pandemii se v Česku i v řadě dalších zemí mění spíše skladba a viditelnost agrese dětí a mladistvých než její celková míra: v registrované kriminalitě přibývá násilných činů v úzkých podskupinách a školy hlásí více případů, zatímco celkové počty v přepočtu na obyvatele a sebevýpovědi žáků do roku 2022 nárůst neukazují. U části dětí se během lockdownů zhoršila seberegulace, tedy zvládání pozornosti, emocí a spánku, silněji při přísnějších opatřeních a v rodinách pod tlakem; u většiny dětí šlo o přechodnou změnu, u menšiny o trvalejší. Přispívajícími cestami jsou rodinný stres, ztráta struktury a péče mimo domov, nedostatek spánku a pohybu a problematické, návykové užívání digitálních médií, které se s nepozorností a externalizací pojí silněji než samotný čas u obrazovek; vztah je malý a obousměrný. Takový stav může klinicky připomínat ADHD, protože ADHD je extrém spojité dimenze, po níž se projevy posouvají i vlivem prostředí. Nejlépe doloženým environmentálním zdrojem obrazu podobného ADHD je nedostatek spánku, který vyvolává hlavně nepozornost, emoční labilitu a podrážděnost, obvykle bez hyperaktivity. Výzkum nepodporuje, že by obrazovky způsobovaly poruchu ADHD; část jejich souvislosti s pozorností je genetická, a dítě s návykovým užíváním a příznaky podobnými ADHD proto potřebuje vyšetření, nikoli předpoklad získaného stavu. Úprava spánku, médií a rodičovství krátkodobě zlepšuje emoční potíže, opoziční chování a agresi, jádrové příznaky diagnostikovaného ADHD však v zaslepených hodnoceních nemění. Dlouhé zrání prefrontální kůry znamená dlouhé období zranitelnosti i dlouhou možnost nápravy; uzavírající se okno je doloženo jen pro těžkou ranou deprivaci. Pro včasný zásah nejvíce svědčí to, že děti s výraznými potížemi na začátku pandemie se zotavovaly hůře.
+
+| Část hypotézy | Navržená formulace | Na čem stojí | Status v textu |
+|---|---|---|---|
+| 1 Trend agrese | Po pandemii se mění skladba a viditelnost agrese dětí a mladistvých; celková registrovaná kriminalita dětí v Česku v přepočtu na obyvatele předpandemickou úroveň nepřekračuje | registrovaná kriminalita (ČSÚ a Policejní prezidium, IKSP), zpravodajství o zprávě NSZ, hlášení ČŠI, sebevýpovědi HBSC (Molcho a kol. 2025; Prati 2025) | doloženo pro skladbu a školní hlášení; česká čísla **[neověřeno v plném textu]**; celkový nárůst nedoložen |
+| 2 Lockdowny | U části dětí se zhoršila seberegulace a emoční pohoda, víc při přísnějších opatřeních a v zatížených rodinách; u většiny přechodně | metaanalýzy a kohorty s předpandemickým měřením (Stacheder a kol. 2026; Kaman a kol. 2024), kvazi-experiment Hjern a kol. 2025 | doloženo jako malý, většinou přechodný účinek; agrese nejméně konzistentní výsledek |
+| 3 Mechanismus lockdownu | Hlavní cestou byl rodinný stres a ztráta péče mimo domov, méně izolace sama | Murray a kol. 2023, Stracke a kol. 2023, Hjern a kol. 2025, Sato a kol. 2023 | částečně doloženo; formální oddělení od vlivu obrazovek chybí |
+| 4 Obrazovky | S horší pozorností a externalizací se pojí hlavně návykové užívání a nevhodný obsah a kontext, méně čas; vztah je malý a obousměrný | metaanalýzy a kohorty (Vasconcellos a kol. 2025; Thorell a kol. 2024; Xiao a kol. 2025; Nivins a kol. 2026; Mallawaarachchi a kol. 2024) | doloženo jako souvislost; kauzalita jen pro malé posuny příznaků |
+| 5 Krátká videa | Krátká videa korelují s horší pozorností a inhibicí; kauzálně a u dětí mladších 12 let to doloženo není | Nguyen a kol. 2025 (převážně korelační studie), Ebster a kol. 2026, Chiencharoenthanakij a kol. 2025, Liu a kol. 2025 | hypotéza |
+| 6 Stav podobný ADHD | Prostředí může vyvolat stav podobný ADHD; nejlépe doložený je nedostatek spánku (nepozornost, labilita, podrážděnost, obvykle bez hyperaktivity) a těžká raná deprivace | experimenty se spánkem (Fallone a kol. 2005; Gruber a kol. 2012; Becker a kol. 2019), studie ERA (Kennedy a kol. 2016), konsenzus Světové federace ADHD (Faraone a kol. 2021) | doloženo pro spánek a deprivaci; pro obrazovky hypotéza |
+| 7 Pojetí ADHD | ADHD lze vykládat jako poruchu seberegulace v tradici Barkleyho; jde o etablovanou teorii s oponenty, ne o platnou definici | Barkley 1997, Shaw a kol. 2014; protiváha Willcutt a kol. 2005, Faraone a kol. 2019 | teorie; slovo „misnomer“ v recenzované literatuře nenalezeno |
+| 8 Genetika a dimenze | ADHD je vysoce dědičné, ale chová se jako extrém spojité dimenze; prostředí posouvá projevy po téže dimenzi, a ostré dělení na „pravé“ a „získané“ proto data nepodporují | Faraone a Larsson 2019, Larsson a kol. 2012, Thapar 2018, Visscher, Hill a Wray 2008, Sibley a kol. 2022, Rydell a kol. 2018 | doloženo |
+| 9 Obrazovky a porucha | Výzkum nepodporuje, že by obrazovky způsobovaly poruchu ADHD; malé posuny úrovně příznaků doloženy jsou | Levelink a kol. 2021, Zhang a kol. 2023, Frei a kol. 2025, Wallace a kol. 2023, Nivins a kol. 2026 | doloženo ve formě „výzkum nepodporuje“; absolutní „nemohou“ nedoloženo |
+| 10 Náprava | Změny spánku, médií a rodičovství zlepšují emoční potíže, opoziční chování a agresi; jádrové příznaky diagnostikovaného ADHD v zaslepených hodnoceních nemění; úplné vymizení získaného stavu testováno nebylo | Daley a kol. 2014, Sonuga-Barke a kol. 2013, Schmidt-Persson a kol. 2024, Robinson a kol. 2001, Hiscock a kol. 2015 | částečně doloženo, krátkodobě |
+| 11 Plasticita a včasnost | Dlouhé zrání asociační kůry znamená dlouhou zranitelnost i dlouhou možnost nápravy; uzavírající se okno je doloženo jen pro těžkou ranou deprivaci; včasný zásah podporuje horší zotavení dětí s výraznými potížemi | Sydnor a kol. 2021, Nelson a kol. 2007, Humphreys a kol. 2015, Reiss a kol. 2026, Co-SPACE (konferenční abstrakt 2023) | obecně doloženo; pro obrazovky a lockdown hypotéza |
+| 12 Spojení s dnešním násilím | Spojení lockdownů s násilím mladistvých v letech 2024-2025 vyžaduje kohortový mechanismus, který dosud nikdo netestoval | inference této zprávy z částí H1 a H2 | hypotéza |
+
+**Formulace, kterým se vyhnout.** Data nepodporují tyto podoby původních tvrzení: „agrese dětí roste“ bez uvedení ukazatele, období a srovnávacího základu; „ADHD je špatně pojmenováno“ jako fakt, protože slovo „misnomer“ ve vztahu k ADHD v recenzované literatuře nalezeno nebylo a regulační pojetí je jednou z několika teorií; „ADHD je genetické, a obrazovky ho proto způsobit nemohou“ jako absolutní tvrzení, protože dědičnost je populační parametr a malé posuny příznaků vlivem prostředí doloženy jsou; „behaviorální změna získaný stav vyřeší“, protože úplné vymizení testováno nebylo a zlepšení po změně prostředí získaný stav od ADHD nerozlišuje; „mozek z obrazovek se podobá mozku s ADHD“, protože přímé srovnání vzorců chybí a nálezy se liší metrikou i směrem; a „bez včasné intervence je výsledek nejistý“ bez upřesnění, co se po kterém věku mění, protože taková věta je téměř nevyvratitelná.
+
+**Hypotézy, které lze v textu nabídnout jako testovatelné (inference této zprávy).** Kohortová hypotéza: mladiství v letech 2024-2025, kteří byli v letech 2020-2021 ve věku 10-13 let, mají vyšší míru násilných činů na obyvatele než dřívější kohorty ve stejném věku, i po zohlednění zákona č. 333/2020 Sb. a citlivosti hlášení. Hypotéza profilu: environmentálně podmíněný stav má více nepozornosti, emoční lability a podrážděnosti a méně hyperaktivity než ADHD; plyne z experimentů se spánkem a pro obrazovky testována nebyla. Intervenční hypotéza: omezení obrazovek u dětí se zvýšenými příznaky podobnými ADHD zlepší učiteli zaslepeně hodnocenou nepozornost a podrážděnost, u dětí s diagnostikovaným ADHD však jádrové příznaky nenormalizuje. Mediační hypotéza: souvislost návykového užívání s nepozorností vede zčásti přes zkrácení spánku; formální test s objektivními měřítky chybí. Hypotéza o agresi: pokud agrese vzniká z dysregulace, měla by reagovat na stejné intervence jako problémy s chováním u ADHD, u nichž rodičovský trénink působí i při zaslepeném hodnocení (SMD 0,31; Daley a kol. 2014).
+
+**Zdroje k návrhu přeformulované teze**
+
+- ČSÚ, Kriminalita (časové řady)
+  - https://csu.gov.cz/kriminalita
+- IKSP, shrnutí studie Násilná kriminalita dětí mladších 15 let (2023)
+  - https://iksp.gov.cz/storage/169/summary_Violent-crime-of-children-under-15-years-of-age_IKSP-2023.pdf
+- ČT24, zpráva NSZ za rok 2025
+  - https://ct24.ceskatelevize.cz/clanek/domaci/mira-kriminality-v-cesku-stagnuje-pribyva-agrese-u-deti-375069
+- Blesk, výroční zpráva ČŠI 2023/24
+  - https://www.blesk.cz/clanek/zpravy-udalosti-domaci/829709/inspekce-ve-skolach-pribylo-agrese-vuci-spoluzakum-a-sebeposkozovani.html
+- Molcho a kol. 2025, Int J Public Health, HBSC 1994-2022
+  - https://doi.org/10.3389/ijph.2025.1607654
+- Prati 2025, Behavioral Sciences, HBSC 2013/14-2021/22
+  - https://doi.org/10.3390/bs16010036
+- Právní prostor, zdvojnásobení hranic škody (zákon č. 333/2020 Sb.)
+  - https://pravniprostor.cz/clanky/trestni-pravo/hranice-skody-se-v-trestnepravnich-kauzach-zvysuje-na-dvojnasobek
+- Stacheder, Oppermann a Anders 2026, Child Development, metaanalýza 157 studií
+  - https://doi.org/10.1093/chidev/aacag090
+- Kaman a kol. 2024, trajektorie COPSY
+  - https://doi.org/10.1186/s13034-024-00776-2
+- Hjern a kol. 2025, Acta Paediatrica, švédské předškolní děti
+  - https://doi.org/10.1111/apa.70410
+- Murray a kol. 2023, JAACAP, Pelotas 2015
+  - https://doi.org/10.1016/j.jaac.2022.07.832
+- Stracke a kol. 2023, IJERPH, duševní zdraví rodičů a dětí
+  - https://doi.org/10.3390/ijerph20054485
+- Sato a kol. 2023, JAMA Pediatrics, japonské jesle
+  - https://doi.org/10.1001/jamapediatrics.2023.2096
+- Vasconcellos a kol. 2025, Psychological Bulletin, longitudinální metaanalýza
+  - https://doi.org/10.1037/bul0000468
+- Thorell a kol. 2024 (online 2022), Eur Child Adolesc Psychiatry, longitudinální přehled
+  - https://doi.org/10.1007/s00787-022-02130-3
+- Xiao a kol. 2025, JAMA, návykové užívání v ABCD
+  - https://doi.org/10.1001/jama.2025.7829
+- Nivins a kol. 2026, Pediatrics Open Science, sociální sítě a nepozornost
+  - https://doi.org/10.1542/pedsos.2025-000922
+- Mallawaarachchi a kol. 2024, JAMA Pediatrics, kontext užívání obrazovek do 6 let
+  - https://doi.org/10.1001/jamapediatrics.2024.2620
+- Nguyen a kol. 2025, Psychological Bulletin, metaanalýza krátkých videí
+  - https://doi.org/10.1037/bul0000498
+- Ebster a kol. 2026, Eur Child Adolesc Psychiatry, krátká videa u mládeže
+  - https://doi.org/10.1007/s00787-026-03083-7
+- Chiencharoenthanakij a kol. 2025, Brain and Behavior, thajské děti 6-12 let
+  - https://doi.org/10.1002/brb3.70656
+- Liu a kol. 2025, NeuroImage, prediktory závislosti na krátkých videích
+  - https://doi.org/10.1016/j.neuroimage.2025.121605
+- Fallone a kol. 2005, Sleep, omezení spánku a hodnocení učiteli
+  - https://doi.org/10.1093/sleep/28.12.1561
+- Gruber a kol. 2012, Pediatrics, prodloužení a zkrácení spánku
+  - https://doi.org/10.1542/peds.2012-0564
+- Becker a kol. 2019, JAACAP, zkrácení spánku u dospívajících s ADHD
+  - https://doi.org/10.1016/j.jaac.2018.09.439
+- Kennedy a kol. 2016, JCPP, ERA a varianta ADHD po deprivaci
+  - https://doi.org/10.1111/jcpp.12576
+- Faraone a kol. 2021, Neurosci Biobehav Rev, konsenzus Světové federace ADHD
+  - https://doi.org/10.1016/j.neubiorev.2021.01.022
+- Barkley 1997, Psychological Bulletin, teorie behaviorální inhibice
+  - https://doi.org/10.1037/0033-2909.121.1.65
+- Shaw, Stringaris, Nigg a Leibenluft 2014, Am J Psychiatry, emoční dysregulace v ADHD
+  - https://doi.org/10.1176/appi.ajp.2013.13070966
+- Willcutt a kol. 2005, Biological Psychiatry, validita exekutivní teorie
+  - https://doi.org/10.1016/j.biopsych.2005.02.006
+- Faraone a kol. 2019, JCPP, emoční dysregulace v ADHD
+  - https://doi.org/10.1111/jcpp.12899
+- Faraone a Larsson 2019, Molecular Psychiatry, genetika ADHD
+  - https://doi.org/10.1038/s41380-018-0070-0
+- Larsson a kol. 2012, JCPP, ADHD jako extrém spojitého rysu
+  - https://doi.org/10.1111/j.1469-7610.2011.02467.x
+- Thapar 2018, Am J Psychiatry, genetika ADHD ve 21. století
+  - https://doi.org/10.1176/appi.ajp.2018.18040383
+- Visscher, Hill a Wray 2008, Nature Reviews Genetics, dědičnost a omyly
+  - https://doi.org/10.1038/nrg2322
+- Sibley a kol. 2022, Am J Psychiatry, remise v MTA
+  - https://doi.org/10.1176/appi.ajp.2021.21010032
+- Rydell a kol. 2018, JCPP, fenotyp ADHD 2004-2014
+  - https://doi.org/10.1111/jcpp.12882
+- Levelink a kol. 2021, J Atten Disord, kohorta KOALA
+  - https://doi.org/10.1177/1087054720953897
+- Zhang a kol. 2023, JAMA Network Open, sdílené genetické riziko
+  - https://doi.org/10.1001/jamanetworkopen.2023.41502
+- Frei a kol. 2025, Psychiatry Research, MoBa
+  - https://doi.org/10.1016/j.psychres.2025.116761
+- Wallace a kol. 2023, Scientific Reports, změny uvnitř jedince
+  - https://doi.org/10.1038/s41598-023-44105-7
+- Daley a kol. 2014, JAACAP, behaviorální intervence u ADHD
+  - https://doi.org/10.1016/j.jaac.2014.05.013
+- Sonuga-Barke a kol. 2013, Am J Psychiatry, nefarmakologické intervence
+  - https://doi.org/10.1176/appi.ajp.2012.12070991
+- Schmidt-Persson a kol. 2024, JAMA Network Open, SCREENS a duševní zdraví
+  - https://doi.org/10.1001/jamanetworkopen.2024.19881
+- Robinson a kol. 2001, Arch Pediatr Adolesc Med, RCT a agrese
+  - https://doi.org/10.1001/archpedi.155.1.17
+- Hiscock a kol. 2015, BMJ, spánková intervence u ADHD
+  - https://doi.org/10.1136/bmj.h68
+- Sydnor a kol. 2021, Neuron, vývoj asociační kůry
+  - https://doi.org/10.1016/j.neuron.2021.06.016
+- Nelson a kol. 2007, Science, BEIP
+  - https://doi.org/10.1126/science.1143921
+- Humphreys a kol. 2015, Lancet Psychiatry, BEIP ve 12 letech
+  - https://doi.org/10.1016/S2215-0366(15)00095-4
+- Reiss a kol. 2026, BMC Public Health, socioekonomický gradient
+  - https://doi.org/10.1186/s12889-026-26577-0
+- Co-SPACE, delší sledování (konferenční abstrakt ICCAP 2023)
+  - https://doi.org/10.3233/DEV-241204
+
+## Co ověřit před publikací: čísla z tisku, blokované primární zdroje a české datové mezery
+
+Řada údajů ve zprávě pochází ze souhrnů vyhledávače, z tisku nebo jen z abstraktů, protože primární dokumenty byly pro relaci nedostupné. Před publikací je nutné je porovnat s primárními texty. Tabulky uvádějí, kde se údaj ve zprávě vyskytuje, odkud pochází a co ověřit; poslední podčást shrnuje česká data, která v poznámkách chybějí úplně.
+
+### Česká čísla známá jen z výňatků a tisku
+
+| Údaj | Kde ve zprávě | Původ v poznámkách | Co ověřit |
+|---|---|---|---|
+| Stíhané a vyšetřované děti a mladiství 2018-2025 a jednotka řady (osoby, nebo skutky) | H1, rozpory | výňatek vyhledávače z tabulky ČSÚ | tabulka ČSÚ Kriminalita a PDF Kriminalita 2024 |
+| Závěry studie IKSP 2023 (pokles 2008-2022 i na 10 000 dětí; rostoucí agresivitu nepotvrdila) | H1 | anglické shrnutí IKSP a tisk | plný text studie IKSP a její tabulky |
+| Analýza IKSP za rok 2023 (4 137 osob mladších 18 let; 500 až 750 násilných případů dětí ročně; návrat k úrovni 2017-2018) | H1 | výňatek vyhledávače | PDF IKSP Kriminalita mládeže v roce 2023 |
+| NSZ: asi +40 % násilných provinění 2024-2025 oproti průměru 2015-2019, věkové vymezení, „zážitkové násilí“, návrh věku 13 let; 1 634 a 2 174 činů v roce 2025; 7,9 % násilné kriminality v roce 2024 | H1, rozpory | tisk a výňatky PDF | plné texty zpráv o činnosti státního zastupitelství za roky 2024 a 2025 |
+| ČT24: přes 3 600 trestných činů nezletilých v roce 2025, vraždy z 8 na 12; ministerstvo spravedlnosti: 6 pachatelů vražd do 15 let u soudů | H1, rozpory | tisk | statistiky Policie ČR a ministerstva spravedlnosti, jednotka údaje ČT24 |
+| ČŠI 2023/24: 56 % základních škol řešilo agresi vůči spolužákovi (+15 procentních bodů), 39 % a 4 % středních škol verbální a fyzickou agresi vůči učitelům; zpráva 2024/25 nečtena | H1 | tisk (Blesk, Echo24) | výroční zprávy ČŠI 2023/24 a 2024/25 |
+| Policie: přes 830 incidentů ve školách v 1. pololetí 2026 oproti asi 270 | H1 | tisk | sdělení Policie ČR ke změně metodiky |
+| Počet dětí ve věku 10-14 let v roce 2019 (553 914, nebo 578,0 tisíce) | H1, rozpory | registr a publikace ČSÚ | ČSÚ, věkové složení obyvatelstva |
+| Délka uzavření škol (38 týdnů; přes 200 dní; 302 dní) | H2 | Statista; OECD jen ze souhrnu vyhledávače; INSA s odkazem na ECDC | datový soubor UNESCO o uzavření škol, OECD |
+| PAQ Research: 55 % rodičů uvedlo zhoršení pohody dítěte | H2 | souhrn vyhledávače | PDF PAQ Research a Nadace České spořitelny |
+| NUDZ a ČŠI 2023: známky deprese u 40 % a úzkosti u 30 % deváťáků | H2 | tisková zpráva NUDZ | plná zpráva národního monitoringu |
+| E-Bezpečí 2025: 62 % 13-17letých pravidelně na TikToku, „online agrese přibývá“ | H3, Kdo už o tom psal | tisk (MediaGuru) | zpráva Čeští žáci v online světě 2025 |
+| Hospitalizace na dětské psychiatrii v roce 2021 (přes 2 600, nebo 3 201) | rozpory | tisk a nepřímo ročenka ÚZIS | ročenka ÚZIS Dětská psychiatrie |
+| ADHD v Česku: ÚZIS 2022 (38 500 dětí), VZP 2020-2024 (14 779 a 16 823), SÚKL podle Novinky.cz, NMS (methylfenidát asi polovina distribuovaných DDD skupiny N06BA od roku 2020) | rozpory | tisk, tisková zpráva VZP, výňatky zpráv NMS | ÚZIS, VZP, grafy 3-8 a 3-9 souhrnné zprávy NMS 2024, SÚKL |
+
+### Mezinárodní a vědecké údaje s omezeným ověřením
+
+| Údaj | Kde ve zprávě | Původ v poznámkách | Co ověřit |
+|---|---|---|---|
+| Nguyen a kol. 2025: pozornost r = -0,38, inhibice r = -0,41, duševní zdraví r = -0,21, „14 studií z Číny“, chybějící intervaly | H3, rozpory | abstrakt a tisk | plný text v Psychological Bulletin |
+| Stacheder a kol. 2026: souhrnné velikosti účinku a metaregrese přísnosti opatření | H2 | jen abstrakt (academic.oup.com blokováno) | plný text |
+| Rogers a MacLean 2023: souhrnná velikost účinku | H2 | jen záznam a abstrakt | plný text |
+| NCES School Pulse Panel: 83 % (2022) a 80 % (2024) vedoucích škol; 87 %, 56 %, 11 % a 36 % (2022); 76 % (2025) | H2, Kdo už o tom psal | tisková zpráva a sekundární shrnutí (nces.ed.gov blokováno) | publikace NCES |
+| CORAL ve 24 měsících (komunikace pod hranicí 11,9 % oproti 5,4 %; CBCL bez rozdílu) a jeho DOI | H2 | souhrn vyhledávače; DOI odvozen z názvu souboru | plný text v Archives of Disease in Childhood |
+| Corrigan a kol. 2024: 160 a 130 dospívajících | H7, rozpory | komentář přes souhrn vyhledávače | plný text PNAS |
+| Německo (PKS 2025), Švédsko (střelba, děti v plánování vražd), Anglie (vyloučení, odsouzení) | H1 | tisk a sekundární shrnutí; bka.de blokováno | BKA PKS 2025, Brå, DfE |
+| CDC YRBS, podíl středoškoláků v rvačce 1991-2021 | H1 | dokument CDC, cdc.gov pro přímé čtení blokováno | CDC YRBS |
+| Diagnostická kritéria: DSM-5 a DSM-5-TR pro ADHD, MKN-11 6A05 a 6C51, specifikátor opozičního vzdoru s chronickou podrážděností | H3, H4, H5 | sekundární přetisky a zrcadla (who.int, findacode.com blokováno) | primární texty APA a WHO |
+| Evans a kol. 2021 (MKN-11 a DSM-5 u podrážděnosti) | H5 | souhrn vyhledávače | abstrakt a plný text |
+| NICE NG87: „no clear evidence“ pro rodičovský trénink u 5-18 let; formulace o environmentálních úpravách a to, zda je diagnostickým, nebo léčebným kritériem | H6 | souhrn vyhledávače | nice.org.uk |
+| AAP 2019: doslovné citace klíčových doporučení čteny přes plný text v PubMed; číslování, stupně doporučení a údaj o nejméně devíti měsících obtíží u předškoláků jen ze shrnutí AAFP | H4, H6 | částečně sekundární | publications.aap.org |
+| Česká doporučená péče ČLS JEP, kapitola ADHD děti | H4 nepřímo | úryvky vyhledávače | postupy-pece.psychiatrie.cz |
+| Odgers 2024 (Nature) a doporučení US Surgeon General 2023 | Kdo už o tom psal | sekundární shrnutí | nature.com, hhs.gov |
+| Hallowell 2005: citace „springs entirely from the environment“ | Kdo už o tom psal | sekundární shrnutí (hbr.org blokováno) | plný text Harvard Business Review |
+| Koepp a kol. 1998: N = 8 a popis úlohy | neurovědní tabulka | citující práce přes Scite | plný text v Nature |
+| Chaarani a kol. 2022: text oznámení o stažení a nahrazení | rozpory | záznam PubMed | stránka vydavatele |
+| Vytištěné intervaly a znaménka: Frisira a kol. 2024 (RR 1,38 s intervalem vytištěným jako 1,36-1,52, pravděpodobně překlep); Pierce a kol. 2025 (interval u problémů s chováním vnitřně nekonzistentní); Alcon a kol. 2024 (znaménková konvence u ASQ-3 popsaná jako „improvements“ je v rozporu s komunikačním signálem u Hessami a kol. 2022 a O'Connor a kol. 2025) | H2, H4 | abstrakty | plné texty |
+| Slovo „misnomer“ připisované Barkleyho knihám | H5 | v recenzované literatuře nenalezeno | Barkleyho knihy |
+| Rok českého vydání knihy Haidta, rok vydání knihy Lembke, ocenění BPS pro Etchellse | Kdo už o tom psal | nezjištěno nebo jen z blogu | katalogy a vydavatelé |
+
+### Primární zdroje nedostupné kvůli síťové politice relace
+
+Síťová politika relace blokovala přímé čtení těchto primárních zdrojů: IKSP (iksp.cz, iksp.gov.cz), ČSÚ (csu.gov.cz), NSZ (verejnazaloba.cz), ČT24 (ct24.ceskatelevize.cz), BKA (bka.de), NCES (nces.ed.gov), CDC (cdc.gov), PMC (pmc.ncbi.nlm.nih.gov), Nature (nature.com), NICE (nice.org.uk), WHO (who.int), AAP (publications.aap.org), česká doporučení psychiatrické péče (postupy-pece.psychiatrie.cz), UNESCO (unesco.org, proxy spojení odmítla), ÚZIS (psychiatrie.uzis.cz) a VZP (vzp.cz). Údaje SÚKL byly dostupné jen přes tisk a přes přetisk oznámení na kurzy.cz. Dále selhalo čtení academic.oup.com (plný text Stacheder a kol. 2026), hbr.org, publishersweekly.com, findacode.com, seznamzpravy.cz, sciencemediacentre.es, ifp.nyu.edu, internet.psych.wisc.edu a nursinginpractice.com; přímé dotazy na eutils.ncbi.nlm.nih.gov a api.openalex.org proxy odmítla. Plný text doporučení AAP 2019 byl přečten přes nástroj PubMed. Česká oficiální statistika je ve zprávě známa jen z výňatků vyhledávače a z tisku a všechna česká oficiální čísla je nutné před publikací porovnat s primárními dokumenty.
+
+### České datové mezery
+
+Pro obhajobu teze na českých datech chybí tyto řady a studie. **Roční počty násilných činů dětí do 15 let a mladistvých ve věku 15-17 let za roky 2005-2025 v přepočtu na obyvatele** nebyly získány; zdrojem by byly statistické ročenky Policie ČR, tabulky studie IKSP za roky 2008-2022 a řada IKSP Kriminalita mládeže. Bez nich nelze testovat ani kohortovou hypotézu z návrhu přeformulované teze. **České údaje HBSC o rvačkách a šikaně po jednotlivých cyklech 2002-2022** získány nebyly (Česko je jen součástí souhrnného poklesu v 19 zemích); zdrojem je HBSC Data Browser nebo národní zpráva Univerzity Palackého, a výsledky cyklu 2025/26 dosud nevyšly. **Česká studie s předpandemickým výchozím měřením** externalizace, hyperaktivity nebo sociálních dovedností nalezena nebyla, přestože hledání pokrylo NUDZ, ČŠI, PAQ Research, HBSC na Univerzitě Palackého, Univerzitu Karlovu a Masarykovu univerzitu. **Řady diagnóz ADHD a předepisování methylfenidátu a atomoxetinu za roky 2015-2025** existují jen jako útržky z tisku a pojišťovny; dalším krokem je ročenka dětské psychiatrie ÚZIS a grafy 3-8 a 3-9 souhrnné zprávy NMS za rok 2024. **Klinická odeslání a diagnózy pro poruchy chování, opoziční vzdor a podrážděnost** (MKN F91 a F92) v čase nebyly nalezeny pro Česko ani jinde. Dále chybějí opakovaná šetření učitelů o agresi vůči učitelům, data Probační a mediační služby, české výsledky ESPAD nebo ISRD, kvantifikace dopadu zákonů č. 333/2020 Sb. a č. 165/2024 Sb. na statistiky dětí a mladistvých, údaje o podílu ukrajinských žáků na statistikách, české údaje o domácím násilí vůči dětem během uzavření škol, česká řada času u obrazovek podle věku po roce 2022, plný text článku NUDZ „Generace v síti“, plný text české doporučené péče pro ADHD u dětí a pokrytí českého tisku (Respekt, Deník N, Aktuálně.cz, Český rozhlas) pro otázku, kdo o tématu psal.
+
+**Zdroje k části Co ověřit před publikací**
+
+- ČSÚ, Kriminalita (časové řady)
+  - https://csu.gov.cz/kriminalita
+- ČSÚ, Kriminalita 2024 (PDF)
+  - https://csu.gov.cz/docs/107508/b7753efe-d0e3-39cc-44bc-c05e6df204a3/08000925.pdf?version=1.1
+- IKSP, plný text studie Násilná kriminalita dětí mladších 15 let
+  - https://www.iksp.cz/storage/169/06309826-475-nasilna-kriminalita-deti-mladsich-patnacti-let-web.pdf
+- IKSP, Kriminalita mládeže v roce 2023 (Večerka)
+  - https://iksp.gov.cz/storage/169/K05_Kriminalita-mladeze-v-roce-2023.pdf
+- IKSP, Kriminalita mládeže 2023, policejní statistiky
+  - https://www.iksp.cz/storage/169/Kriminalita-mladeze-policejni-statistiky-v-roce-2023_IKSP.pdf
+- NSZ, stručné shrnutí za rok 2025 (PDF)
+  - https://verejnazaloba.cz/wp-content/uploads/2026/06/STRU%C4%8CN%C3%89-SHRNUT%C3%8D-ZA-ROK-2025.pdf
+- NSZ, zpráva o činnosti za rok 2024 (textová část)
+  - https://verejnazaloba.cz/wp-content/uploads/2025/06/ZPR%C3%81VA-O-%C4%8CINNOSTI-SZ-2024-textov%C3%A1-%C4%8D%C3%A1st.pdf
+- ČŠI, výroční zpráva 2024/2025 (PDF)
+  - https://www.csicr.cz/CSICR/media/Prilohy/2024_p%C5%99%C3%ADlohy/Dokumenty/VZ_2025_everze.pdf
+- ČT24, incidenty ve školách 2026 a změna metodiky
+  - https://ct24.ceskatelevize.cz/clanek/domaci/agresivita-deti-roste-ve-skolach-i-vuci-rodicum-resort-skolstvi-hleda-reseni-378761
+- ČSÚ, Vývoj obyvatelstva 2024
+  - https://csu.gov.cz/docs/107508/73bdd158-6b48-b352-a0ec-b5a3c000c681/13006925.pdf?version=1.2
+- UP Žurnál, české HBSC a problematické užívání sociálních sítí
+  - https://www.zurnal.upol.cz/nc/zprava/clanek/hbsc-studie-roste-pocet-deti-s-problematickym-uzivanim-socialnich-siti/
+- UNESCO, Global monitoring of school closures, datový soubor (PDF)
+  - https://www.unesco.org/sites/default/files/medias/fichiers/2022/10/Global%20monitoring%20of%20school%20closures_Full%20dataset%20-%20Master%20file%2030092021.pdf
+- OECD, The State of Global Education
+  - https://www.oecd.org/education/the-state-of-global-education_1a23bb23-en
+- PAQ Research a Nadace České spořitelny, vzdělávání v pandemii
+  - https://cdn.erstegroup.com/content/dam/cz/csas/www_nadacecs_cz/dokumenty/studie-analyzy/2021/vzdelavani-pandemie-paq.pdf
+- NUDZ, tisková zpráva k národnímu monitoringu duševního zdraví dětí 2023
+  - https://www.nudz.cz/fileadmin/user_upload/Tiskove_zpravy/TZ-Narodni_monitoring_dusevniho_zdravi_deti-_40___vykazuje_znamky_stredni_az_tezke_deprese__30___uzkosti._Odbornici_pripravuji_preventivni_opatreni.pdf
+- MediaGuru, Čeští žáci v online světě 2025
+  - https://www.mediaguru.cz/clanky/2025/12/u-deti-vede-instagram-a-yt-propada-facebook-online-agrese-pribyva/
+- ÚZIS, statistika dětské psychiatrie (PDF)
+  - https://psychiatrie.uzis.cz/res/file/oborove-statistiky/detska-psychiatrie.pdf
+- VZP, tisková zpráva o dětech s poruchou pozornosti
+  - https://www.vzp.cz/o-nas/aktuality/vzp-za-5-let-pribylo-2-tisice-deti-s-poruchou-pozornosti
+- NMS, Zpráva o problematickém užívání psychoaktivních léků v ČR 2023 (PDF)
+  - https://www.drogy-info.cz/data/obj_files/33914/1242/Zpr%C3%A1va%20o%20problematick%C3%A9m%20u%C5%BE%C3%ADv%C3%A1n%C3%AD%20psychoaktivn%C3%ADch%20l%C3%A9k%C5%AF%20v%20%C4%8CR%202023_fin.pdf
+- NMS, Souhrnná zpráva o závislostech v ČR 2024 (PDF)
+  - https://www.drogy-info.cz/data/obj_files/35754/1384/2024_Souhrnn%C3%A1%20zpr%C3%A1va%20o%20z%C3%A1vislostech%20v%20%C4%8CR%202024_web_fin02.pdf
+- Kurzy.cz, přetisk oznámení SÚKL o omezené dostupnosti methylfenidátu
+  - https://www.kurzy.cz/tema/8864862.html
+- Nguyen a kol. 2025, Psychological Bulletin, metaanalýza krátkých videí
+  - https://doi.org/10.1037/bul0000498
+- Stacheder, Oppermann a Anders 2026, Child Development, metaanalýza 157 studií
+  - https://doi.org/10.1093/chidev/aacag090
+- Rogers a MacLean 2023, J Atten Disord, příznaky ADHD během pandemie
+  - https://doi.org/10.1177/10870547231158750
+- NCES, tisková zpráva School Pulse Panel 2024
+  - https://nces.ed.gov/learn/press-release/about-one-quarter-public-schools-reported-lack-focus-or-inattention-students-had-severe-negative
+- University College Cork, záznam CORAL 24 měsíců
+  - https://research.ucc.ie/en/publications/developmental-and-behavioural-outcomes-at-2-years-in-babies-born/
+- Corrigan, Rokem a Kuhl 2024, PNAS, lockdown a struktura mozku
+  - https://doi.org/10.1073/pnas.2403200121
+- BKA, Polizeiliche Kriminalstatistik 2025
+  - https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/PolizeilicheKriminalstatistik/PKS2025/Polizeiliche_Kriminalstatistik_2025/Polizeiliche_Kriminalstatistik_2025_node.html
+- CDC, YRBS 2025, zdůvodnění položek (rvačky 1991-2021)
+  - https://www.cdc.gov/yrbs/media/pdf/2025/2025-standard-YRBS-item-rationale508.pdf
+- Reprint kritérií DSM-5 pro ADHD (Masarykova univerzita)
+  - https://is.muni.cz/el/ped/jaro2019/SPp207/um/DSM5_DiagnosticCriteria_ADHD.pdf?lang=en
+- CISMeF, MKN-11 6A05
+  - https://www.cismef.org/page/detail/en/ICD11_CA_821852937
+- CISMeF, MKN-11 porucha hraní her
+  - https://www.cismef.org/page/detail/en/ICD11_CA_1448597234
+- RACGP AJGP 2026, souhrn kritérií poruchy hraní her
+  - https://www1.racgp.org.au/ajgp/2026/may/gaming-disorder
+- Evans a kol. 2021, JCPP, MKN-11 a DSM-5 u podrážděnosti
+  - https://doi.org/10.1111/jcpp.13244
+- NICE NG87, zdůvodnění doporučení
+  - https://www.nice.org.uk/guidance/NG87/chapter/rationale-and-impact
+- NICE NG87, doporučení
+  - https://www.nice.org.uk/guidance/ng87/chapter/recommendations
+- Wolraich a kol. 2019, Pediatrics, doporučení AAP
+  - https://doi.org/10.1542/peds.2019-2528
+- AAFP, shrnutí doporučení AAP
+  - https://www.aafp.org/pubs/afp/issues/2020/0701/p58.html
+- Psychiatrická společnost ČLS JEP, doporučené postupy, ADHD děti
+  - https://postupy-pece.psychiatrie.cz/specialni-psychiatrie/f9-adhd/adhd-deti
+- Odgers 2024, Nature, recenze knihy The Anxious Generation
+  - https://doi.org/10.1038/d41586-024-00902-2
+- Harvard Business Review, kanonická adresa eseje Overloaded Circuits (nečteno)
+  - https://hbr.org/2005/01/overloaded-circuits-why-smart-people-underperform
+- Koepp a kol. 1998, Nature, dopamin při videohře
+  - https://doi.org/10.1038/30498
+- JAMA Network Open 2023, oznámení o stažení a nahrazení práce Chaarani a kol.
+  - https://doi.org/10.1001/jamanetworkopen.2023.6895
+- Frisira, Holland a Sayal 2024, Eur Child Adolesc Psychiatry, relativní věk
+  - https://doi.org/10.1007/s00787-024-02459-x
+- Pierce a kol. 2025, BJPsych Open, UKHLS
+  - https://doi.org/10.1192/bjo.2025.10801
+- Alcon a kol. 2024, Psychology International, předškolní děti
+  - https://doi.org/10.3390/psycholint6040062
+- Hessami a kol. 2022, JAMA Network Open, vývoj kojenců
+  - https://doi.org/10.1001/jamanetworkopen.2022.38941
+- O'Connor a kol. 2025, J Dev Behav Pediatr, vývoj kojenců
+  - https://doi.org/10.1097/dbp.0000000000001352
+
+## Závěr
+
+Tato část je inferencí zprávy. Data mění úroveň, na které lze hypotézu obhájit. Původní znění spojuje populační trend (více násilí dětí) s individuálním mechanismem (dysregulace z obrazovek a lockdownů napodobující ADHD), tyto dvě roviny se však v dohledaných datech potkávají jen nepřímo. Individuální účinky jsou malé, obousměrné a nejzřetelnější u emočních potíží; populační signál nárůstu se omezuje na skladbu registrovaných činů, úzké podskupiny a školní hlášení, která reagují i na právní a metodické změny. Nejlépe obhajitelná a v integrované podobě dosud nepublikovaná je proto verze teze postavená na spojité dimenzi seberegulace: spánek, rodinný stres, ztráta struktury a návykové užívání posouvají dítě po téže ose, na jejímž konci leží ADHD, a agrese je vzdáleným a nejslabším článkem řetězce. Tento rámec nahrazuje dělení na „pravé“ a „získané“ ADHD otázkou, kde na dimenzi dítě je a co z jeho zátěže lze změnit.
+
+Rozhodující test teze nevyžaduje nový experiment, ale česká data, která existují a pro tuto rešerši byla nedostupná: roční počty násilných činů podle věku v přepočtu na obyvatele, české řady HBSC a řady diagnóz a předepisování. Kohortová analýza mladistvých, kteří prošli lockdowny ve věku 10-13 let, s korekcí na zákon č. 333/2020 Sb. by ukázala, zda souvislost lockdownů s dnešním násilím mladistvých vůbec vyžaduje vysvětlení. Do jejího provedení odpovídá datům psát o trendu agrese jako o otevřené otázce a o mechanismu jako o hypotéze s testovatelnými předpověďmi. Praktický závěr, že problémy s chováním reagují na rodičovský trénink i u dětí s diagnostikovaným ADHD a při zaslepeném hodnocení, platí nezávisle na tom, jak otázka trendu dopadne.
+
+## Prohlášení o použití AI
+
+Rešerše i syntéza byly provedeny s pomocí nástrojů umělé inteligence. Výzkumné poznámky sestavily 12. 11. 2026 instance jazykového modelu Claude (Anthropic) s využitím konektorů PubMed, Scite, OpenAlex a Elicit a webového vyhledávání; stejnou technologií byla provedena i tato syntéza. Vyhledávač Consensus nebyl dostupný kvůli vyčerpané měsíční kvótě. Síťová politika relace blokovala přímé čtení řady primárních zdrojů; jejich seznam uvádí část Co ověřit před publikací. Kontrola stažených článků proběhla nástrojem Scite verify_papers a nezachytila stažení a nahrazení práce Chaarani a kol. 2022, které bylo zjištěno přes PubMed. Všechna čísla, data, velikosti účinku a citace ve zprávě pocházejí z výzkumných poznámek, nikoli z paměti modelu; výpočty označené jako vlastní vycházejí z údajů v poznámkách. Údaje a tvrzení uvedené v části Co ověřit před publikací a všechny údaje se značkou [neověřeno v plném textu] je nutné před zveřejněním ověřit v primárních zdrojích. Části označené jako inference (Hypotéza obsahuje vnitřní napětí, Návrh přeformulované teze, Závěr) jsou interpretací, nikoli zjištěním.

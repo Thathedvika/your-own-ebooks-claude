@@ -1,0 +1,502 @@
+<title>Výkazy na autopilota</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a drawing sheet. Title block on top, numbered steps down a single 760px column, grid paper ground. */
+:root{
+  --paper:#f6f8fb; --sheet:#ffffff; --ink:#15233b; --muted:#56627a; --line:#d5dce8; --grid:rgba(31,75,153,.05);
+  --accent:#1f4b99; --accent-soft:#e6edf9; --red:#b4441a; --red-soft:#fbece5; --ok:#2f7a4d; --ok-soft:#e6f3ea;
+  --code-bg:#f0f3f8;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0f1522; --sheet:#151d2d; --ink:#e3e9f4; --muted:#9aa7bf; --line:#2a3650; --grid:rgba(120,160,230,.06);
+  --accent:#8fb2ff; --accent-soft:#1c2a47; --red:#f19a72; --red-soft:#3a2219; --ok:#7fd1a0; --ok-soft:#18311f;
+  --code-bg:#0c121d; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --paper:#0f1522; --sheet:#151d2d; --ink:#e3e9f4; --muted:#9aa7bf; --line:#2a3650; --grid:rgba(120,160,230,.06);
+  --accent:#8fb2ff; --accent-soft:#1c2a47; --red:#f19a72; --red-soft:#3a2219; --ok:#7fd1a0; --ok-soft:#18311f;
+  --code-bg:#0c121d; color-scheme:dark;}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;}
+.wrap{max-width:820px;margin:0 auto;padding-block:32px 64px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(2rem,5vw,2.9rem);font-weight:800;letter-spacing:-.01em}
+h2{font-size:1.55rem;font-weight:700;margin-bottom:12px}
+h3{font-size:1.1rem;font-weight:700;margin:22px 0 6px}
+p{margin:0 0 12px}
+a{color:var(--accent);word-break:break-all}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+ul,ol{margin:0 0 12px;padding-left:22px}
+li{margin-bottom:4px}
+.lead{font-size:1.1rem;color:var(--muted);max-width:65ch}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+section{background:var(--sheet);border:1px solid var(--line);border-radius:6px;padding:24px;margin-top:20px}
+section>*:last-child{margin-bottom:0}
+.sec-head{display:flex;gap:12px;align-items:baseline;margin-bottom:12px;flex-wrap:wrap}
+.sec-no{font-family:var(--mono);font-size:.8rem;color:var(--muted);border:1px solid var(--line);padding:1px 7px;border-radius:3px}
+
+/* title block, like on a drawing sheet */
+.titleblock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1.5px solid var(--ink);margin-top:20px;background:var(--sheet)}
+.titleblock div{padding:8px 10px;border-right:1px solid var(--ink);min-width:0}
+.titleblock div:last-child{border-right:0}
+.titleblock span{display:block;font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.titleblock b{font-family:var(--mono);font-weight:500;font-size:.9rem}
+@media (max-width:560px){.titleblock{grid-template-columns:repeat(2,minmax(0,1fr))}.titleblock div:nth-child(2){border-right:0}.titleblock div:nth-child(-n+2){border-bottom:1px solid var(--ink)}}
+
+/* flow diagram */
+.flow{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1.1fr) 28px minmax(0,1fr);align-items:stretch;gap:0;margin:8px 0 16px}
+.col{border:1px solid var(--line);border-radius:6px;padding:12px;background:var(--paper);min-width:0}
+.col h4{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 8px;font-weight:500}
+.col.core{border:1.5px solid var(--accent);background:var(--accent-soft)}
+.node{background:var(--sheet);border:1px solid var(--line);border-radius:4px;padding:7px 9px;margin-bottom:7px;font-size:.88rem;line-height:1.35}
+.node:last-child{margin-bottom:0}
+.node b{display:block;font-size:.9rem}
+.node small{color:var(--muted)}
+.arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-family:var(--mono);font-size:1.2rem}
+@media (max-width:680px){.flow{grid-template-columns:minmax(0,1fr)}.arrow{transform:rotate(90deg);height:28px}}
+
+/* callouts */
+.note{border-left:3px solid var(--accent);background:var(--accent-soft);padding:10px 14px;border-radius:0 4px 4px 0;margin:12px 0}
+.warn{border-left:3px solid var(--red);background:var(--red-soft);padding:10px 14px;border-radius:0 4px 4px 0;margin:12px 0}
+.good{border-left:3px solid var(--ok);background:var(--ok-soft);padding:10px 14px;border-radius:0 4px 4px 0;margin:12px 0}
+.note p:last-child,.warn p:last-child,.good p:last-child{margin-bottom:0}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+.steps>li{counter-increment:s;position:relative;padding:0 0 18px 44px;border-left:1px dashed var(--line);margin-left:14px}
+.steps>li:last-child{border-left-color:transparent;padding-bottom:0}
+.steps>li::before{content:counter(s);position:absolute;left:-15px;top:-2px;width:30px;height:30px;border-radius:50%;
+  background:var(--sheet);border:1.5px solid var(--accent);color:var(--accent);font-family:var(--mono);font-size:.85rem;display:flex;align-items:center;justify-content:center}
+.steps h3{margin-top:0}
+
+/* code */
+.code{position:relative;margin:8px 0 14px}
+pre{background:var(--code-bg);border:1px solid var(--line);border-radius:4px;padding:12px 14px;overflow-x:auto;margin:0;font-family:var(--mono);font-size:.82rem;line-height:1.5;white-space:pre}
+code{font-family:var(--mono);font-size:.86em;background:var(--code-bg);padding:1px 4px;border-radius:3px}
+pre code{background:none;padding:0;font-size:inherit}
+.copy{position:absolute;top:6px;right:6px;font-family:var(--mono);font-size:.72rem;border:1px solid var(--line);background:var(--sheet);color:var(--ink);border-radius:3px;padding:3px 8px;cursor:pointer}
+.copy:hover{border-color:var(--accent);color:var(--accent)}
+details{border:1px solid var(--line);border-radius:4px;padding:8px 12px;margin:8px 0 14px;background:var(--paper)}
+details summary{cursor:pointer;font-weight:600}
+details[open] summary{margin-bottom:8px}
+
+/* tables */
+.tbl{overflow-x:auto;margin:8px 0 14px}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:520px}
+th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+th{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:500}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:8px 0 12px}
+.lvl{border:1px solid var(--line);border-radius:6px;padding:12px;min-width:0}
+.lvl .tag{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
+.lvl.opt .tag{color:var(--red)}
+.lvl b{display:block;margin:4px 0}
+.lvl p{font-size:.9rem;margin:0}
+@media (max-width:680px){.levels{grid-template-columns:minmax(0,1fr)}}
+
+.compare{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+@media (max-width:600px){.compare{grid-template-columns:minmax(0,1fr)}}
+.compare>div{padding:10px 12px;border-radius:4px;font-size:.92rem;min-width:0}
+.compare .bad{background:var(--red-soft)}
+.compare .fine{background:var(--ok-soft)}
+.compare span{display:block;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;color:var(--muted)}
+
+.src{list-style:none;padding:0}
+.src li{padding:10px 0;border-bottom:1px solid var(--line)}
+.src li:last-child{border-bottom:0}
+.src .d{display:block}
+.src a{font-family:var(--mono);font-size:.82rem}
+.src small{color:var(--muted)}
+footer{margin-top:20px;font-size:.85rem;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Návod pro architekta v Hongkongu</div>
+  <h1>Výkazy na autopilota</h1>
+  <p class="lead">Jak z nahrávek schůzek, hlasových poznámek a vybraných podkladů nechat AI agenta skládat denní záznam práce a týdenní výkaz. Ty jen zkontroluješ a odešleš. Postaveno na Hermes Agent s modelem Kimi nebo GLM, protože Claude ani ChatGPT v Hongkongu oficiálně nefungují.</p>
+  <div class="titleblock" aria-label="Údaje o dokumentu">
+    <div><span>Výkres č.</span><b>WL-01</b></div>
+    <div><span>Revize</span><b>A</b></div>
+    <div><span>Datum</span><b>15. 11. 2026</b></div>
+    <div><span>Měřítko</span><b>1 řádek = 0,25 h</b></div>
+  </div>
+</header>
+
+<section id="jak">
+  <div class="sec-head"><span class="sec-no">01</span><h2>Jak to funguje</h2></div>
+  <p>Tři vrstvy. Vstupy sbíráš skoro bez práce, agent je třídí a skládá, ty dostaneš hotový návrh do telefonu.</p>
+  <div class="flow" role="img" aria-label="Schéma: vstupy, agent, výstupy">
+    <div class="col">
+      <h4>Vstupy</h4>
+      <div class="node"><b>Plaud</b><small>schůzky: nahrávka, přepis, shrnutí</small></div>
+      <div class="node"><b>Hlasová poznámka</b><small>do Telegramu: „Log: 2 h oprava výkresů…“</small></div>
+      <div class="node"><b>Soubory</b><small>zápis, export z Teams, PDF (volitelně)</small></div>
+    </div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="col core">
+      <h4>Hermes Agent</h4>
+      <div class="node"><b>Model Kimi nebo GLM</b><small>přes API, platíš podle spotřeby</small></div>
+      <div class="node"><b>Skill „worklog“</b><small>pravidla: co, kolik, zdroj, bez vymýšlení</small></div>
+      <div class="node"><b>Složka WorkLog</b><small>denní záznamy, týdenní výkazy, impact log</small></div>
+      <div class="node"><b>Plánovač</b><small>18:30 denní uzávěrka, pátek 16:00 výkaz</small></div>
+    </div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="col">
+      <h4>Výstupy</h4>
+      <div class="node"><b>Denní souhrn</b><small>v Telegramu + otázky na mezery</small></div>
+      <div class="node"><b>Týdenní výkaz</b><small>.docx a tabulka hodin ke kontrole</small></div>
+      <div class="node"><b>Impact log</b><small>podklad pro hodnocení a jednání o platu</small></div>
+    </div>
+  </div>
+  <div class="good"><p><b>Základní pravidlo:</b> agent píše návrh, odesílá vždy člověk. Nic nejde šéfovi automaticky.</p></div>
+
+  <h3>Tři stupně, ne všechno najednou</h3>
+  <div class="levels">
+    <div class="lvl"><span class="tag">Týden 1</span><b>Ruční sběr</b><p>Telegram, hlasové poznámky, sdílení shrnutí z Plaud. Výkaz si vyžádáš příkazem.</p></div>
+    <div class="lvl"><span class="tag">Týden 2</span><b>Automatika</b><p>Denní uzávěrka a páteční výkaz běží samy. Ladíš šablonu a kódy projektů.</p></div>
+    <div class="lvl opt"><span class="tag">Jen se souhlasem IT</span><b>Firemní systémy</b><p>Napojení na pracovní e-mail nebo přepisy z Teams. Bez souhlasu zaměstnavatele vynech.</p></div>
+  </div>
+</section>
+
+<section id="pred">
+  <div class="sec-head"><span class="sec-no">02</span><h2>Než začneš: čtyři pravidla</h2></div>
+  {{LEGAL}}
+</section>
+
+<section id="nakup">
+  <div class="sec-head"><span class="sec-no">03</span><h2>Co pořídit</h2></div>
+  {{SHOPPING}}
+</section>
+
+<section id="setup">
+  <div class="sec-head"><span class="sec-no">04</span><h2>Nastavení krok za krokem</h2></div>
+  <p>Počítej zhruba s jedním odpoledním blokem (můj odhad, ne údaj výrobce). Příkazy jsou pro Mac; rozdíly pro Windows jsou u kroků uvedené.</p>
+  <ol class="steps">
+
+    <li>
+      <h3>Rozhodni, kde agent poběží</h3>
+      <p>Plánované úlohy spouští takzvaný gateway. Podle dokumentace musí běžet, aby se úloha vykonala. Když je počítač ve spánku, zmeškaná úloha se po probuzení spustí jednou (výchozí nastavení <code>cron.catch_up_missed: true</code>).</p>
+      <ul>
+        <li><b>Doporučeno na start:</b> vlastní Mac s Apple Silicon nebo Windows PC. Instalátor Hermes Desktop pro macOS je jen pro Apple Silicon.</li>
+        <li><b>Ne firemní notebook</b> bez souhlasu IT. Agent umí spouštět příkazy a číst soubory.</li>
+        <li><b>Později:</b> malý server (VPS) běží nonstop. Pro pokročilé, návod to neřeší.</li>
+      </ul>
+    </li>
+
+    <li>
+      <h3>Nainstaluj Hermes</h3>
+      <p>Nejjednodušší je instalátor Hermes Desktop ze stránky projektu (Mac: otevři DMG a přetáhni Hermes.app do Aplikací; Windows: otevři soubor .appinstaller). Obsahuje aplikaci i příkazový řádek. Alternativa jen pro terminál:</p>
+      <div class="code"><pre><code>curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+source ~/.zshrc
+hermes doctor</code></pre></div>
+      <p>Windows (PowerShell): <code>iex (irm https://hermes-agent.nousresearch.com/install.ps1)</code></p>
+    </li>
+
+    <li>
+      <h3>Připoj model Kimi nebo GLM</h3>
+      {{MODEL}}
+      <div class="code"><pre><code>hermes model
+# vyber "Kimi / Moonshot" nebo "Z.AI" (GLM), vlož API klíč, zvol model
+
+hermes
+# první test, napiš:  Reply with OK and today's date.</code></pre></div>
+      <p>Klíče se ukládají do <code>~/.hermes/.env</code>, ostatní nastavení do <code>~/.hermes/config.yaml</code>. Hermes vyžaduje model s kontextem aspoň 64 000 tokenů. Když chat nefunguje, nepřidávej další funkce a spusť <code>hermes doctor</code> a znovu <code>hermes model</code>.</p>
+    </li>
+
+    <li>
+      <h3>Časové pásmo a pracovní složka</h3>
+      <div class="code"><pre><code>mkdir -p ~/WorkLog/{inbox,daily,weekly,templates}
+hermes config set timezone Asia/Hong_Kong
+hermes config set terminal.cwd /Users/TVOJE_JMENO/WorkLog</code></pre></div>
+      <p>Windows: složku vytvoř v Průzkumníku, např. <code>C:\Users\TVOJE_JMENO\WorkLog</code> s podsložkami inbox, daily, weekly, templates, a tu cestu dej do <code>terminal.cwd</code>. <code>terminal.cwd</code> je pracovní složka pro zprávy z Telegramu.</p>
+    </li>
+
+    <li>
+      <h3>Vlož kontext: AGENTS.md</h3>
+      <p>Soubor <code>~/WorkLog/AGENTS.md</code> agent načte jako kontext. Doplň firmu, nadřízeného, seznam projektů s kódy a lidi, se kterými pracuješ. Tohle je jediné místo, které musíš opravdu vyplnit.</p>
+      <details><summary>Obsah AGENTS.md (zkopíruj a doplň hranaté závorky)</summary>
+        <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code id="agents-md"># WorkLog - context for the agent
+
+## Who I am
+- Role: Architect at [FIRM NAME], Hong Kong. Working language: English.
+- Report to: [MANAGER NAME / ROLE]. Reports are due: [e.g. Friday 18:00].
+- Working hours: [e.g. Mon-Fri 09:00-19:00 HKT].
+
+## Projects and codes (keep this list current)
+| Code | Project | Client | Stage | Notes |
+|---|---|---|---|---|
+| P-0000 | [Project name] | [Client] | [e.g. Tender / Construction] | |
+| ADMIN | Internal / admin | - | - | |
+| BD | Business development, proposals | - | - | |
+
+## People I work with often (names help the agent recognise speakers)
+- [Name] - [role, company]
+- [Name] - [role, company]
+
+## Report rules
+- Language and spelling: British English.
+- Timesheet granularity: 0.25 h.
+- My employer's report format: see templates/weekly-template.md (if present).
+- Never send anything to my manager or colleagues. I review and send myself.
+
+## Confidentiality
+- Do not put fees, contract disputes or personal data of third parties into reports.
+- Summarise meetings; never paste full transcripts into reports.</code></pre></div>
+      </details>
+      <p>Do <code>~/WorkLog/templates/weekly-template.md</code> dej firemní formát výkazu. Když existuje, agent ho dodrží přesně. Výchozí šablona:</p>
+      <details><summary>Výchozí šablona týdenního výkazu</summary>
+        <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code># Weekly report - [Name] - Week [WW], [YYYY]
+
+&lt;!-- Replace this file with your employer's real format. The agent follows it exactly. --&gt;
+
+## 1. Timesheet
+| Project code | Project | Mon | Tue | Wed | Thu | Fri | Total |
+|---|---|---|---|---|---|---|---|
+
+## 2. Key outcomes this week
+
+## 3. Meetings and coordination
+
+## 4. Support and quality assurance for the team
+
+## 5. Next week: priorities, open items, risks</code></pre></div>
+      </details>
+    </li>
+
+    <li>
+      <h3>Nainstaluj skill „worklog“</h3>
+      <p>Skill je návod, který si agent načte, když ho potřebuje. Tenhle určuje, jak zapisovat, slučovat a hlavně nevymýšlet hodiny. Ulož ho jako <code>~/.hermes/skills/productivity/worklog/SKILL.md</code>. Na Windows (nebo kdykoli) jednodušeji: v chatu s Hermes napiš „Save the following as a new skill named worklog, exactly as written:“ a vlož obsah.</p>
+      <details><summary>Obsah SKILL.md</summary>
+        <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code>---
+name: worklog
+description: Capture work notes and draft daily logs and weekly reports
+version: 1.0.0
+metadata:
+  hermes:
+    tags: [timesheet, work-log, reporting]
+    category: productivity
+---
+
+# Worklog
+
+Turns voice notes, Plaud meeting summaries, forwarded documents and short text
+notes into an evidence-based daily work log and a weekly report / timesheet.
+All files live in the WorkLog folder (see AGENTS.md in that folder for the
+owner's role, project list, project codes and report format).
+
+## When to Use
+
+- The user sends a message, voice note or file that starts with "log", "worklog",
+  "note" or is a shared Plaud summary / transcript.
+- The user types `/worklog` with or without text.
+- A scheduled job asks for "DAILY CLOSE", "WEEKLY REPORT" or "IMPACT DIGEST".
+
+## Folder layout (inside the WorkLog folder)
+
+- `inbox/` raw inputs, one file per item: `YYYY-MM-DD_HHMM_&lt;source&gt;_&lt;short-title&gt;.md`
+- `daily/YYYY-MM-DD.md` daily log
+- `weekly/YYYY-Www.md` weekly report (ISO week), optional `.docx` copy
+- `impact-log.md` running list of notable contributions
+- `templates/weekly-template.md` the employer's report format (if present, follow it exactly)
+
+## Procedure
+
+### A. CAPTURE (any incoming note, voice note or file)
+
+1. Save the raw input to `inbox/` using the naming pattern above. For files, store
+   the extracted text, not the original binary. Keep the original wording.
+2. Extract work entries. One entry = one activity:
+   `start time | duration (h) | project code | category | what was done | with whom | source`
+   Categories: Design, Coordination &amp; meetings, Review &amp; QA, Support for others,
+   Site, Documentation, Admin, Other.
+3. Append the entries to `daily/&lt;today&gt;.md` (create it if missing).
+4. Reply in ONE short line: what was logged and anything missing
+   (e.g. "Logged 1.5 h P-2301 Review &amp; QA. Missing: who requested it?").
+
+### B. DAILY CLOSE (scheduled, weekdays)
+
+1. Read today's `inbox/` files and `daily/&lt;today&gt;.md`.
+2. Merge duplicates (a Plaud meeting and a voice note about the same meeting are
+   one entry). Sort by start time.
+3. Write the final table to `daily/&lt;today&gt;.md` with a total of hours and a
+   "Gaps" list (missing durations, unknown project codes, unexplained time).
+4. Add any notable contribution (problem solved, risk caught, rework of someone
+   else's output, decision unblocked) to `impact-log.md` with date and source.
+5. Reply with: total hours, 3-6 bullet summary, the Gaps list as questions.
+   Keep it under 120 words.
+
+### C. WEEKLY REPORT (scheduled, Friday)
+
+1. Read `daily/` files for Monday to today of the current ISO week and the
+   week's entries in `impact-log.md`.
+2. If `templates/weekly-template.md` exists, follow its structure exactly.
+   Otherwise produce:
+   - Timesheet table: project code, project name, hours per day, total.
+   - Key outcomes (5-8 bullets, outcome first, then evidence).
+   - Coordination and meetings (count and total hours).
+   - Support and quality assurance for others (see Pitfalls for wording).
+   - Next week: open items and risks.
+3. Save to `weekly/YYYY-Www.md`. If asked for Word, also create the `.docx`.
+4. Reply with a 5-line summary and attach the file using `MEDIA:&lt;absolute path&gt;`.
+   This is a DRAFT for the user to review. Never send it to anyone else.
+
+### D. IMPACT DIGEST (scheduled, monthly)
+
+Summarise the last month of `impact-log.md` into 5-10 achievement statements
+suitable for a performance review: situation, action, result, evidence.
+
+## Pitfalls
+
+- Never invent hours, people, decisions or project codes. Durations come only
+  from recording length, an explicit statement by the user, or a calendar entry.
+  If unknown, write `?` and list it under Gaps.
+- Every entry must name its source (Plaud recording title and time, voice note
+  time, email subject, file name).
+- Rework or fixes of other people's work: describe the issue and the fix in
+  neutral, factual language. No blame, no adjectives about colleagues, no names
+  unless the user explicitly asks. Example: "Corrected grid references in the
+  tender drawing set (24 sheets) before issue; prevented a re-issue." NOT
+  "Fixed X's careless mistakes again."
+- Do not copy full meeting transcripts into reports. Summarise outcomes only.
+- Do not include client-confidential details (fees, disputes, personal data)
+  in the weekly report unless the user explicitly asks.
+- Use the language and spelling set in AGENTS.md (default: British English).
+
+## Verification
+
+- Daily file total equals the sum of the table rows.
+- Every row has a source.
+- Weekly totals per project equal the sum of the daily files.</code></pre></div>
+      </details>
+      <div class="code"><pre><code>hermes skills list | grep worklog</code></pre></div>
+      <p>Každý skill je zároveň příkaz: v chatu funguje <code>/worklog Spent 2 h correcting the door schedule before tender issue</code>.</p>
+    </li>
+
+    <li>
+      <h3>Propoj Telegram</h3>
+      <p>V Hermes Desktop: <b>Messaging → Telegram → Create with QR</b>. Naskenuješ kód v Telegramu, Hermes vytvoří bota, zapíše token a tvoje ID jako jediného povoleného uživatele. Ručně: <code>hermes gateway setup</code>, vyber Telegram a token získej u @BotFather.</p>
+      <div class="code"><pre><code>hermes gateway install     # gateway poběží jako služba na pozadí
+hermes gateway status</code></pre></div>
+      <p>V chatu s botem pošli <code>/sethome</code>, aby věděl, kam doručovat výsledky. Telegram doporučuji před WhatsAppem: napojení WhatsAppu v Hermes jede přes neoficiální most a dokumentace sama uvádí riziko zablokování účtu a doporučuje samostatné číslo.</p>
+    </li>
+
+    <li>
+      <h3>Hlasové poznámky</h3>
+      <p>Hlasové zprávy poslané botovi se automaticky přepíšou na text. Výchozí přepis běží lokálně (faster-whisper, bez API klíče, ne na Intel Macu a Windows ARM64). Nastav angličtinu a slovník jmen a projektů, které přepis jinak komolí:</p>
+      <div class="code"><pre><code>hermes config set stt.language en
+hermes config set stt.prompt "Revit, BIM, BD, Buildings Department, [jména projektů], [jména kolegů]"</code></pre></div>
+      <p>Návyk: začínej poznámku slovem <b>„Log“</b>. Například: „Log. About an hour and a half on the Kai Tak façade set, correcting grid references before issue.“</p>
+    </li>
+
+    <li>
+      <h3>Naplánuj denní uzávěrku, týdenní výkaz a měsíční přehled</h3>
+      <p>Spusť v terminálu (nahraď cestu). Úlohy běží v hongkongském čase díky kroku 4.</p>
+      <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code>hermes cron create "30 18 * * 1-5" "DAILY CLOSE: Use the worklog skill, procedure B, for today's date. Work only inside the WorkLog folder. Reply in English, under 120 words, and end with the Gaps questions." --skill worklog --workdir /Users/TVOJE_JMENO/WorkLog --name "Daily close" --deliver telegram
+
+hermes cron create "0 16 * * 5" "WEEKLY REPORT: Use the worklog skill, procedure C, for the current ISO week. Follow templates/weekly-template.md. Save the Markdown file and a .docx copy in weekly/, then attach the .docx. This is a draft for my review only." --skill worklog --workdir /Users/TVOJE_JMENO/WorkLog --name "Weekly report" --deliver telegram
+
+hermes cron create "0 10 1 * *" "IMPACT DIGEST: Use the worklog skill, procedure D, for the previous calendar month. Save it as weekly/impact-YYYY-MM.md and attach it." --skill worklog --workdir /Users/TVOJE_JMENO/WorkLog --name "Monthly impact" --deliver telegram</code></pre></div>
+      <p>Otestuj hned, nečekej na večer:</p>
+      <div class="code"><pre><code>hermes cron list
+hermes cron run "Daily close"</code></pre></div>
+      <p>Volitelně, aby šlo na denní souhrn odpovědět opravou a agent věděl, o čem je řeč:</p>
+      <div class="code"><pre><code>hermes config set cron.mirror_delivery true</code></pre></div>
+    </li>
+
+    <li>
+      <h3>Zabezpeč</h3>
+      <p>Výchozí nastavení už blokuje nebezpečné příkazy a neznámé uživatele. Na počítači s pracovními daty dokumentace doporučuje přidat ruční schvalování:</p>
+      <div class="code"><pre><code>hermes config set approvals.mode manual</code></pre></div>
+      <p>Nikdy nenastavuj <code>GATEWAY_ALLOW_ALL_USERS=true</code>. Token bota nikomu neposílej; při úniku ho zruš příkazem <code>/revoke</code> u @BotFather.</p>
+    </li>
+  </ol>
+</section>
+
+<section id="plaud">
+  <div class="sec-head"><span class="sec-no">05</span><h2>Plaud: jak dostat schůzky k agentovi</h2></div>
+  {{PLAUD}}
+</section>
+
+<section id="rytmus">
+  <div class="sec-head"><span class="sec-no">06</span><h2>Denní rytmus</h2></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Kdy</th><th>Co uděláš</th><th>Čas</th></tr></thead>
+    <tbody>
+      <tr><td>Začátek schůzky</td><td>Řekneš, že nahráváš, a zapneš Plaud.</td><td class="num">5 s</td></tr>
+      <tr><td>Po schůzce</td><td>Shrnutí z aplikace Plaud sdílíš do chatu s botem.</td><td class="num">2 ťuknutí</td></tr>
+      <tr><td>Mezi schůzkami</td><td>Hlasovka „Log…“: opravy, telefonáty, koordinace, kontrola cizích podkladů.</td><td class="num">20 s</td></tr>
+      <tr><td>18:30</td><td>Přijde denní souhrn s otázkami. Odpovíš hlasem nebo textem.</td><td class="num">1 až 3 min</td></tr>
+      <tr><td>Pátek 16:00</td><td>Přijde návrh výkazu v .docx. Projdeš, upravíš, odešleš sám.</td><td class="num">5 až 10 min</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Časy ve sloupci vpravo jsou cílové hodnoty návrhu, ne naměřené údaje. Ověř je za první dva týdny.</p>
+</section>
+
+<section id="neviditelna">
+  <div class="sec-head"><span class="sec-no">07</span><h2>Neviditelná práce a opravy za ostatní</h2></div>
+  <p>Výkaz má ukázat, co se díky tobě nestalo: chyby zachycené před vydáním, nekoordinované podklady, které jsi srovnal. Formuluj věcně, s rozsahem a důsledkem, bez obviňování. Skill to má v pravidlech.</p>
+  <div class="compare">
+    <div class="bad"><span>Takhle ne</span>Fixed the junior team's careless mistakes on the tender set again.</div>
+    <div class="fine"><span>Takhle ano</span>Reviewed and corrected grid references on 24 tender drawings before issue; avoided a re-issue to the contractor.</div>
+    <div class="bad"><span>Takhle ne</span>Had to redo structural coordination because nobody checked it.</div>
+    <div class="fine"><span>Takhle ano</span>Re-coordinated slab openings with the structural consultant (3 clashes resolved), unblocking the MEP submission.</div>
+  </div>
+  <p style="margin-top:12px">Soubor <code>impact-log.md</code> se plní sám při denní uzávěrce. Jednou měsíčně z něj agent udělá 5 až 10 vět ve tvaru situace, akce, výsledek, doklad. To je podklad k hodnocení, kde se jinak vzpomíná po paměti.</p>
+</section>
+
+<section id="it">
+  <div class="sec-head"><span class="sec-no">08</span><h2>Stupeň 3: firemní systémy (jen se souhlasem IT)</h2></div>
+  <ul>
+    <li><b>Pracovní e-mail.</b> Hermes má vestavěný skill Himalaya pro práci se schránkou přes IMAP/SMTP. Firemní Microsoft 365 často IMAP nebo hesla aplikací vypíná; rozhoduje IT.</li>
+    <li><b>Přepisy z Microsoft Teams.</b> Hermes má pipeline pro přepisy schůzek z Teams přes Microsoft Graph. Dokumentace uvádí, že k nastavení jsou potřeba práva správce tenantu. Bez IT nejde.</li>
+    <li><b>Bez napojení:</b> přepis schůzky z Teams si můžeš stáhnout ručně a poslat botovi jako soubor. Agent čte .docx, .pdf, .txt i .md.</li>
+  </ul>
+  <p class="warn">Přeposílání firemní pošty do soukromé schránky nebo k externímu AI poskytovateli bývá v rozporu s interními pravidly. Nedělej to bez písemného souhlasu.</p>
+</section>
+
+<section id="problemy">
+  <div class="sec-head"><span class="sec-no">09</span><h2>Když něco nefunguje</h2></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Příznak</th><th>Co zkusit</th></tr></thead>
+    <tbody>
+      <tr><td>Agent neodpovídá nebo hlásí chybu modelu</td><td><code>hermes doctor</code>, pak <code>hermes model</code> (klíč, kredit, název modelu)</td></tr>
+      <tr><td>Bot v Telegramu mlčí</td><td><code>hermes gateway status</code>, případně <code>hermes gateway setup</code> znovu</td></tr>
+      <tr><td>Denní souhrn nepřišel</td><td><code>hermes cron list</code> ukáže poslední běh a chybu; <code>hermes cron run "Daily close"</code></td></tr>
+      <tr><td>Agent si vymýšlí hodiny</td><td>Odpověz opravou a do AGENTS.md přidej pravidlo; skill už vymýšlení zakazuje</td></tr>
+      <tr><td>Přepis komolí jména</td><td>Doplň je do <code>stt.prompt</code> (krok 8)</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="zdroje">
+  <div class="sec-head"><span class="sec-no">10</span><h2>Video a pár zdrojů</h2></div>
+  {{SOURCES}}
+</section>
+
+<footer>
+  <p>Ověřeno k 15. 11. 2026. Hermes Agent se vyvíjí rychle; když se příkaz liší, platí aktuální oficiální dokumentace. Nejde o právní poradenství.</p>
+</footer>
+</div>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var code=btn.parentElement.querySelector('code');
+    var text=code.innerText;
+    var done=function(){btn.textContent='Zkopírováno';setTimeout(function(){btn.textContent='Kopírovat';},1600);};
+    var fallback=function(){var r=document.createRange();r.selectNodeContents(code);var s=window.getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Označeno, Ctrl+C';};
+    try{navigator.clipboard.writeText(text).then(done,fallback);}catch(e){fallback();}
+  });
+});
+</script>

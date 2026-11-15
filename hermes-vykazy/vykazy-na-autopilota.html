@@ -195,23 +195,23 @@ footer{margin-top:20px;font-size:.85rem;color:var(--muted)}
     </li>
 
     <li>
-      <h3>Nainstaluj Hermes</h3>
-      <p>Nejjednodušší je instalátor Hermes Desktop ze stránky projektu (Mac: otevři DMG a přetáhni Hermes.app do Aplikací; Windows: otevři soubor .appinstaller). Obsahuje aplikaci i příkazový řádek. Alternativa jen pro terminál:</p>
-      <div class="code"><pre><code>curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
-source ~/.zshrc
-hermes doctor</code></pre></div>
-      <p>Windows (PowerShell): <code>iex (irm https://hermes-agent.nousresearch.com/install.ps1)</code></p>
-    </li>
-
-    <li>
-      <h3>Připoj model Kimi nebo GLM</h3>
+      <h3>Stáhni Hermes Desktop a vyber model</h3>
+      <p><b>Nejjednodušší cesta, bez terminálu:</b> stáhni instalátor Hermes Desktop ze stránky projektu (Mac: otevři DMG a přetáhni Hermes.app do Aplikací; Windows: otevři soubor .appinstaller). Balíček obsahuje agenta, aplikaci i příkazový řádek. Při prvním spuštění tě provede úvodní nastavení, ve kterém zvolíš poskytovatele a model.</p>
+      <ol>
+        <li>Spusť Hermes Desktop. V úvodním průvodci vyber poskytovatele <b>Kimi / Moonshot</b> nebo <b>Z.AI</b> (GLM) a vlož API klíč.</li>
+        <li>Kdykoli později: <b>Settings → Providers</b> (API klíče) a <b>Settings → Model → Main model</b>: vyber poskytovatele a model a klikni na <b>Apply</b>. Tenhle hlavní model používají i plánované úlohy.</li>
+        <li>Napiš do chatu: <i>Reply with OK and today's date.</i> Když odpoví, základ funguje.</li>
+      </ol>
       {{MODEL}}
-      <div class="code"><pre><code>hermes model
-# vyber "Kimi / Moonshot" nebo "Z.AI" (GLM), vlož API klíč, zvol model
-
-hermes
-# první test, napiš:  Reply with OK and today's date.</code></pre></div>
-      <p>Klíče se ukládají do <code>~/.hermes/.env</code>, ostatní nastavení do <code>~/.hermes/config.yaml</code>. Hermes vyžaduje model s kontextem aspoň 64 000 tokenů. Když chat nefunguje, nepřidávej další funkce a spusť <code>hermes doctor</code> a znovu <code>hermes model</code>.</p>
+      <details><summary>Alternativa přes terminál</summary>
+        <div class="code"><pre><code>curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+source ~/.zshrc
+hermes model      # vyber "Kimi / Moonshot" nebo "Z.AI", vlož klíč, zvol model
+hermes            # test: Reply with OK and today's date.
+hermes doctor     # diagnostika, když něco nejde</code></pre></div>
+        <p>Windows (PowerShell): <code>iex (irm https://hermes-agent.nousresearch.com/install.ps1)</code></p>
+      </details>
+      <p>Klíče se ukládají do <code>~/.hermes/.env</code>, ostatní nastavení do <code>~/.hermes/config.yaml</code>; aplikace i terminál sdílejí stejné nastavení. Hermes vyžaduje model s kontextem aspoň 64 000 tokenů. Pravidlo z dokumentace: dokud nefunguje obyčejný chat, nepřidávej další funkce.</p>
     </li>
 
     <li>
@@ -401,7 +401,7 @@ hermes config set stt.prompt "Revit, BIM, BD, Buildings Department, [jména proj
 
     <li>
       <h3>Naplánuj denní uzávěrku, týdenní výkaz a měsíční přehled</h3>
-      <p>Spusť v terminálu (nahraď cestu). Úlohy běží v hongkongském čase díky kroku 4.</p>
+      <p>Spusť v terminálu (nahraď cestu). Úlohy běží v hongkongském čase díky kroku 3. Naplánované úlohy pak vidíš a spravuješ i v Hermes Desktop.</p>
       <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code>hermes cron create "30 18 * * 1-5" "DAILY CLOSE: Use the worklog skill, procedure B, for today's date. Work only inside the WorkLog folder. Reply in English, under 120 words, and end with the Gaps questions." --skill worklog --workdir /Users/TVOJE_JMENO/WorkLog --name "Daily close" --deliver telegram
 
 hermes cron create "0 16 * * 5" "WEEKLY REPORT: Use the worklog skill, procedure C, for the current ISO week. Follow templates/weekly-template.md. Save the Markdown file and a .docx copy in weekly/, then attach the .docx. This is a draft for my review only." --skill worklog --workdir /Users/TVOJE_JMENO/WorkLog --name "Weekly report" --deliver telegram
@@ -474,7 +474,7 @@ hermes cron run "Daily close"</code></pre></div>
       <tr><td>Bot v Telegramu mlčí</td><td><code>hermes gateway status</code>, případně <code>hermes gateway setup</code> znovu</td></tr>
       <tr><td>Denní souhrn nepřišel</td><td><code>hermes cron list</code> ukáže poslední běh a chybu; <code>hermes cron run "Daily close"</code></td></tr>
       <tr><td>Agent si vymýšlí hodiny</td><td>Odpověz opravou a do AGENTS.md přidej pravidlo; skill už vymýšlení zakazuje</td></tr>
-      <tr><td>Přepis komolí jména</td><td>Doplň je do <code>stt.prompt</code> (krok 8)</td></tr>
+      <tr><td>Přepis komolí jména</td><td>Doplň je do <code>stt.prompt</code> (krok 7)</td></tr>
     </tbody>
   </table></div>
 </section>

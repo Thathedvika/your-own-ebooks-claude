@@ -331,7 +331,7 @@ footer{margin-top:20px;font-size:.85rem;color:var(--muted)}
       <div><code>weekly-template.md</code><small>šablona výkazu, patří do ~/WorkLog/templates/</small></div><button class="dl" type="button" data-file="weekly-template.md" hidden>Stáhnout</button>
       <div><code>impact-log.md</code><small>prázdný záznam úspěchů, patří do ~/WorkLog/</small></div><button class="dl" type="button" data-file="impact-log.md" hidden>Stáhnout</button>
     </div>
-    <p class="dl-msg" id="dl-msg">Tlačítka Stáhnout se zobrazí, jakmile je stránka načtená v claude.ai. Jinde soubory zkopíruj tlačítkem Kopírovat v krocích 4 a 5.</p>
+    <p class="dl-msg" id="dl-msg">Pokud se tlačítka Stáhnout nezobrazí, zkopíruj soubory tlačítkem Kopírovat v krocích 4 a 5.</p>
   </div>
   
   <ol class="steps">
@@ -788,35 +788,43 @@ hermes config set stt.provider elevenlabs</code></pre></div>
   function files(){return {'SKILL.md':txt('f-skill'),'AGENTS.md':txt('f-agents'),'weekly-template.md':txt('f-template'),'impact-log.md':IMPACT};}
   var msg=document.getElementById('dl-msg');
   function say(t){if(msg){msg.textContent=t;}}
-  if(!window.claude||!window.claude.use){return;}
-  window.claude.use('downloads').then(function(dl){
-    if(!dl){return;}
-    var btns=document.querySelectorAll('.dl');
+  var btns=document.querySelectorAll('.dl');
+  function plainSave(name,data){
+    var blob=(data instanceof Blob)?data:new Blob([data],{type:name.slice(-4)==='.zip'?'application/zip':'text/markdown;charset=utf-8'});
+    var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download=name;
+    document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},2000);
+    return Promise.resolve();
+  }
+  function wire(saveFn,note){
     btns.forEach(function(b){b.hidden=false;});
-    say('Prohlížeč se před uložením zeptá na potvrzení.');
+    say(note);
     btns.forEach(function(b){
       b.addEventListener('click',function(){
         var name=b.getAttribute('data-file'); var f=files(); var p;
         if(name==='ZIP'){
-          if(typeof JSZip==='undefined'){say('ZIP se nepodařilo připravit. Stáhni soubory jednotlivě.');return;}
+          if(typeof JSZip==='undefined'){say('ZIP se nepodařilo připravit (chybí připojení k internetu). Stáhni soubory jednotlivě.');return;}
           var z=new JSZip();
           z.file('WorkLog/AGENTS.md',f['AGENTS.md']);
           z.file('WorkLog/impact-log.md',f['impact-log.md']);
           z.file('WorkLog/templates/weekly-template.md',f['weekly-template.md']);
           z.folder('WorkLog/inbox');z.folder('WorkLog/daily');z.folder('WorkLog/weekly');
           z.file('skills/worklog/SKILL.md',f['SKILL.md']);
-          p=z.generateAsync({type:'blob'}).then(function(blob){return dl.save({filename:'WorkLog.zip',data:blob});});
-        } else {
-          p=dl.save({filename:name,data:f[name]});
-        }
-        p.then(function(){say('Uloženo: '+(name==='ZIP'?'WorkLog.zip':name));},function(e){
+          p=z.generateAsync({type:'blob'}).then(function(blob){return saveFn('WorkLog.zip',blob);});
+        } else { p=saveFn(name,f[name]); }
+        p.then(function(){say('Staženo: '+(name==='ZIP'?'WorkLog.zip':name));},function(e){
           var c=e&&e.code;
           if(c==='declined'){say('Stahování zrušeno.');}
           else if(c==='rate_limited'){say('Chvíli počkej a zkus to znovu.');}
-          else{say('Stažení tady nejde. Použij tlačítko Kopírovat.');btns.forEach(function(x){x.hidden=true;});}
+          else{say('Stažení tady nejde. Použij tlačítko Kopírovat.');}
         });
       });
     });
+  }
+  var host=window.claude&&typeof window.claude.use==='function';
+  if(!host){ wire(plainSave,'Soubory se uloží do složky Stažené soubory.'); return; }
+  window.claude.use('downloads').then(function(dl){
+    if(!dl){return;}
+    wire(function(name,data){return dl.save({filename:name,data:data});},'Prohlížeč se před uložením zeptá na potvrzení.');
   },function(){});
 })();
 </script>

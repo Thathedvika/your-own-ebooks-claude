@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
+</head>
+<body>
+<title>Výkazy na autopilota</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a drawing set. Sticky sheet index on the left, one 780px sheet column on the right, grid-paper ground. */
+:root{
+  --paper:#f6f8fb; --sheet:#ffffff; --ink:#15233b; --muted:#56627a; --line:#d5dce8; --grid:rgba(31,75,153,.05);
+  --accent:#1f4b99; --accent-soft:#e6edf9; --red:#b4441a; --red-soft:#fbece5; --ok:#2f7a4d; --ok-soft:#e6f3ea;
+  --code-bg:#f0f3f8;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0f1522; --sheet:#151d2d; --ink:#e3e9f4; --muted:#9aa7bf; --line:#2a3650; --grid:rgba(120,160,230,.06);
+  --accent:#8fb2ff; --accent-soft:#1c2a47; --red:#f19a72; --red-soft:#3a2219; --ok:#7fd1a0; --ok-soft:#18311f;
+  --code-bg:#0c121d; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --paper:#0f1522; --sheet:#151d2d; --ink:#e3e9f4; --muted:#9aa7bf; --line:#2a3650; --grid:rgba(120,160,230,.06);
+  --accent:#8fb2ff; --accent-soft:#1c2a47; --red:#f19a72; --red-soft:#3a2219; --ok:#7fd1a0; --ok-soft:#18311f;
+  --code-bg:#0c121d; color-scheme:dark;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;}
+.page{max-width:1120px;margin:0 auto;padding-block:28px 64px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;align-items:start}
+@media (max-width:900px){.page{grid-template-columns:minmax(0,1fr);gap:0}}
+main{min-width:0}
+h1,h2,h3,h4{font-family:var(--display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(2rem,5vw,2.9rem);font-weight:800;letter-spacing:-.01em}
+h2{font-size:1.55rem;font-weight:700}
+h3{font-size:1.15rem;font-weight:700;margin:26px 0 8px;scroll-margin-top:16px}
+h4{font-size:1rem;font-weight:700;margin:16px 0 6px}
+p{margin:0 0 12px}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+ul,ol{margin:0 0 12px;padding-left:22px}
+li{margin-bottom:4px}
+.lead{font-size:1.08rem;color:var(--muted);max-width:65ch}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+
+/* sheet index (menu) */
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);max-height:calc(100vh - 32px);overflow:auto;
+  background:var(--sheet);border:1px solid var(--line);border-radius:6px;padding:12px 12px 14px}
+.toc summary{font-family:var(--mono);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);cursor:pointer;list-style:none;padding:2px 0}
+.toc summary::-webkit-details-marker{display:none}
+.toc summary::after{content:" +";color:var(--accent)}
+.toc[open] summary::after{content:" −"}
+.toc ol{list-style:none;padding:0;margin:8px 0 0}
+.toc>ol>li{margin:0 0 6px}
+.toc a{display:block;text-decoration:none;color:var(--ink);font-size:.9rem;line-height:1.35;padding:3px 6px;border-radius:3px;border-left:2px solid transparent}
+.toc a:hover{background:var(--accent-soft)}
+.toc a.active{border-left-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.toc>ol>li>a{font-weight:600}
+.toc .n{font-family:var(--mono);font-size:.75rem;color:var(--muted);margin-right:6px}
+.toc ol ol{margin:2px 0 4px 10px}
+.toc ol ol a{font-size:.84rem;color:var(--muted)}
+@media (max-width:900px){.toc{position:static;max-height:none;margin-bottom:16px}}
+
+/* sections */
+section{background:var(--sheet);border:1px solid var(--line);border-radius:6px;padding:24px;margin-top:20px;scroll-margin-top:16px}
+section>*:last-child{margin-bottom:0}
+.sec-head{display:flex;gap:12px;align-items:baseline;margin-bottom:12px;flex-wrap:wrap}
+.sec-no{font-family:var(--mono);font-size:.8rem;color:var(--muted);border:1px solid var(--line);padding:1px 7px;border-radius:3px}
+h3 .sub{font-family:var(--mono);font-size:.78rem;font-weight:500;color:var(--muted);margin-right:8px}
+
+/* title block */
+.titleblock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1.5px solid var(--ink);margin-top:20px;background:var(--sheet)}
+.titleblock div{padding:8px 10px;border-right:1px solid var(--ink);min-width:0}
+.titleblock div:last-child{border-right:0}
+.titleblock span{display:block;font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.titleblock b{font-family:var(--mono);font-weight:500;font-size:.9rem}
+@media (max-width:560px){.titleblock{grid-template-columns:repeat(2,minmax(0,1fr))}.titleblock div:nth-child(2){border-right:0}.titleblock div:nth-child(-n+2){border-bottom:1px solid var(--ink)}}
+
+/* flow diagram */
+.flow{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1.1fr) 28px minmax(0,1fr);align-items:stretch;margin:8px 0 16px}
+.col{border:1px solid var(--line);border-radius:6px;padding:12px;background:var(--paper);min-width:0}
+.col h4{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 8px;font-weight:500}
+.col.core{border:1.5px solid var(--accent);background:var(--accent-soft)}
+.node{background:var(--sheet);border:1px solid var(--line);border-radius:4px;padding:7px 9px;margin-bottom:7px;font-size:.88rem;line-height:1.35}
+.node:last-child{margin-bottom:0}
+.node b{display:block;font-size:.9rem}
+.node small{color:var(--muted)}
+.arrow{display:flex;align-items:center;justify-content:center;color:var(--accent);font-family:var(--mono);font-size:1.2rem}
+@media (max-width:680px){.flow{grid-template-columns:minmax(0,1fr)}.arrow{transform:rotate(90deg);height:28px}}
+
+/* callouts */
+.note,.warn,.good{padding:10px 14px;border-radius:0 4px 4px 0;margin:12px 0}
+.note{border-left:3px solid var(--accent);background:var(--accent-soft)}
+.warn{border-left:3px solid var(--red);background:var(--red-soft)}
+.good{border-left:3px solid var(--ok);background:var(--ok-soft)}
+.note p:last-child,.warn p:last-child,.good p:last-child,.note ul:last-child{margin-bottom:0}
+.check{list-style:none;padding-left:0;margin:6px 0 0}
+.check li{position:relative;padding-left:26px;margin-bottom:8px}
+.check li:last-child{margin-bottom:0}
+.check li::before{content:"";position:absolute;left:2px;top:5px;width:13px;height:13px;border:1.5px solid var(--accent);border-radius:2px;background:var(--sheet)}
+
+/* steps */
+.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+.steps>li{counter-increment:s;position:relative;padding:0 0 18px 44px;border-left:1px dashed var(--line);margin-left:14px}
+.steps>li:last-child{border-left-color:transparent;padding-bottom:0}
+.steps>li::before{content:counter(s);position:absolute;left:-15px;top:-2px;width:30px;height:30px;border-radius:50%;
+  background:var(--sheet);border:1.5px solid var(--accent);color:var(--accent);font-family:var(--mono);font-size:.85rem;display:flex;align-items:center;justify-content:center}
+.steps>li>h3{margin-top:0}
+
+/* code */
+.code{position:relative;margin:8px 0 14px}
+pre{background:var(--code-bg);border:1px solid var(--line);border-radius:4px;padding:12px 14px;overflow-x:auto;margin:0;font-family:var(--mono);font-size:.82rem;line-height:1.5;white-space:pre}
+code{font-family:var(--mono);font-size:.86em;background:var(--code-bg);padding:1px 4px;border-radius:3px;overflow-wrap:anywhere}
+pre code{background:none;padding:0;font-size:inherit;overflow-wrap:normal}
+.btns{position:absolute;top:6px;right:6px;display:flex;gap:6px}
+.copy,.dl{font-family:var(--mono);font-size:.72rem;border:1px solid var(--line);background:var(--sheet);color:var(--ink);border-radius:3px;padding:3px 8px;cursor:pointer}
+.copy:hover,.dl:hover{border-color:var(--accent);color:var(--accent)}
+.dl{border-color:var(--accent);color:var(--accent)}
+.files{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;align-items:center;margin:8px 0 6px}
+.files code{background:none;padding:0}
+.files small{display:block;color:var(--muted)}
+.files .dl{justify-self:end}
+.dl-all{font-family:var(--mono);font-size:.8rem;border:1.5px solid var(--accent);background:var(--accent);color:var(--sheet);border-radius:4px;padding:6px 12px;cursor:pointer;margin-top:6px}
+.dl-msg{font-size:.85rem;color:var(--muted);margin:6px 0 0}
+details.more{border:1px solid var(--line);border-radius:4px;padding:8px 12px;margin:8px 0 14px;background:var(--paper)}
+details.more summary{cursor:pointer;font-weight:600}
+details.more[open] summary{margin-bottom:8px}
+
+/* tables */
+.tbl{overflow-x:auto;margin:8px 0 14px}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:540px}
+th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+th{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:500}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+td small{color:var(--muted)}
+.pill{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;padding:1px 6px;border-radius:3px;white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.no{background:var(--red-soft);color:var(--red)}
+.pill.q{background:var(--accent-soft);color:var(--accent)}
+
+.levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:8px 0 12px}
+.lvl{border:1px solid var(--line);border-radius:6px;padding:12px;min-width:0}
+.lvl .tag{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
+.lvl.opt .tag{color:var(--red)}
+.lvl b{display:block;margin:4px 0}
+.lvl p{font-size:.9rem;margin:0}
+@media (max-width:680px){.levels{grid-template-columns:minmax(0,1fr)}}
+.compare{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+@media (max-width:600px){.compare{grid-template-columns:minmax(0,1fr)}}
+.compare>div{padding:10px 12px;border-radius:4px;font-size:.92rem;min-width:0}
+.compare .bad{background:var(--red-soft)}
+.compare .fine{background:var(--ok-soft)}
+.compare span{display:block;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px;color:var(--muted)}
+
+.src{list-style:none;padding:0}
+.src li{padding:10px 0;border-bottom:1px solid var(--line)}
+.src li:last-child{border-bottom:0}
+.src .d{display:block}
+.src a{font-family:var(--mono);font-size:.82rem;word-break:break-all}
+footer{margin-top:20px;font-size:.85rem;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+
+<div class="page">
+
+<nav aria-label="Obsah návodu">
+<details class="toc" id="toc" open>
+  <summary>Obsah</summary>
+  <ol>
+    <li><a href="#prehled"><span class="n">1</span>Přehled</a>
+      <ol><li><a href="#jak">Jak to funguje</a></li><li><a href="#stupne">Tři stupně zavádění</a></li></ol></li>
+    <li><a href="#pred"><span class="n">2</span>Než začneš</a>
+      <ol><li><a href="#checklist">Kontrolní seznam</a></li><li><a href="#pravidla">Čtyři pravidla</a></li></ol></li>
+    <li><a href="#nakup"><span class="n">3</span>Co pořídit</a>
+      <ol><li><a href="#zarizeni">Nahrávací zařízení</a></li><li><a href="#tarify">Tarify Plaud</a></li><li><a href="#model">Model: Kimi nebo GLM</a></li><li><a href="#chat">WhatsApp nebo Telegram</a></li></ol></li>
+    <li><a href="#setup"><span class="n">4</span>Nastavení krok za krokem</a>
+      <ol><li><a href="#soubory">Soubory ke stažení</a></li><li><a href="#k1">1 Kde agent poběží</a></li><li><a href="#k2">2 Hermes Desktop a model</a></li><li><a href="#k3">3 Čas a pracovní složka</a></li><li><a href="#k4">4 Kontext AGENTS.md</a></li><li><a href="#k5">5 Skill worklog</a></li><li><a href="#k6">6 WhatsApp nebo Telegram</a></li><li><a href="#k7">7 Hlasové poznámky</a></li><li><a href="#k8">8 Plánované úlohy</a></li><li><a href="#k9">9 Zabezpečení</a></li></ol></li>
+    <li><a href="#plaud"><span class="n">5</span>Plaud a přepis</a>
+      <ol><li><a href="#plaud-hk">Plaud v Hongkongu</a></li><li><a href="#plaud-nastaveni">Nastavení přepisu</a></li><li><a href="#plaud-pokyn">Pokyn pro shrnutí</a></li><li><a href="#plaud-cesty">Cesta k agentovi</a></li><li><a href="#kvalita">Kvalita přepisu</a></li></ol></li>
+    <li><a href="#provoz"><span class="n">6</span>Provoz</a>
+      <ol><li><a href="#rytmus">Denní rytmus</a></li><li><a href="#neviditelna">Neviditelná práce</a></li><li><a href="#it">Firemní systémy</a></li><li><a href="#problemy">Když něco nefunguje</a></li></ol></li>
+    <li><a href="#zdroje"><span class="n">7</span>Zdroje</a>
+      <ol><li><a href="#zdroje-start">Na začátek</a></li><li><a href="#zdroje-ref">Reference</a></li></ol></li>
+  </ol>
+</details>
+</nav>
+
+<main>
+<header>
+  <div class="eyebrow">Návod pro architekta v Hongkongu</div>
+  <h1>Výkazy na autopilota</h1>
+  <p class="lead">Jak z nahrávek schůzek, hlasových poznámek a vybraných podkladů nechat AI agenta skládat denní záznam práce a týdenní výkaz. Ty jen zkontroluješ a odešleš. Postaveno na Hermes Agent s modelem Kimi nebo GLM, protože Claude ani ChatGPT v Hongkongu oficiálně nefungují. S agentem si píšeš ve WhatsAppu nebo v Telegramu.</p>
+  <div class="titleblock" aria-label="Údaje o dokumentu">
+    <div><span>Výkres č.</span><b>WL-01</b></div>
+    <div><span>Revize</span><b>B</b></div>
+    <div><span>Datum</span><b>15. 11. 2026</b></div>
+    <div><span>Měřítko</span><b>1 řádek = 0,25 h</b></div>
+  </div>
+</header>
+
+<!-- 1 -->
+<section id="prehled">
+  <div class="sec-head"><span class="sec-no">1</span><h2>Přehled</h2></div>
+  <h3 id="jak"><span class="sub">1.1</span>Jak to funguje</h3>
+  <p>Tři vrstvy. Vstupy sbíráš skoro bez práce, agent je třídí a skládá, ty dostaneš hotový návrh do telefonu.</p>
+  <div class="flow" role="img" aria-label="Schéma: vstupy, agent, výstupy">
+    <div class="col">
+      <h4>Vstupy</h4>
+      <div class="node"><b>Plaud</b><small>schůzky: nahrávka, přepis, shrnutí</small></div>
+      <div class="node"><b>Hlasová poznámka</b><small>do WhatsAppu nebo Telegramu: „Log: 2 h oprava výkresů…“</small></div>
+      <div class="node"><b>Soubory</b><small>zápis, export z Teams, PDF (volitelně)</small></div>
+    </div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="col core">
+      <h4>Hermes Agent</h4>
+      <div class="node"><b>Model Kimi nebo GLM</b><small>přes API, platíš podle spotřeby</small></div>
+      <div class="node"><b>Skill „worklog“</b><small>pravidla: co, kolik, zdroj, bez vymýšlení</small></div>
+      <div class="node"><b>Složka WorkLog</b><small>denní záznamy, týdenní výkazy, impact log</small></div>
+      <div class="node"><b>Plánovač</b><small>18:30 denní uzávěrka, pátek 16:00 výkaz</small></div>
+    </div>
+    <div class="arrow" aria-hidden="true">→</div>
+    <div class="col">
+      <h4>Výstupy</h4>
+      <div class="node"><b>Denní souhrn</b><small>do chatu + otázky na mezery</small></div>
+      <div class="node"><b>Týdenní výkaz</b><small>.docx a tabulka hodin ke kontrole</small></div>
+      <div class="node"><b>Impact log</b><small>podklad pro hodnocení a jednání o platu</small></div>
+    </div>
+  </div>
+  <div class="good"><p><b>Základní pravidlo:</b> agent píše návrh, odesílá vždy člověk. Nic nejde šéfovi automaticky.</p></div>
+
+  <h3 id="stupne"><span class="sub">1.2</span>Tři stupně, ne všechno najednou</h3>
+  <div class="levels">
+    <div class="lvl"><span class="tag">Týden 1</span><b>Ruční sběr</b><p>Chat s agentem, hlasové poznámky, sdílení shrnutí z Plaud. Výkaz si vyžádáš příkazem.</p></div>
+    <div class="lvl"><span class="tag">Týden 2</span><b>Automatika</b><p>Denní uzávěrka a páteční výkaz běží samy. Ladíš šablonu a kódy projektů.</p></div>
+    <div class="lvl opt"><span class="tag">Jen se souhlasem IT</span><b>Firemní systémy</b><p>Napojení na pracovní e-mail nebo přepisy z Teams. Bez souhlasu zaměstnavatele vynech.</p></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="pred">
+  <div class="sec-head"><span class="sec-no">2</span><h2>Než začneš</h2></div>
+  <h3 id="checklist"><span class="sub">2.1</span>Kontrolní seznam: ověř dřív, než něco koupíš nebo zapneš</h3>
+  <div class="note">
+    <ul class="check">
+      <li><b>Pravidla zaměstnavatele.</b> Smíš v práci používat AI nástroje, a které? Platí to i pro model u čínského poskytovatele? Bez souhlasu nenapojuj pracovní e-mail ani Teams. Viz 2.2 a 6.3.</li>
+      <li><b>Účet Plaud z Hongkongu.</b> Než koupíš zařízení, nainstaluj aplikaci Plaud a zaregistruj účet. Podmínky Plaud Hongkong z omezení výslovně vyjímají (viz 5.1); registrace je praktická zkouška zdarma.</li>
+      <li><b>Registrace u modelu z Hongkongu.</b> Hongkong jsem v oficiálních seznamech regionů Kimi ani Z.ai výslovně nenašel. Zaregistruj se, nabij minimum ($1 u Kimi) a vytvoř API klíč. Když to projde, jsi v pořádku. Viz 3.3.</li>
+      <li><b>Žádný GLM Coding Plan.</b> Pro Hermes jen běžný API klíč s placením podle spotřeby. Viz 3.3.</li>
+      <li><b>WhatsApp: druhé číslo?</b> Pokud chceš agenta ve WhatsAppu, rozhodni předem, jestli mu dáš samostatné číslo (doporučené) nebo budeš psát sám sobě. Viz 3.4.</li>
+      <li><b>Cena modelu.</b> Odhad $5,5 až $13,5 měsíčně je výpočet z předpokladu. Po prvním týdnu zkontroluj skutečnou spotřebu příkazem <code>/usage</code>. Viz 3.3.</li>
+      <li><b>Automatické stahování z Plaud.</b> Napojení Plaud MCP na Hermes nebylo vyzkoušené. Začni sdílením shrnutí do chatu; automatiku zkus až po prvním týdnu. Viz 5.4.</li>
+    </ul>
+  </div>
+
+  <h3 id="pravidla"><span class="sub">2.2</span>Čtyři pravidla</h3>
+  <ol>
+    <li><b>Zeptej se zaměstnavatele, jestli smíš používat AI nástroje a které.</b> Hongkongský úřad pro ochranu osobních údajů (PCPD) vydal 31. 3. 2025 checklist pro firemní pravidla používání generativní AI. Doporučuje firmám určit, které platformy smí zaměstnanci používat, k jakým účelům a jaké informace do nich smí vkládat. Pokud firma taková pravidla má, mají přednost před tímto návodem. U klientů z veřejného sektoru nebo s citlivými projekty může vadit i to, že model běží u čínského poskytovatele.</li>
+    <li><b>Na začátku schůzky řekni, že nahráváš a proč.</b> Případová poznámka PCPD 2020E02 uvádí, že zákon o ochraně osobních údajů (PDPO) nahrávání nezakazuje. Když ale nahrávka zachycuje osobní údaje, platí pro ni zásady zákona. Úřad doporučuje lidi předem informovat, že se nahrává a k čemu. Plaud sám uvádí, že souhlas účastníků je odpovědností uživatele.</li>
+    <li><b>Dávej agentovi co nejméně dat.</b> Posílej shrnutí, ne celé přepisy, a nenapojuj pracovní e-mail. PCPD 25. 8. 2026 vydal pokyny k agentní AI. Doporučuje dávat agentům jen nezbytně nutný přístup, omezovat doplňky a používat aktuální oficiální verze. Už v březnu 2026 úřad varoval, že agent může omylem smazat data a že neprověřené skilly a pluginy mohou obsahovat škodlivý kód. Proto instaluj jen skilly, které znáš, například ten z tohoto návodu.</li>
+    <li><b>Vědět, kudy data tečou.</b> Hermes běží u tebe a podle dokumentace neodesílá žádnou telemetrii; data jdou jen k poskytovateli modelu. Kimi i Z.ai (GLM) ve svých podmínkách pro API uvádějí, že vstupy z API nepoužívají k trénování modelů (u Z.ai pokud s tím výslovně nesouhlasíš). Obě firmy uvádějí zpracování v Singapuru. Plaud ukládá data asijských účtů v AWS Singapur a podle svého Trust Center na nich bez souhlasu netrénuje.</li>
+  </ol>
+  <p class="note">Tohle není právní poradenství. Vládní odpověď Legislativní radě z 14. 6. 2017 (LCQ17) k nahrávání rozhovoru jeho účastníkem jsem v plném znění neověřil. Sekundární zdroje ji citují tak, že zákon účastníkovi rozhovoru nahrávání nezakazuje.</p>
+</section>
+
+<!-- 3 -->
+<section id="nakup">
+  <div class="sec-head"><span class="sec-no">3</span><h2>Co pořídit</h2></div>
+
+  <h3 id="zarizeni"><span class="sub">3.1</span>Nahrávací zařízení a alternativy</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Možnost</th><th>K čemu</th><th>Hongkong</th><th>Cena</th></tr></thead>
+    <tbody>
+      <tr><td><b>Plaud Note Pro</b> <span class="pill ok">doporučeno</span></td><td>Schůzky u stolu i telefonáty, hovor pozná sám. Výdrž podle výrobce až 50 h (režim Endurance).</td><td><span class="pill ok">ověřeno</span><br><small>oficiální HK obchod, podmínky HK vyjímají z omezení</small></td><td class="num">HK$1,399</td></tr>
+      <tr><td><b>Plaud NotePin S</b></td><td>Nositelný, jen osobní schůzky. Telefonáty nenahrává.</td><td><span class="pill ok">ověřeno</span></td><td class="num">HK$1,399</td></tr>
+      <tr><td><b>TicNote (Mobvoi)</b></td><td>Podobný rekordér, podle prodejců přes 120 jazyků, 25 h výdrž.</td><td><span class="pill q">částečně</span><br><small>prodává se jako oficiální dovoz; podmínky služby pro HK a test kantonštiny jsem nenašel</small></td><td class="num">HK$1,099 až 1,288<br><small>prodejci</small></td></tr>
+      <tr><td><b>iFLYTEK SR302</b></td><td>Výrobce uvádí kantonštinu a přepínání čínštiny s angličtinou.</td><td><span class="pill q">částečně</span><br><small>v prodeji; tvrzení o kantonštině nezávisle neověřeno</small></td><td class="num">HK$1,899 až 2,000<br><small>prodejci</small></td></tr>
+      <tr><td><b>Bez zařízení</b></td><td>Po schůzce hlasová poznámka do chatu s agentem (30 s). Online schůzky: přepis z Teams nebo Plaud Desktop.</td><td><span class="pill ok">funguje</span></td><td class="num">0</td></tr>
+    </tbody>
+  </table></div>
+  <p>Proč Plaud: jen u něj mám pro Hongkong doloženou dostupnost služby přímo ve smluvních podmínkách, oficiální hongkongský obchod a oficiální napojení pro agenty (MCP). U alternativ jsou doložené jen ceny v obchodech.</p>
+
+  <h3 id="tarify"><span class="sub">3.2</span>Tarify Plaud</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Tarif</th><th>Přepis</th><th>Cena</th></tr></thead>
+    <tbody>
+      <tr><td>Starter</td><td>300 minut měsíčně (5 h), přepis i shrnutí</td><td class="num">zdarma se zařízením</td></tr>
+      <tr><td>Pro</td><td>1 200 minut měsíčně (20 h)</td><td class="num">US$99.99/rok</td></tr>
+      <tr><td>Unlimited</td><td>bez měsíčního limitu (max. 24 h denně)</td><td class="num">US$239.99/rok</td></tr>
+    </tbody>
+  </table></div>
+  <p>Starter stačí na zkoušku. Při mnoha schůzkách Pro nebo Unlimited. Hongkongský obchod prodává předplatné v HKD (HK$788 a HK$1,888 ročně); který tarif je který, ověř v obchodě.</p>
+
+  <h3 id="model"><span class="sub">3.3</span>Model: Kimi nebo GLM</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Poskytovatel</th><th>Model</th><th>Cena za 1 mil. tokenů</th><th>Poznámka</th></tr></thead>
+    <tbody>
+      <tr><td><b>Kimi</b> <span class="pill ok">doporučeno</span></td><td><code>kimi-k3</code></td><td class="num">vstup $3 / výstup $15</td><td>Kimi má oficiální návod pro Hermes. Předplacený kredit od $1.</td></tr>
+      <tr><td><b>GLM (Z.ai)</b></td><td><code>glm-5.3</code></td><td class="num">vstup $1.40 / výstup $4.40</td><td>Levnější. Platba kartou přes Stripe.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note"><p><b>Kolik to bude stát měsíčně?</b> Hrubý odhad z předpokladu 3 milionů vstupních a 0,3 milionu výstupních tokenů měsíčně: Kimi K3 zhruba $13,5, GLM-5.3 zhruba $5,5, bez slev za cache. Je to výpočet, ne měření. Skutečnou spotřebu ukáže v Hermes <code>/usage</code> nebo <code>/insights</code>. Předplacený kredit funguje jako strop.</p></div>
+  <p class="warn"><b>GLM Coding Plan nekupuj.</b> Podmínky Z.ai ho omezují na oficiálně podporované nástroje a Hermes v jejich seznamu není. Při porušení hrozí omezení nebo zablokování účtu.</p>
+  <p>Data: Kimi i Z.ai ve svých podmínkách pro API uvádějí, že vstupy z API nepoužívají k trénování (u Z.ai pokud výslovně nesouhlasíš), a obě uvádějí zpracování v Singapuru. Hongkong jsem v jejich oficiálních seznamech regionů výslovně nenašel, proto začni nejmenším nabitím.</p>
+
+  <h3 id="chat"><span class="sub">3.4</span>Chat s agentem: WhatsApp nebo Telegram</h3>
+  <p>Agent umí obojí, výsledky a hlasové poznámky fungují stejně. Rozdíl je ve způsobu napojení.</p>
+  <div class="tbl"><table>
+    <thead><tr><th></th><th>WhatsApp</th><th>Telegram</th></tr></thead>
+    <tbody>
+      <tr><td>Výhoda</td><td>Používáš ho denně, nic nového se neučíš.</td><td>Oficiální rozhraní pro boty, nejstabilnější.</td></tr>
+      <tr><td>Napojení</td><td>Neoficiální most (emuluje WhatsApp Web), spárování QR kódem jako „propojené zařízení“.</td><td>Bot přes @BotFather nebo tlačítko „Create with QR“ v Hermes Desktop.</td></tr>
+      <tr><td>Číslo</td><td>Doporučené samostatné číslo pro agenta (např. předplacená SIM; číslo musí zůstat aktivní). Jinak režim „self-chat“: píšeš sám sobě na svém čísle.</td><td>Žádné další číslo.</td></tr>
+      <tr><td>Rizika</td><td>Dokumentace Hermes uvádí malé riziko omezení účtu; po aktualizaci WhatsAppu může být nutné Hermes aktualizovat a znovu spárovat.</td><td>Žádná zvláštní.</td></tr>
+      <tr><td>Hlasovky</td><td>Přepisují se automaticky.</td><td>Přepisují se automaticky.</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>Doporučení:</b> pokud chceš WhatsApp, dej agentovi samostatné číslo. Riziko pak nenese tvůj hlavní účet. Pokud nechceš řešit druhé číslo, je jednodušší Telegram. Oficiální WhatsApp Business Cloud API riziko blokace nemá, ale vyžaduje účet Meta Business a veřejnou adresu serveru; pro jednoho uživatele zbytečně složité.</p>
+  <p>Počítač: vlastní Mac s Apple Silicon (M1 a novější) nebo Windows PC. Hermes Agent je zdarma (open source, licence MIT).</p>
+</section>
+
+<!-- 4 -->
+<section id="setup">
+  <div class="sec-head"><span class="sec-no">4</span><h2>Nastavení krok za krokem</h2></div>
+  <p>Počítej zhruba s jedním odpoledním blokem (můj odhad). Příkazy jsou pro Mac; rozdíly pro Windows jsou u kroků uvedené.</p>
+  <div class="note" id="soubory">
+    <p><b>Soubory ke stažení.</b> Všechno, co agent potřebuje, najdeš i rozbalené v krocích 4 a 5. Tady je máš pohromadě.</p>
+    <div class="files" id="files-list">
+      <div><code>WorkLog.zip</code><small>všechny soubory ve správných složkách: WorkLog/ a skills/worklog/</small></div><button class="dl" type="button" data-file="ZIP" hidden>Stáhnout</button>
+      <div><code>SKILL.md</code><small>skill worklog, patří do ~/.hermes/skills/productivity/worklog/</small></div><button class="dl" type="button" data-file="SKILL.md" hidden>Stáhnout</button>
+      <div><code>AGENTS.md</code><small>kontext o tobě, firmě a projektech, patří do ~/WorkLog/</small></div><button class="dl" type="button" data-file="AGENTS.md" hidden>Stáhnout</button>
+      <div><code>weekly-template.md</code><small>šablona výkazu, patří do ~/WorkLog/templates/</small></div><button class="dl" type="button" data-file="weekly-template.md" hidden>Stáhnout</button>
+      <div><code>impact-log.md</code><small>prázdný záznam úspěchů, patří do ~/WorkLog/</small></div><button class="dl" type="button" data-file="impact-log.md" hidden>Stáhnout</button>
+    </div>
+    <p class="dl-msg" id="dl-msg">Pokud se tlačítka Stáhnout nezobrazí, zkopíruj soubory tlačítkem Kopírovat v krocích 4 a 5.</p>
+  </div>
+  
+  <ol class="steps">
+
+    <li id="k1">
+      <h3>Rozhodni, kde agent poběží</h3>
+      <p>Plánované úlohy spouští takzvaný gateway a podle dokumentace musí běžet, aby se úloha vykonala. Když je počítač ve spánku, zmeškaná úloha se po probuzení spustí jednou (výchozí nastavení <code>cron.catch_up_missed: true</code>).</p>
+      <ul>
+        <li><b>Doporučeno:</b> vlastní Mac s Apple Silicon nebo Windows PC. Instalátor Hermes Desktop pro macOS je jen pro Apple Silicon.</li>
+        <li><b>Ne firemní notebook</b> bez souhlasu IT. Agent umí spouštět příkazy a číst soubory.</li>
+        <li><b>Později:</b> malý server (VPS) běží nonstop. Pro pokročilé, návod to neřeší.</li>
+      </ul>
+    </li>
+
+    <li id="k2">
+      <h3>Stáhni Hermes Desktop a vyber model</h3>
+      <p><b>Nejjednodušší cesta, bez terminálu:</b> stáhni instalátor Hermes Desktop ze stránky projektu (Mac: otevři DMG a přetáhni Hermes.app do Aplikací; Windows: otevři soubor .appinstaller). Balíček obsahuje agenta, aplikaci i příkazový řádek.</p>
+      <ol>
+        <li>Spusť Hermes Desktop. V úvodním průvodci vyber poskytovatele <b>Kimi / Moonshot</b> nebo <b>Z.AI</b> (GLM) a vlož API klíč.</li>
+        <li>Kdykoli později: <b>Settings → Providers</b> (API klíče) a <b>Settings → Model → Main model</b>: vyber poskytovatele a model a klikni na <b>Apply</b>. Tenhle hlavní model používají i plánované úlohy.</li>
+        <li>Napiš do chatu: <i>Reply with OK and today's date.</i> Když odpoví, základ funguje.</li>
+      </ol>
+      <div class="note">
+        <p><b>Kimi podle oficiálního návodu Kimi pro Hermes:</b> zaregistruj se na mezinárodní platformě <b>platform.kimi.ai</b>, nabij kredit (minimum $1) a vytvoř API klíč. V Hermes zvol <b>Kimi / Moonshot</b> a v podnabídce první položku (v Hermes v0.18.2 se jmenuje „Kimi / Kimi Coding Plan“; podle Kimi je to zároveň vestavěná volba pro globální Moonshot API). Když <code>kimi-k3</code> v seznamu není, zvol „Enter custom model name“ a napiš <code>kimi-k3</code> bez předpony <code>moonshot/</code>. Hermes má hlásit adresu <code>https://api.moonshot.ai/v1</code>.</p>
+        <p><b>Pozor:</b> klíče z čínské platformy (platform.kimi.com, api.moonshot.cn) a z mezinárodní platformy nejsou zaměnitelné. V oficiálních seznamech podporovaných regionů jsem Hongkong ani u Kimi, ani u Z.ai nenašel výslovně uvedený. Jedna stránka nápovědy Kimi uvádí, že přístup mimo pevninskou Čínu nemusí být stabilní. Začni proto nejmenším nabitím a ověř, že registrace i platba z Hongkongu projdou.</p>
+        <p><b>GLM:</b> registrace na z.ai, nabití kreditu, „Standard API Key“, v Hermes poskytovatel <b>Z.AI</b>, model <code>glm-5.3</code>. Hermes si správnou adresu pro klíč najde sám.</p>
+      </div>
+      <details class="more"><summary>Alternativa přes terminál</summary>
+        <div class="code"><pre><code>curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
+source ~/.zshrc
+hermes model      # vyber "Kimi / Moonshot" nebo "Z.AI", vlož klíč, zvol model
+hermes            # test: Reply with OK and today's date.
+hermes doctor     # diagnostika, když něco nejde</code></pre></div>
+        <p>Windows (PowerShell): <code>iex (irm https://hermes-agent.nousresearch.com/install.ps1)</code></p>
+      </details>
+      <p>Klíče se ukládají do <code>~/.hermes/.env</code>, ostatní nastavení do <code>~/.hermes/config.yaml</code>; aplikace i terminál sdílejí stejné nastavení. Hermes vyžaduje model s kontextem aspoň 64 000 tokenů. Pravidlo z dokumentace: dokud nefunguje obyčejný chat, nepřidávej další funkce.</p>
+    </li>
+
+    <li id="k3">
+      <h3>Časové pásmo a pracovní složka</h3>
+      <div class="code"><pre><code>mkdir -p ~/WorkLog/{inbox,daily,weekly,templates}
+hermes config set timezone Asia/Hong_Kong
+hermes config set terminal.cwd /Users/TVOJE_JMENO/WorkLog</code></pre></div>
+      <p>Windows: složku vytvoř v Průzkumníku, např. <code>C:\Users\TVOJE_JMENO\WorkLog</code> s podsložkami inbox, daily, weekly, templates, a tu cestu dej do <code>terminal.cwd</code>. Je to pracovní složka pro zprávy z chatu.</p>
+    </li>
+
+    <li id="k4">
+      <h3>Vlož kontext: AGENTS.md</h3>
+      <p>Soubor <code>~/WorkLog/AGENTS.md</code> agent načte jako kontext. Doplň firmu, nadřízeného, seznam projektů s kódy a lidi, se kterými pracuješ. Tohle je jediné místo, které musíš opravdu vyplnit.</p>
+      <details class="more"><summary>Obsah AGENTS.md (zkopíruj a doplň hranaté závorky)</summary>
+        <div class="code"><div class="btns"><button class="dl" type="button" data-file="AGENTS.md" hidden>Stáhnout</button><button class="copy" type="button">Kopírovat</button></div><pre><code id="f-agents"># WorkLog - context for the agent
+
+## Who I am
+- Role: Architect at [FIRM NAME], Hong Kong. Working language: English.
+- Report to: [MANAGER NAME / ROLE]. Reports are due: [e.g. Friday 18:00].
+- Working hours: [e.g. Mon-Fri 09:00-19:00 HKT].
+
+## Projects and codes (keep this list current)
+| Code | Project | Client | Stage | Notes |
+|---|---|---|---|---|
+| P-0000 | [Project name] | [Client] | [e.g. Tender / Construction] | |
+| ADMIN | Internal / admin | - | - | |
+| BD | Business development, proposals | - | - | |
+
+## People I work with often (names help the agent recognise speakers)
+- [Name] - [role, company]
+- [Name] - [role, company]
+
+## Report rules
+- Language and spelling: British English.
+- Timesheet granularity: 0.25 h.
+- My employer's report format: see templates/weekly-template.md (if present).
+- Never send anything to my manager or colleagues. I review and send myself.
+
+## Confidentiality
+- Do not put fees, contract disputes or personal data of third parties into reports.
+- Summarise meetings; never paste full transcripts into reports.</code></pre></div>
+      </details>
+      <p>Do <code>~/WorkLog/templates/weekly-template.md</code> dej firemní formát výkazu. Když existuje, agent ho dodrží přesně.</p>
+      <details class="more"><summary>Výchozí šablona týdenního výkazu</summary>
+        <div class="code"><div class="btns"><button class="dl" type="button" data-file="weekly-template.md" hidden>Stáhnout</button><button class="copy" type="button">Kopírovat</button></div><pre><code id="f-template"># Weekly report - [Name] - Week [WW], [YYYY]
+
+&lt;!-- Replace this file with your employer's real format. The agent follows it exactly. --&gt;
+
+## 1. Timesheet
+| Project code | Project | Mon | Tue | Wed | Thu | Fri | Total |
+|---|---|---|---|---|---|---|---|
+
+## 2. Key outcomes this week
+
+## 3. Meetings and coordination
+
+## 4. Support and quality assurance for the team
+
+## 5. Next week: priorities, open items, risks</code></pre></div>
+      </details>
+    </li>
+
+    <li id="k5">
+      <h3>Nainstaluj skill „worklog“</h3>
+      <p>Skill je návod, který si agent načte, když ho potřebuje. Tenhle určuje, jak zapisovat, slučovat a hlavně nevymýšlet hodiny. Ulož ho jako <code>~/.hermes/skills/productivity/worklog/SKILL.md</code>. Na Windows (nebo kdykoli) jednodušeji: v chatu s Hermes napiš „Save the following as a new skill named worklog, exactly as written:“ a vlož obsah.</p>
+      <details class="more"><summary>Obsah SKILL.md</summary>
+        <div class="code"><div class="btns"><button class="dl" type="button" data-file="SKILL.md" hidden>Stáhnout</button><button class="copy" type="button">Kopírovat</button></div><pre><code id="f-skill">---
+name: worklog
+description: Capture work notes and draft daily logs and weekly reports
+version: 1.0.0
+metadata:
+  hermes:
+    tags: [timesheet, work-log, reporting]
+    category: productivity
+---
+
+# Worklog
+
+Turns voice notes, Plaud meeting summaries, forwarded documents and short text
+notes into an evidence-based daily work log and a weekly report / timesheet.
+All files live in the WorkLog folder (see AGENTS.md in that folder for the
+owner's role, project list, project codes and report format).
+
+## When to Use
+
+- The user sends a message, voice note or file that starts with "log", "worklog",
+  "note" or is a shared Plaud summary / transcript.
+- The user types `/worklog` with or without text.
+- A scheduled job asks for "DAILY CLOSE", "WEEKLY REPORT" or "IMPACT DIGEST".
+
+## Folder layout (inside the WorkLog folder)
+
+- `inbox/` raw inputs, one file per item: `YYYY-MM-DD_HHMM_&lt;source&gt;_&lt;short-title&gt;.md`
+- `daily/YYYY-MM-DD.md` daily log
+- `weekly/YYYY-Www.md` weekly report (ISO week), optional `.docx` copy
+- `impact-log.md` running list of notable contributions
+- `templates/weekly-template.md` the employer's report format (if present, follow it exactly)
+
+## Procedure
+
+### A. CAPTURE (any incoming note, voice note or file)
+
+1. Save the raw input to `inbox/` using the naming pattern above. For files, store
+   the extracted text, not the original binary. Keep the original wording.
+2. Extract work entries. One entry = one activity:
+   `start time | duration (h) | project code | category | what was done | with whom | source`
+   Categories: Design, Coordination &amp; meetings, Review &amp; QA, Support for others,
+   Site, Documentation, Admin, Other.
+3. Append the entries to `daily/&lt;today&gt;.md` (create it if missing).
+4. Reply in ONE short line: what was logged and anything missing
+   (e.g. "Logged 1.5 h P-2301 Review &amp; QA. Missing: who requested it?").
+
+### B. DAILY CLOSE (scheduled, weekdays)
+
+1. Read today's `inbox/` files and `daily/&lt;today&gt;.md`.
+2. Merge duplicates (a Plaud meeting and a voice note about the same meeting are
+   one entry). Sort by start time.
+3. Write the final table to `daily/&lt;today&gt;.md` with a total of hours and a
+   "Gaps" list (missing durations, unknown project codes, unexplained time).
+4. Add any notable contribution (problem solved, risk caught, rework of someone
+   else's output, decision unblocked) to `impact-log.md` with date and source.
+5. Reply with: total hours, 3-6 bullet summary, the Gaps list as questions.
+   Keep it under 120 words.
+
+### C. WEEKLY REPORT (scheduled, Friday)
+
+1. Read `daily/` files for Monday to today of the current ISO week and the
+   week's entries in `impact-log.md`.
+2. If `templates/weekly-template.md` exists, follow its structure exactly.
+   Otherwise produce:
+   - Timesheet table: project code, project name, hours per day, total.
+   - Key outcomes (5-8 bullets, outcome first, then evidence).
+   - Coordination and meetings (count and total hours).
+   - Support and quality assurance for others (see Pitfalls for wording).
+   - Next week: open items and risks.
+3. Save to `weekly/YYYY-Www.md`. If asked for Word, also create the `.docx`.
+4. Reply with a 5-line summary and attach the file using `MEDIA:&lt;absolute path&gt;`.
+   This is a DRAFT for the user to review. Never send it to anyone else.
+
+### D. IMPACT DIGEST (scheduled, monthly)
+
+Summarise the last month of `impact-log.md` into 5-10 achievement statements
+suitable for a performance review: situation, action, result, evidence.
+
+## Pitfalls
+
+- Never invent hours, people, decisions or project codes. Durations come only
+  from recording length, an explicit statement by the user, or a calendar entry.
+  If unknown, write `?` and list it under Gaps.
+- Every entry must name its source (Plaud recording title and time, voice note
+  time, email subject, file name).
+- Rework or fixes of other people's work: describe the issue and the fix in
+  neutral, factual language. No blame, no adjectives about colleagues, no names
+  unless the user explicitly asks. Example: "Corrected grid references in the
+  tender drawing set (24 sheets) before issue; prevented a re-issue." NOT
+  "Fixed X's careless mistakes again."
+- Do not copy full meeting transcripts into reports. Summarise outcomes only.
+- Do not include client-confidential details (fees, disputes, personal data)
+  in the weekly report unless the user explicitly asks.
+- Use the language and spelling set in AGENTS.md (default: British English).
+
+## Verification
+
+- Daily file total equals the sum of the table rows.
+- Every row has a source.
+- Weekly totals per project equal the sum of the daily files.</code></pre></div>
+      </details>
+      <div class="code"><pre><code>hermes skills list | grep worklog</code></pre></div>
+      <p>Každý skill je zároveň příkaz: v chatu funguje <code>/worklog Spent 2 h correcting the door schedule before tender issue</code>.</p>
+    </li>
+
+    <li id="k6">
+      <h3>Propoj WhatsApp nebo Telegram</h3>
+      <h4>A) WhatsApp</h4>
+      <ol>
+        <li>Rozhodni režim (viz 3.4): <b>bot</b> = samostatné číslo pro agenta, <b>self-chat</b> = píšeš sám sobě na svém čísle.</li>
+        <li>Spusť průvodce a v telefonu (u čísla, které bude agent používat) otevři WhatsApp → Nastavení → Propojená zařízení → Propojit zařízení a naskenuj QR kód. Kód se obnovuje asi po 20 sekundách.</li>
+        <li>Povol jen své číslo: předvolba bez „+“, pro Hongkong 852.</li>
+        <li>Spusť gateway jako službu a v chatu s agentem pošli <code>/sethome</code>.</li>
+      </ol>
+      <div class="code"><pre><code>hermes whatsapp          # průvodce: režim bot / self-chat, pak QR kód
+hermes config set WHATSAPP_ALLOWED_USERS 852XXXXXXXX
+hermes gateway install   # gateway poběží na pozadí
+hermes gateway status</code></pre></div>
+      <p>Telefon s číslem agenta musí být občas online; po delší nečinnosti WhatsApp propojené zařízení odpojí a stačí znovu spustit <code>hermes whatsapp</code>. Když napojení po aktualizaci WhatsAppu přestane fungovat, pomůže <code>hermes update</code> a nové spárování.</p>
+      <h4>B) Telegram</h4>
+      <p>V Hermes Desktop: <b>Messaging → Telegram → Create with QR</b>. Naskenuješ kód v Telegramu, Hermes vytvoří bota a zapíše tvoje ID jako jediného povoleného uživatele. Ručně: <code>hermes gateway setup</code>, vyber Telegram a token získej u @BotFather. Pak <code>hermes gateway install</code> a v chatu s botem <code>/sethome</code>.</p>
+      <p>Nikdy nepovoluj všechny uživatele (<code>GATEWAY_ALLOW_ALL_USERS=true</code> ani <code>WHATSAPP_ALLOWED_USERS=*</code>).</p>
+    </li>
+
+    <li id="k7">
+      <h3>Hlasové poznámky</h3>
+      <p>Hlasové zprávy poslané agentovi do WhatsAppu i Telegramu se automaticky přepíšou na text. Výchozí přepis běží lokálně (faster-whisper, bez API klíče; nefunguje na Intel Macu a Windows ARM64). Nastav angličtinu a slovník jmen a projektů:</p>
+      <div class="code"><pre><code>hermes config set stt.language en
+hermes config set stt.prompt "Revit, BIM, Buildings Department, [jména projektů], [jména kolegů]"</code></pre></div>
+      <p>Návyk: začínej poznámku slovem <b>„Log“</b>. Například: „Log. About an hour and a half on the Kai Tak façade set, correcting grid references before issue.“</p>
+    </li>
+
+    <li id="k8">
+      <h3>Naplánuj denní uzávěrku, týdenní výkaz a měsíční přehled</h3>
+      <p>Spusť v terminálu (nahraď cestu). Úlohy běží v hongkongském čase díky kroku 3. Pro Telegram změň <code>--deliver whatsapp</code> na <code>--deliver telegram</code>. Úlohy pak vidíš a spravuješ i v Hermes Desktop.</p>
+      <div class="code"><div class="btns"><button class="copy" type="button">Kopírovat</button></div><pre><code>hermes cron create "30 18 * * 1-5" "DAILY CLOSE: Use the worklog skill, procedure B, for today's date. Work only inside the WorkLog folder. Reply in English, under 120 words, and end with the Gaps questions." --skill worklog --workdir /Users/TVOJE_JMENO/WorkLog --name "Daily close" --deliver whatsapp
+
+hermes cron create "0 16 * * 5" "WEEKLY REPORT: Use the worklog skill, procedure C, for the current ISO week. Follow templates/weekly-template.md. Save the Markdown file and a .docx copy in weekly/, then attach the .docx. This is a draft for my review only." --skill worklog --workdir /Users/TVOJE_JMENO/WorkLog --name "Weekly report" --deliver whatsapp
+
+hermes cron create "0 10 1 * *" "IMPACT DIGEST: Use the worklog skill, procedure D, for the previous calendar month. Save it as weekly/impact-YYYY-MM.md and attach it." --skill worklog --workdir /Users/TVOJE_JMENO/WorkLog --name "Monthly impact" --deliver whatsapp</code></pre></div>
+      <p>Otestuj hned, nečekej na večer:</p>
+      <div class="code"><pre><code>hermes cron list
+hermes cron run "Daily close"</code></pre></div>
+      <p>Volitelně, aby šlo na denní souhrn odpovědět opravou a agent věděl, o čem je řeč: <code>hermes config set cron.mirror_delivery true</code></p>
+    </li>
+
+    <li id="k9">
+      <h3>Zabezpeč</h3>
+      <p>Výchozí nastavení už blokuje nebezpečné příkazy a neznámé uživatele. Na počítači s pracovními daty dokumentace doporučuje ruční schvalování:</p>
+      <div class="code"><pre><code>hermes config set approvals.mode manual</code></pre></div>
+      <p>Session WhatsAppu (složka <code>~/.hermes/platforms/whatsapp/session</code>) a token Telegram bota chraň jako heslo. Při podezření na únik: WhatsApp → Nastavení → Propojená zařízení → odhlásit; u Telegramu <code>/revoke</code> u @BotFather.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- 5 -->
+<section id="plaud">
+  <div class="sec-head"><span class="sec-no">5</span><h2>Plaud a přepis</h2></div>
+
+  <h3 id="plaud-hk"><span class="sub">5.1</span>Plaud v Hongkongu</h3>
+  <ul>
+    <li><b>Smluvní podmínky:</b> oddíl 15.2 obchodních podmínek Plaud vyjmenovává, kde služby nejsou dostupné (Rusko, Bělorusko, Kuba, Írán, Severní Korea, Sýrie, ČLR) a u Číny výslovně uvádí „excluding Hong Kong and Macau“. Spotřebitelská smlouva uvádí jen pevninskou Čínu, pro kterou má Plaud samostatnou aplikaci.</li>
+    <li><b>Oficiální obchod:</b> hk.plaud.ai prodává zařízení i předplatné AI v HKD.</li>
+    <li><b>Modely v pozadí:</b> přepis a shrnutí počítá Plaud na svých serverech s modely OpenAI, Anthropic a Google. Omezení těchto firem pro Hongkong se týká přímých zákazníků; Plaud je volá jako svůj dodavatel a hongkongský web Plaud je uvádí jako součást služby. Aktuální seznam modelů ukáže aplikace (Generate → Custom generation → AI model).</li>
+  </ul>
+
+  <h3 id="plaud-nastaveni"><span class="sub">5.2</span>Nastavení přepisu</h3>
+  <ul>
+    <li><b>Jazyk:</b> Plaud přepisuje vždy v jednom jazyce na nahrávku. U smíšených schůzek vyber převažující jazyk. Podle nápovědy podporuje přes 112 jazyků včetně kantonštiny.</li>
+    <li><b>Mluvčí:</b> Plaud automaticky pozná jen tvůj hlas (po nastavení hlasového profilu). Ostatní označí jako Speaker 1, 2 a jména jim doplníš ručně. Shrnutí vytvořené před přejmenováním je potřeba vygenerovat znovu.</li>
+    <li><b>Online schůzky:</b> Plaud Desktop (Mac a Windows) nahraje Teams, Zoom nebo Meet ze zvuku počítače, bez bota ve schůzce. Vyžaduje spárované zařízení Plaud.</li>
+  </ul>
+
+  <h3 id="plaud-pokyn"><span class="sub">5.3</span>Pokyn pro shrnutí, které se hodí do výkazu</h3>
+  <p>V nahrávce zvol <b>Generate → Custom generation</b> a vlož tento pokyn.</p>
+  <div class="code"><div class="btns"><button class="copy" type="button">Kopírovat</button></div><pre><code>Summarise this meeting as a work-log entry in British English.
+Output exactly these fields:
+Date and start time:
+Duration (from the recording length):
+Project (name or code if mentioned):
+Participants (roles/companies, names only if stated):
+Purpose:
+Decisions made:
+Actions for me (owner = me):
+Actions for others:
+Issues I raised, caught or resolved (risks, errors, clashes):
+Notes for my timesheet (category: Design / Coordination / Review &amp; QA / Support for others / Site / Admin):
+Do not invent anything that was not said. Mark uncertain items with "?".</code></pre></div>
+
+  <h3 id="plaud-cesty"><span class="sub">5.4</span>Jak se shrnutí dostane k agentovi</h3>
+  <div class="levels">
+    <div class="lvl"><span class="tag">A · Start</span><b>Sdílení do chatu</b><p>V aplikaci Plaud exportuj shrnutí (TXT, Markdown, DOCX nebo PDF) a sdílej ho do chatu s agentem ve WhatsAppu nebo Telegramu.</p></div>
+    <div class="lvl"><span class="tag">B · Automaticky</span><b>Plaud MCP</b><p>Agent si dnešní shrnutí stáhne sám při denní uzávěrce.</p></div>
+    <div class="lvl"><span class="tag">C · Archiv</span><b>AutoFlow e-mail</b><p>Plaud po přepisu sám pošle přepis nebo shrnutí na zvolenou adresu. Záloha do tvé schránky.</p></div>
+  </div>
+  <details class="more"><summary>Varianta B: napojení Plaud MCP (po prvním týdnu)</summary>
+    <p>Plaud provozuje oficiální MCP server <code>https://mcp.plaud.ai/mcp</code>. Je jen pro čtení, vyžaduje zapnutý Plaud Cloud Sync a podle nápovědy Plaud je zdarma pro aktivní účty. Data jdou podle dokumentace Plaud přes server v USA a po vyřízení požadavku se tam neukládají. Do <code>~/.hermes/config.yaml</code> přidej:</p>
+    <div class="code"><div class="btns"><button class="copy" type="button">Kopírovat</button></div><pre><code>mcp_servers:
+  plaud:
+    url: "https://mcp.plaud.ai/mcp"
+    auth: oauth</code></pre></div>
+    <div class="code"><pre><code>hermes mcp login plaud     # otevře prohlížeč, přihlásíš se do Plaud</code></pre></div>
+    <p>Pak u denní uzávěrky (krok 8) uprav zadání:</p>
+    <div class="code"><div class="btns"><button class="copy" type="button">Kopírovat</button></div><pre><code>hermes cron edit "Daily close" --prompt "DAILY CLOSE: First use the plaud MCP tools to list today's recordings and save each available summary to inbox/ (skip files already saved). Then use the worklog skill, procedure B, for today's date. Work only inside the WorkLog folder. Reply in English, under 120 words, and end with the Gaps questions."</code></pre></div>
+    <p class="warn">Tuhle kombinaci jsem nemohl vyzkoušet. Dokumentace Hermes upozorňuje, že někteří poskytovatelé MCP vyžadují vlastní OAuth aplikaci. Když přihlášení selže, zůstaň u varianty A.</p>
+  </details>
+  <p>AutoFlow (varianta C) se nastavuje jen v mobilní aplikaci Plaud: u „Send email“ zvolíš adresu a co posílat. Spouští se jen u nahrávek nad 200 slov (asi 5 minut řeči) a minuty se odečítají z tarifu.</p>
+
+  <h3 id="kvalita"><span class="sub">5.5</span>Kvalita přepisu: Plaud, Whisper, ElevenLabs</h3>
+  <div class="tbl"><table>
+    <thead><tr><th></th><th>Plaud</th><th>Whisper</th><th>ElevenLabs Scribe</th></tr></thead>
+    <tbody>
+      <tr><td>Nezávislá chybovost (Artificial Analysis)</td><td>neměřeno; engine Plaud nezveřejňuje</td><td>Large v3: 4,1 až 4,2 %</td><td>v2: 2,2 až 2,3 %, v3: 1,9 %</td></tr>
+      <tr><td>Více jazyků v jedné nahrávce</td><td><span class="pill no">ne</span> jeden jazyk</td><td><span class="pill q">bez dokladu</span></td><td><span class="pill ok">ano</span></td></tr>
+      <tr><td>Rozlišení mluvčích</td><td><span class="pill ok">ano</span> jména ručně</td><td><span class="pill no">ne</span> samotný model</td><td><span class="pill ok">ano</span></td></tr>
+      <tr><td>Kde ho máš</td><td>v Plaud</td><td>v Hermes pro hlasovky (malý model „base“, slabší než Large v3)</td><td>v Hermes jako volitelný přepis hlasovek</td></tr>
+    </tbody>
+  </table></div>
+  <p>Nižší chybovost je lepší. Čísla Artificial Analysis jsou z angličtiny; test kantonštiny smíchané s angličtinou jsem nenašel pro žádný z nástrojů. Pro převážně anglické schůzky vlastní přepis Plaud stačí.</p>
+  <div class="note">
+    <p><b>Poznámka ke kantonštině.</b> Kantonsky se na tvých schůzkách mluví minimálně, takže nic dalšího není potřeba. Kdyby se to změnilo: ElevenLabs zvládá více jazyků v jedné nahrávce a rozlišuje mluvčí. Tvoje sestra má profesionální účet ElevenLabs; kdybys ho potřeboval, stačí říct. Hermes ho pak umí použít pro přepis hlasovek:</p>
+    <div class="code"><pre><code>hermes config set ELEVENLABS_API_KEY [klíč]
+hermes config set stt.provider elevenlabs</code></pre></div>
+    <p>ElevenLabs v Hongkongu není mezi blokovanými regiony (jeho seznam: Bělorusko, Kuba, Írán, Severní Korea, Rusko, Sýrie, Krym, Doněcká a Luhanská oblast).</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section id="provoz">
+  <div class="sec-head"><span class="sec-no">6</span><h2>Provoz</h2></div>
+
+  <h3 id="rytmus"><span class="sub">6.1</span>Denní rytmus</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Kdy</th><th>Co uděláš</th><th>Čas</th></tr></thead>
+    <tbody>
+      <tr><td>Začátek schůzky</td><td>Řekneš, že nahráváš, a zapneš Plaud.</td><td class="num">5 s</td></tr>
+      <tr><td>Po schůzce</td><td>Shrnutí z aplikace Plaud sdílíš do chatu s agentem.</td><td class="num">2 ťuknutí</td></tr>
+      <tr><td>Mezi schůzkami</td><td>Hlasovka „Log…“: opravy, telefonáty, koordinace, kontrola cizích podkladů.</td><td class="num">20 s</td></tr>
+      <tr><td>18:30</td><td>Přijde denní souhrn s otázkami. Odpovíš hlasem nebo textem.</td><td class="num">1 až 3 min</td></tr>
+      <tr><td>Pátek 16:00</td><td>Přijde návrh výkazu v .docx. Projdeš, upravíš, odešleš sám.</td><td class="num">5 až 10 min</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Časy vpravo jsou cílové hodnoty návrhu, ne naměřené údaje. Ověř je za první dva týdny.</p>
+
+  <h3 id="neviditelna"><span class="sub">6.2</span>Neviditelná práce a opravy za ostatní</h3>
+  <p>Výkaz má ukázat, co se díky tobě nestalo: chyby zachycené před vydáním, nekoordinované podklady, které jsi srovnal. Formuluj věcně, s rozsahem a důsledkem, bez obviňování. Skill to má v pravidlech.</p>
+  <div class="compare">
+    <div class="bad"><span>Takhle ne</span>Fixed the junior team's careless mistakes on the tender set again.</div>
+    <div class="fine"><span>Takhle ano</span>Reviewed and corrected grid references on 24 tender drawings before issue; avoided a re-issue to the contractor.</div>
+    <div class="bad"><span>Takhle ne</span>Had to redo structural coordination because nobody checked it.</div>
+    <div class="fine"><span>Takhle ano</span>Re-coordinated slab openings with the structural consultant (3 clashes resolved), unblocking the MEP submission.</div>
+  </div>
+  <p style="margin-top:12px">Soubor <code>impact-log.md</code> se plní sám při denní uzávěrce. Jednou měsíčně z něj agent udělá 5 až 10 vět ve tvaru situace, akce, výsledek, doklad. Podklad k hodnocení, kde se jinak vzpomíná po paměti.</p>
+
+  <h3 id="it"><span class="sub">6.3</span>Firemní systémy (jen se souhlasem IT)</h3>
+  <ul>
+    <li><b>Pracovní e-mail.</b> Hermes má vestavěný skill Himalaya pro práci se schránkou přes IMAP/SMTP. Firemní Microsoft 365 často IMAP nebo hesla aplikací vypíná; rozhoduje IT.</li>
+    <li><b>Přepisy z Microsoft Teams.</b> Hermes má pipeline pro přepisy schůzek z Teams přes Microsoft Graph. Podle dokumentace jsou potřeba práva správce tenantu.</li>
+    <li><b>Bez napojení:</b> přepis schůzky z Teams si můžeš stáhnout ručně a poslat agentovi jako soubor. Agent čte .docx, .pdf, .txt i .md.</li>
+  </ul>
+  <p class="warn">Přeposílání firemní pošty do soukromé schránky nebo k externímu AI poskytovateli bývá v rozporu s interními pravidly. Nedělej to bez písemného souhlasu.</p>
+
+  <h3 id="problemy"><span class="sub">6.4</span>Když něco nefunguje</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Příznak</th><th>Co zkusit</th></tr></thead>
+    <tbody>
+      <tr><td>Agent neodpovídá nebo hlásí chybu modelu</td><td><code>hermes doctor</code>, pak <code>hermes model</code> (klíč, kredit, název modelu)</td></tr>
+      <tr><td>Agent v chatu mlčí</td><td><code>hermes gateway status</code>; u WhatsAppu zkontroluj číslo v <code>WHATSAPP_ALLOWED_USERS</code> (s 852, bez +)</td></tr>
+      <tr><td>WhatsApp se odpojil</td><td><code>hermes update</code>, pak znovu <code>hermes whatsapp</code> a naskenovat QR</td></tr>
+      <tr><td>Denní souhrn nepřišel</td><td><code>hermes cron list</code> ukáže poslední běh a chybu; <code>hermes cron run "Daily close"</code></td></tr>
+      <tr><td>Agent si vymýšlí hodiny</td><td>Odpověz opravou a do AGENTS.md přidej pravidlo; skill už vymýšlení zakazuje</td></tr>
+      <tr><td>Přepis komolí jména</td><td>Doplň je do <code>stt.prompt</code> (krok 7)</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 7 -->
+<section id="zdroje">
+  <div class="sec-head"><span class="sec-no">7</span><h2>Zdroje</h2></div>
+  <h3 id="zdroje-start"><span class="sub">7.1</span>Na začátek, do 30 minut</h3>
+  <ul class="src">
+    <li><span class="d"><b>Video: Hermes Agent Masterclass: Installation, Setup, Basic Commands</b> (kanál Onchain AI Garage). Odkazuje na něj přímo oficiální quickstart Hermes.</span>
+      <a href="https://www.youtube.com/watch?v=R3YOGfTBcQg" target="_blank" rel="noopener">https://www.youtube.com/watch?v=R3YOGfTBcQg</a></li>
+    <li><span class="d"><b>Video: Hermes Agent Full Tutorial for Beginners | Setup Guide</b> (Tech With Tim, 23. 4. 2026). Instalace, chat, skilly, plánované úlohy. Existenci a datum jsem ověřil jen přes výpisy třetích stran.</span>
+      <a href="https://www.youtube.com/watch?v=1ve4Atbqmoo" target="_blank" rel="noopener">https://www.youtube.com/watch?v=1ve4Atbqmoo</a></li>
+    <li><span class="d"><b>Julia Evans: Get your work recognized: write a brag document.</b> Krátký, čtivý článek o tom, proč si vést seznam vlastní práce. Z téhle myšlenky vychází impact log.</span>
+      <a href="https://jvns.ca/blog/brag-documents/" target="_blank" rel="noopener">https://jvns.ca/blog/brag-documents/</a></li>
+  </ul>
+  <h3 id="zdroje-ref"><span class="sub">7.2</span>Reference, když je potřeba</h3>
+  <ul class="src">
+    <li><span class="d">Hermes: oficiální quickstart</span><a href="https://hermes-agent.nousresearch.com/docs/getting-started/quickstart" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/getting-started/quickstart</a></li>
+    <li><span class="d">Hermes Desktop: model, chat a úlohy v aplikaci</span><a href="https://hermes-agent.nousresearch.com/docs/user-guide/desktop" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/desktop</a></li>
+    <li><span class="d">Hermes: napojení WhatsAppu (režimy, druhé číslo, rizika)</span><a href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/whatsapp" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/messaging/whatsapp</a></li>
+    <li><span class="d">Hermes: napojení Telegramu</span><a href="https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram</a></li>
+    <li><span class="d">Hermes: plánované úlohy (cron)</span><a href="https://hermes-agent.nousresearch.com/docs/guides/automate-with-cron" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/guides/automate-with-cron</a></li>
+    <li><span class="d">Hermes: bezpečný provoz na osobním nebo pracovním počítači</span><a href="https://hermes-agent.nousresearch.com/docs/guides/secure-hermes-on-a-work-machine" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/guides/secure-hermes-on-a-work-machine</a></li>
+    <li><span class="d">Kimi: oficiální návod k použití Kimi v Hermes Agent</span><a href="https://platform.kimi.ai/docs/guide/use-kimi-in-hermes-agent" target="_blank" rel="noopener">https://platform.kimi.ai/docs/guide/use-kimi-in-hermes-agent</a></li>
+    <li><span class="d">Plaud: obchodní podmínky, oddíl 15.2 (Hongkong vyjmut z omezení)</span><a href="https://www.plaud.ai/pages/commercial-terms-of-service" target="_blank" rel="noopener">https://www.plaud.ai/pages/commercial-terms-of-service</a></li>
+    <li><span class="d">Plaud: oficiální hongkongský obchod (roční plán Unlimited)</span><a href="https://hk.plaud.ai/products/plaud-note-unlimited-plan" target="_blank" rel="noopener">https://hk.plaud.ai/products/plaud-note-unlimited-plan</a></li>
+    <li><span class="d">Plaud: dokumentace k Plaud MCP</span><a href="https://docs.plaud.ai/plaud-mcp-cli/mcp" target="_blank" rel="noopener">https://docs.plaud.ai/plaud-mcp-cli/mcp</a></li>
+    <li><span class="d">Artificial Analysis: nezávislý žebříček přesnosti přepisu</span><a href="https://artificialanalysis.ai/speech-to-text" target="_blank" rel="noopener">https://artificialanalysis.ai/speech-to-text</a></li>
+    <li><span class="d">ElevenLabs: regiony s omezeným přístupem</span><a href="https://help.elevenlabs.io/hc/en-us/articles/22497891312401-Do-you-restrict-access-to-the-service-and-platform-for-any-specific-countries" target="_blank" rel="noopener">https://help.elevenlabs.io/hc/en-us/articles/22497891312401-Do-you-restrict-access-to-the-service-and-platform-for-any-specific-countries</a></li>
+    <li><span class="d">PCPD: pokyny k ochraně soukromí při používání agentní AI (25. 8. 2026, PDF)</span><a href="https://www.pcpd.org.hk/english/resources_centre/publications/files/pcpd_use_of_agentic_ai.pdf" target="_blank" rel="noopener">https://www.pcpd.org.hk/english/resources_centre/publications/files/pcpd_use_of_agentic_ai.pdf</a></li>
+    <li><span class="d">PCPD: checklist pro firemní pravidla používání generativní AI (31. 3. 2025)</span><a href="https://www.pcpd.org.hk/english/news_events/media_statements/press_20250331.html" target="_blank" rel="noopener">https://www.pcpd.org.hk/english/news_events/media_statements/press_20250331.html</a></li>
+    <li><span class="d">PCPD: případová poznámka 2020E02 o nahrávání zvuku</span><a href="https://www.pcpd.org.hk/english/enforcement/case_notes/casenotes_2.php?id=2020E02" target="_blank" rel="noopener">https://www.pcpd.org.hk/english/enforcement/case_notes/casenotes_2.php?id=2020E02</a></li>
+  </ul>
+</section>
+
+<footer>
+  <p>Ověřeno k 15. 11. 2026. Hermes Agent se vyvíjí rychle; když se příkaz liší, platí aktuální oficiální dokumentace. Nejde o právní poradenství.</p>
+</footer>
+</main>
+</div>
+
+<script>
+(function(){
+  var toc=document.getElementById('toc');
+  try{ if(window.matchMedia('(max-width:900px)').matches){ toc.removeAttribute('open'); } }catch(e){}
+  toc.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){ try{ if(window.matchMedia('(max-width:900px)').matches){ toc.removeAttribute('open'); } }catch(e){} });
+  });
+  var links={}; toc.querySelectorAll('a[href^="#"]').forEach(function(a){ links[a.getAttribute('href').slice(1)]=a; });
+  var targets=Object.keys(links).map(function(id){return document.getElementById(id);}).filter(Boolean);
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          Object.values(links).forEach(function(l){l.classList.remove('active');});
+          var l=links[en.target.id]; if(l){l.classList.add('active');}
+        }
+      });
+    },{rootMargin:'0px 0px -75% 0px'});
+    targets.forEach(function(t){io.observe(t);});
+  }
+  document.querySelectorAll('.copy').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var code=btn.parentElement.querySelector('code');
+      var text=code.innerText;
+      var done=function(){btn.textContent='Zkopírováno';setTimeout(function(){btn.textContent='Kopírovat';},1600);};
+      var fallback=function(){var r=document.createRange();r.selectNodeContents(code);var s=window.getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Označeno, Ctrl+C';};
+      try{navigator.clipboard.writeText(text).then(done,fallback);}catch(e){fallback();}
+    });
+  });
+})();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+(function(){
+  var IMPACT="# Impact log\n\nRunning list of notable contributions. One line per item:\n`YYYY-MM-DD | project | what happened | what I did | result | source`\n";
+  function txt(id){var el=document.getElementById(id);return el?el.textContent.replace(/\s+$/,'')+'\n':'';}
+  function files(){return {'SKILL.md':txt('f-skill'),'AGENTS.md':txt('f-agents'),'weekly-template.md':txt('f-template'),'impact-log.md':IMPACT};}
+  var msg=document.getElementById('dl-msg');
+  function say(t){if(msg){msg.textContent=t;}}
+  var btns=document.querySelectorAll('.dl');
+  function plainSave(name,data){
+    var blob=(data instanceof Blob)?data:new Blob([data],{type:name.slice(-4)==='.zip'?'application/zip':'text/markdown;charset=utf-8'});
+    var url=URL.createObjectURL(blob);var a=document.createElement('a');a.href=url;a.download=name;
+    document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},2000);
+    return Promise.resolve();
+  }
+  function wire(saveFn,note){
+    btns.forEach(function(b){b.hidden=false;});
+    say(note);
+    btns.forEach(function(b){
+      b.addEventListener('click',function(){
+        var name=b.getAttribute('data-file'); var f=files(); var p;
+        if(name==='ZIP'){
+          if(typeof JSZip==='undefined'){say('ZIP se nepodařilo připravit (chybí připojení k internetu). Stáhni soubory jednotlivě.');return;}
+          var z=new JSZip();
+          z.file('WorkLog/AGENTS.md',f['AGENTS.md']);
+          z.file('WorkLog/impact-log.md',f['impact-log.md']);
+          z.file('WorkLog/templates/weekly-template.md',f['weekly-template.md']);
+          z.folder('WorkLog/inbox');z.folder('WorkLog/daily');z.folder('WorkLog/weekly');
+          z.file('skills/worklog/SKILL.md',f['SKILL.md']);
+          p=z.generateAsync({type:'blob'}).then(function(blob){return saveFn('WorkLog.zip',blob);});
+        } else { p=saveFn(name,f[name]); }
+        p.then(function(){say('Staženo: '+(name==='ZIP'?'WorkLog.zip':name));},function(e){
+          var c=e&&e.code;
+          if(c==='declined'){say('Stahování zrušeno.');}
+          else if(c==='rate_limited'){say('Chvíli počkej a zkus to znovu.');}
+          else{say('Stažení tady nejde. Použij tlačítko Kopírovat.');}
+        });
+      });
+    });
+  }
+  var host=window.claude&&typeof window.claude.use==='function';
+  if(!host){ wire(plainSave,'Soubory se uloží do složky Stažené soubory.'); return; }
+  window.claude.use('downloads').then(function(dl){
+    if(!dl){return;}
+    wire(function(name,data){return dl.save({filename:name,data:data});},'Prohlížeč se před uložením zeptá na potvrzení.');
+  },function(){});
+})();
+</script>
+
+</body>
+</html>

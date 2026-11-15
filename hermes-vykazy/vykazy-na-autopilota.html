@@ -67,6 +67,10 @@ section>*:last-child{margin-bottom:0}
 .warn{border-left:3px solid var(--red);background:var(--red-soft);padding:10px 14px;border-radius:0 4px 4px 0;margin:12px 0}
 .good{border-left:3px solid var(--ok);background:var(--ok-soft);padding:10px 14px;border-radius:0 4px 4px 0;margin:12px 0}
 .note p:last-child,.warn p:last-child,.good p:last-child{margin-bottom:0}
+.check{list-style:none;padding-left:0;margin:6px 0 0}
+.check li{position:relative;padding-left:26px;margin-bottom:8px}
+.check li:last-child{margin-bottom:0}
+.check li::before{content:"";position:absolute;left:2px;top:5px;width:13px;height:13px;border:1.5px solid var(--accent);border-radius:2px;background:var(--sheet)}
 
 /* steps */
 .steps{list-style:none;padding:0;margin:0;counter-reset:s}
@@ -170,7 +174,18 @@ footer{margin-top:20px;font-size:.85rem;color:var(--muted)}
 </section>
 
 <section id="pred">
-  <div class="sec-head"><span class="sec-no">02</span><h2>Než začneš: čtyři pravidla</h2></div>
+  <div class="sec-head"><span class="sec-no">02</span><h2>Než začneš</h2></div>
+  <div class="note" id="checklist">
+    <p><b>Kontrolní seznam: ověř dřív, než něco koupíš nebo zapneš</b></p>
+    <ul class="check">
+      <li><b>Pravidla zaměstnavatele.</b> Smíš v práci používat AI nástroje, a které? Platí to i pro model u čínského poskytovatele? Bez souhlasu nenapojuj pracovní e-mail ani Teams. Viz pravidlo 1 níže a oddíl 08.</li>
+      <li><b>Registrace u modelu z Hongkongu.</b> Hongkong jsem v oficiálních seznamech regionů Kimi ani Z.ai výslovně nenašel. Než začneš s Hermes, zaregistruj se, nabij minimum ($1 u Kimi) a vytvoř API klíč. Když to projde, jsi v pořádku. Viz krok 2.</li>
+      <li><b>Žádný GLM Coding Plan.</b> Pro Hermes jen běžný API klíč s placením podle spotřeby. Viz oddíl 03.</li>
+      <li><b>Cena modelu.</b> Odhad $5,5 až $13,5 měsíčně je výpočet z předpokladu. Po prvním týdnu zkontroluj skutečnou spotřebu příkazem <code>/usage</code> a podle ní nabíjej kredit. Viz oddíl 03.</li>
+      <li><b>Automatické stahování z Plaud.</b> Napojení Plaud MCP na Hermes nebylo vyzkoušené. Začni sdílením shrnutí do Telegramu (varianta A); automatiku zkus až po prvním týdnu. Viz oddíl 05.</li>
+    </ul>
+  </div>
+  <h3>Čtyři pravidla</h3>
   <ol>
     <li><b>Zeptej se zaměstnavatele, jestli smíš používat AI nástroje a které.</b> Hongkongský úřad pro ochranu osobních údajů (PCPD) vydal 31. 3. 2025 checklist pro firemní pravidla používání generativní AI. Doporučuje firmám určit, které platformy smí zaměstnanci používat, k jakým účelům a jaké informace do nich smí vkládat. Pokud firma taková pravidla má, mají přednost před tímto návodem. U klientů z veřejného sektoru nebo s citlivými projekty může vadit i to, že model běží u čínského poskytovatele.</li>
     <li><b>Na začátku schůzky řekni, že nahráváš a proč.</b> Případová poznámka PCPD 2020E02 uvádí, že zákon o ochraně osobních údajů (PDPO) nahrávání nezakazuje. Když ale nahrávka zachycuje osobní údaje, platí pro ni zásady zákona. Úřad doporučuje lidi předem informovat, že se nahrává a k čemu. Plaud sám uvádí, že souhlas účastníků je odpovědností uživatele.</li>

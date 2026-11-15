@@ -112,8 +112,16 @@ h3 .sub{font-family:var(--mono);font-size:.78rem;font-weight:500;color:var(--mut
 pre{background:var(--code-bg);border:1px solid var(--line);border-radius:4px;padding:12px 14px;overflow-x:auto;margin:0;font-family:var(--mono);font-size:.82rem;line-height:1.5;white-space:pre}
 code{font-family:var(--mono);font-size:.86em;background:var(--code-bg);padding:1px 4px;border-radius:3px;overflow-wrap:anywhere}
 pre code{background:none;padding:0;font-size:inherit;overflow-wrap:normal}
-.copy{position:absolute;top:6px;right:6px;font-family:var(--mono);font-size:.72rem;border:1px solid var(--line);background:var(--sheet);color:var(--ink);border-radius:3px;padding:3px 8px;cursor:pointer}
-.copy:hover{border-color:var(--accent);color:var(--accent)}
+.btns{position:absolute;top:6px;right:6px;display:flex;gap:6px}
+.copy,.dl{font-family:var(--mono);font-size:.72rem;border:1px solid var(--line);background:var(--sheet);color:var(--ink);border-radius:3px;padding:3px 8px;cursor:pointer}
+.copy:hover,.dl:hover{border-color:var(--accent);color:var(--accent)}
+.dl{border-color:var(--accent);color:var(--accent)}
+.files{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;align-items:center;margin:8px 0 6px}
+.files code{background:none;padding:0}
+.files small{display:block;color:var(--muted)}
+.files .dl{justify-self:end}
+.dl-all{font-family:var(--mono);font-size:.8rem;border:1.5px solid var(--accent);background:var(--accent);color:var(--sheet);border-radius:4px;padding:6px 12px;cursor:pointer;margin-top:6px}
+.dl-msg{font-size:.85rem;color:var(--muted);margin:6px 0 0}
 details.more{border:1px solid var(--line);border-radius:4px;padding:8px 12px;margin:8px 0 14px;background:var(--paper)}
 details.more summary{cursor:pointer;font-weight:600}
 details.more[open] summary{margin-bottom:8px}
@@ -166,7 +174,7 @@ footer{margin-top:20px;font-size:.85rem;color:var(--muted)}
     <li><a href="#nakup"><span class="n">3</span>Co pořídit</a>
       <ol><li><a href="#zarizeni">Nahrávací zařízení</a></li><li><a href="#tarify">Tarify Plaud</a></li><li><a href="#model">Model: Kimi nebo GLM</a></li><li><a href="#chat">WhatsApp nebo Telegram</a></li></ol></li>
     <li><a href="#setup"><span class="n">4</span>Nastavení krok za krokem</a>
-      <ol><li><a href="#k1">1 Kde agent poběží</a></li><li><a href="#k2">2 Hermes Desktop a model</a></li><li><a href="#k3">3 Čas a pracovní složka</a></li><li><a href="#k4">4 Kontext AGENTS.md</a></li><li><a href="#k5">5 Skill worklog</a></li><li><a href="#k6">6 WhatsApp nebo Telegram</a></li><li><a href="#k7">7 Hlasové poznámky</a></li><li><a href="#k8">8 Plánované úlohy</a></li><li><a href="#k9">9 Zabezpečení</a></li></ol></li>
+      <ol><li><a href="#soubory">Soubory ke stažení</a></li><li><a href="#k1">1 Kde agent poběží</a></li><li><a href="#k2">2 Hermes Desktop a model</a></li><li><a href="#k3">3 Čas a pracovní složka</a></li><li><a href="#k4">4 Kontext AGENTS.md</a></li><li><a href="#k5">5 Skill worklog</a></li><li><a href="#k6">6 WhatsApp nebo Telegram</a></li><li><a href="#k7">7 Hlasové poznámky</a></li><li><a href="#k8">8 Plánované úlohy</a></li><li><a href="#k9">9 Zabezpečení</a></li></ol></li>
     <li><a href="#plaud"><span class="n">5</span>Plaud a přepis</a>
       <ol><li><a href="#plaud-hk">Plaud v Hongkongu</a></li><li><a href="#plaud-nastaveni">Nastavení přepisu</a></li><li><a href="#plaud-pokyn">Pokyn pro shrnutí</a></li><li><a href="#plaud-cesty">Cesta k agentovi</a></li><li><a href="#kvalita">Kvalita přepisu</a></li></ol></li>
     <li><a href="#provoz"><span class="n">6</span>Provoz</a>
@@ -314,6 +322,18 @@ footer{margin-top:20px;font-size:.85rem;color:var(--muted)}
 <section id="setup">
   <div class="sec-head"><span class="sec-no">4</span><h2>Nastavení krok za krokem</h2></div>
   <p>Počítej zhruba s jedním odpoledním blokem (můj odhad). Příkazy jsou pro Mac; rozdíly pro Windows jsou u kroků uvedené.</p>
+  <div class="note" id="soubory">
+    <p><b>Soubory ke stažení.</b> Všechno, co agent potřebuje, najdeš i rozbalené v krocích 4 a 5. Tady je máš pohromadě.</p>
+    <div class="files" id="files-list">
+      <div><code>WorkLog.zip</code><small>všechny soubory ve správných složkách: WorkLog/ a skills/worklog/</small></div><button class="dl" type="button" data-file="ZIP" hidden>Stáhnout</button>
+      <div><code>SKILL.md</code><small>skill worklog, patří do ~/.hermes/skills/productivity/worklog/</small></div><button class="dl" type="button" data-file="SKILL.md" hidden>Stáhnout</button>
+      <div><code>AGENTS.md</code><small>kontext o tobě, firmě a projektech, patří do ~/WorkLog/</small></div><button class="dl" type="button" data-file="AGENTS.md" hidden>Stáhnout</button>
+      <div><code>weekly-template.md</code><small>šablona výkazu, patří do ~/WorkLog/templates/</small></div><button class="dl" type="button" data-file="weekly-template.md" hidden>Stáhnout</button>
+      <div><code>impact-log.md</code><small>prázdný záznam úspěchů, patří do ~/WorkLog/</small></div><button class="dl" type="button" data-file="impact-log.md" hidden>Stáhnout</button>
+    </div>
+    <p class="dl-msg" id="dl-msg">Tlačítka Stáhnout se zobrazí, jakmile je stránka načtená v claude.ai. Jinde soubory zkopíruj tlačítkem Kopírovat v krocích 4 a 5.</p>
+  </div>
+  
   <ol class="steps">
 
     <li id="k1">
@@ -362,7 +382,7 @@ hermes config set terminal.cwd /Users/TVOJE_JMENO/WorkLog</code></pre></div>
       <h3>Vlož kontext: AGENTS.md</h3>
       <p>Soubor <code>~/WorkLog/AGENTS.md</code> agent načte jako kontext. Doplň firmu, nadřízeného, seznam projektů s kódy a lidi, se kterými pracuješ. Tohle je jediné místo, které musíš opravdu vyplnit.</p>
       <details class="more"><summary>Obsah AGENTS.md (zkopíruj a doplň hranaté závorky)</summary>
-        <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code># WorkLog - context for the agent
+        <div class="code"><div class="btns"><button class="dl" type="button" data-file="AGENTS.md" hidden>Stáhnout</button><button class="copy" type="button">Kopírovat</button></div><pre><code id="f-agents"># WorkLog - context for the agent
 
 ## Who I am
 - Role: Architect at [FIRM NAME], Hong Kong. Working language: English.
@@ -392,7 +412,7 @@ hermes config set terminal.cwd /Users/TVOJE_JMENO/WorkLog</code></pre></div>
       </details>
       <p>Do <code>~/WorkLog/templates/weekly-template.md</code> dej firemní formát výkazu. Když existuje, agent ho dodrží přesně.</p>
       <details class="more"><summary>Výchozí šablona týdenního výkazu</summary>
-        <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code># Weekly report - [Name] - Week [WW], [YYYY]
+        <div class="code"><div class="btns"><button class="dl" type="button" data-file="weekly-template.md" hidden>Stáhnout</button><button class="copy" type="button">Kopírovat</button></div><pre><code id="f-template"># Weekly report - [Name] - Week [WW], [YYYY]
 
 &lt;!-- Replace this file with your employer's real format. The agent follows it exactly. --&gt;
 
@@ -414,7 +434,7 @@ hermes config set terminal.cwd /Users/TVOJE_JMENO/WorkLog</code></pre></div>
       <h3>Nainstaluj skill „worklog“</h3>
       <p>Skill je návod, který si agent načte, když ho potřebuje. Tenhle určuje, jak zapisovat, slučovat a hlavně nevymýšlet hodiny. Ulož ho jako <code>~/.hermes/skills/productivity/worklog/SKILL.md</code>. Na Windows (nebo kdykoli) jednodušeji: v chatu s Hermes napiš „Save the following as a new skill named worklog, exactly as written:“ a vlož obsah.</p>
       <details class="more"><summary>Obsah SKILL.md</summary>
-        <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code>---
+        <div class="code"><div class="btns"><button class="dl" type="button" data-file="SKILL.md" hidden>Stáhnout</button><button class="copy" type="button">Kopírovat</button></div><pre><code id="f-skill">---
 name: worklog
 description: Capture work notes and draft daily logs and weekly reports
 version: 1.0.0
@@ -549,7 +569,7 @@ hermes config set stt.prompt "Revit, BIM, Buildings Department, [jména projekt�
     <li id="k8">
       <h3>Naplánuj denní uzávěrku, týdenní výkaz a měsíční přehled</h3>
       <p>Spusť v terminálu (nahraď cestu). Úlohy běží v hongkongském čase díky kroku 3. Pro Telegram změň <code>--deliver whatsapp</code> na <code>--deliver telegram</code>. Úlohy pak vidíš a spravuješ i v Hermes Desktop.</p>
-      <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code>hermes cron create "30 18 * * 1-5" "DAILY CLOSE: Use the worklog skill, procedure B, for today's date. Work only inside the WorkLog folder. Reply in English, under 120 words, and end with the Gaps questions." --skill worklog --workdir /Users/TVOJE_JMENO/WorkLog --name "Daily close" --deliver whatsapp
+      <div class="code"><div class="btns"><button class="copy" type="button">Kopírovat</button></div><pre><code>hermes cron create "30 18 * * 1-5" "DAILY CLOSE: Use the worklog skill, procedure B, for today's date. Work only inside the WorkLog folder. Reply in English, under 120 words, and end with the Gaps questions." --skill worklog --workdir /Users/TVOJE_JMENO/WorkLog --name "Daily close" --deliver whatsapp
 
 hermes cron create "0 16 * * 5" "WEEKLY REPORT: Use the worklog skill, procedure C, for the current ISO week. Follow templates/weekly-template.md. Save the Markdown file and a .docx copy in weekly/, then attach the .docx. This is a draft for my review only." --skill worklog --workdir /Users/TVOJE_JMENO/WorkLog --name "Weekly report" --deliver whatsapp
 
@@ -589,7 +609,7 @@ hermes cron run "Daily close"</code></pre></div>
 
   <h3 id="plaud-pokyn"><span class="sub">5.3</span>Pokyn pro shrnutí, které se hodí do výkazu</h3>
   <p>V nahrávce zvol <b>Generate → Custom generation</b> a vlož tento pokyn.</p>
-  <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code>Summarise this meeting as a work-log entry in British English.
+  <div class="code"><div class="btns"><button class="copy" type="button">Kopírovat</button></div><pre><code>Summarise this meeting as a work-log entry in British English.
 Output exactly these fields:
 Date and start time:
 Duration (from the recording length):
@@ -611,13 +631,13 @@ Do not invent anything that was not said. Mark uncertain items with "?".</code><
   </div>
   <details class="more"><summary>Varianta B: napojení Plaud MCP (po prvním týdnu)</summary>
     <p>Plaud provozuje oficiální MCP server <code>https://mcp.plaud.ai/mcp</code>. Je jen pro čtení, vyžaduje zapnutý Plaud Cloud Sync a podle nápovědy Plaud je zdarma pro aktivní účty. Data jdou podle dokumentace Plaud přes server v USA a po vyřízení požadavku se tam neukládají. Do <code>~/.hermes/config.yaml</code> přidej:</p>
-    <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code>mcp_servers:
+    <div class="code"><div class="btns"><button class="copy" type="button">Kopírovat</button></div><pre><code>mcp_servers:
   plaud:
     url: "https://mcp.plaud.ai/mcp"
     auth: oauth</code></pre></div>
     <div class="code"><pre><code>hermes mcp login plaud     # otevře prohlížeč, přihlásíš se do Plaud</code></pre></div>
     <p>Pak u denní uzávěrky (krok 8) uprav zadání:</p>
-    <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code>hermes cron edit "Daily close" --prompt "DAILY CLOSE: First use the plaud MCP tools to list today's recordings and save each available summary to inbox/ (skip files already saved). Then use the worklog skill, procedure B, for today's date. Work only inside the WorkLog folder. Reply in English, under 120 words, and end with the Gaps questions."</code></pre></div>
+    <div class="code"><div class="btns"><button class="copy" type="button">Kopírovat</button></div><pre><code>hermes cron edit "Daily close" --prompt "DAILY CLOSE: First use the plaud MCP tools to list today's recordings and save each available summary to inbox/ (skip files already saved). Then use the worklog skill, procedure B, for today's date. Work only inside the WorkLog folder. Reply in English, under 120 words, and end with the Gaps questions."</code></pre></div>
     <p class="warn">Tuhle kombinaci jsem nemohl vyzkoušet. Dokumentace Hermes upozorňuje, že někteří poskytovatelé MCP vyžadují vlastní OAuth aplikaci. Když přihlášení selže, zůstaň u varianty A.</p>
   </details>
   <p>AutoFlow (varianta C) se nastavuje jen v mobilní aplikaci Plaud: u „Send email“ zvolíš adresu a co posílat. Spouští se jen u nahrávek nad 200 slov (asi 5 minut řeči) a minuty se odečítají z tarifu.</p>
@@ -757,5 +777,46 @@ hermes config set stt.provider elevenlabs</code></pre></div>
       try{navigator.clipboard.writeText(text).then(done,fallback);}catch(e){fallback();}
     });
   });
+})();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+(function(){
+  var IMPACT="# Impact log\n\nRunning list of notable contributions. One line per item:\n`YYYY-MM-DD | project | what happened | what I did | result | source`\n";
+  function txt(id){var el=document.getElementById(id);return el?el.textContent.replace(/\s+$/,'')+'\n':'';}
+  function files(){return {'SKILL.md':txt('f-skill'),'AGENTS.md':txt('f-agents'),'weekly-template.md':txt('f-template'),'impact-log.md':IMPACT};}
+  var msg=document.getElementById('dl-msg');
+  function say(t){if(msg){msg.textContent=t;}}
+  if(!window.claude||!window.claude.use){return;}
+  window.claude.use('downloads').then(function(dl){
+    if(!dl){return;}
+    var btns=document.querySelectorAll('.dl');
+    btns.forEach(function(b){b.hidden=false;});
+    say('Prohlížeč se před uložením zeptá na potvrzení.');
+    btns.forEach(function(b){
+      b.addEventListener('click',function(){
+        var name=b.getAttribute('data-file'); var f=files(); var p;
+        if(name==='ZIP'){
+          if(typeof JSZip==='undefined'){say('ZIP se nepodařilo připravit. Stáhni soubory jednotlivě.');return;}
+          var z=new JSZip();
+          z.file('WorkLog/AGENTS.md',f['AGENTS.md']);
+          z.file('WorkLog/impact-log.md',f['impact-log.md']);
+          z.file('WorkLog/templates/weekly-template.md',f['weekly-template.md']);
+          z.folder('WorkLog/inbox');z.folder('WorkLog/daily');z.folder('WorkLog/weekly');
+          z.file('skills/worklog/SKILL.md',f['SKILL.md']);
+          p=z.generateAsync({type:'blob'}).then(function(blob){return dl.save({filename:'WorkLog.zip',data:blob});});
+        } else {
+          p=dl.save({filename:name,data:f[name]});
+        }
+        p.then(function(){say('Uloženo: '+(name==='ZIP'?'WorkLog.zip':name));},function(e){
+          var c=e&&e.code;
+          if(c==='declined'){say('Stahování zrušeno.');}
+          else if(c==='rate_limited'){say('Chvíli počkej a zkus to znovu.');}
+          else{say('Stažení tady nejde. Použij tlačítko Kopírovat.');btns.forEach(function(x){x.hidden=true;});}
+        });
+      });
+    });
+  },function(){});
 })();
 </script>

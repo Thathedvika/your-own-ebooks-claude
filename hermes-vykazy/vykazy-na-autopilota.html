@@ -79,8 +79,8 @@ section>*:last-child{margin-bottom:0}
 /* code */
 .code{position:relative;margin:8px 0 14px}
 pre{background:var(--code-bg);border:1px solid var(--line);border-radius:4px;padding:12px 14px;overflow-x:auto;margin:0;font-family:var(--mono);font-size:.82rem;line-height:1.5;white-space:pre}
-code{font-family:var(--mono);font-size:.86em;background:var(--code-bg);padding:1px 4px;border-radius:3px}
-pre code{background:none;padding:0;font-size:inherit}
+code{font-family:var(--mono);font-size:.86em;background:var(--code-bg);padding:1px 4px;border-radius:3px;overflow-wrap:anywhere}
+pre code{background:none;padding:0;font-size:inherit;overflow-wrap:normal}
 .copy{position:absolute;top:6px;right:6px;font-family:var(--mono);font-size:.72rem;border:1px solid var(--line);background:var(--sheet);color:var(--ink);border-radius:3px;padding:3px 8px;cursor:pointer}
 .copy:hover{border-color:var(--accent);color:var(--accent)}
 details{border:1px solid var(--line);border-radius:4px;padding:8px 12px;margin:8px 0 14px;background:var(--paper)}
@@ -171,12 +171,33 @@ footer{margin-top:20px;font-size:.85rem;color:var(--muted)}
 
 <section id="pred">
   <div class="sec-head"><span class="sec-no">02</span><h2>Než začneš: čtyři pravidla</h2></div>
-  {{LEGAL}}
+  <ol>
+    <li><b>Zeptej se zaměstnavatele, jestli smíš používat AI nástroje a které.</b> Hongkongský úřad pro ochranu osobních údajů (PCPD) vydal 31. 3. 2025 checklist pro firemní pravidla používání generativní AI. Doporučuje firmám určit, které platformy smí zaměstnanci používat, k jakým účelům a jaké informace do nich smí vkládat. Pokud firma taková pravidla má, mají přednost před tímto návodem. U klientů z veřejného sektoru nebo s citlivými projekty může vadit i to, že model běží u čínského poskytovatele.</li>
+    <li><b>Na začátku schůzky řekni, že nahráváš a proč.</b> Případová poznámka PCPD 2020E02 uvádí, že zákon o ochraně osobních údajů (PDPO) nahrávání nezakazuje. Když ale nahrávka zachycuje osobní údaje, platí pro ni zásady zákona. Úřad doporučuje lidi předem informovat, že se nahrává a k čemu. Plaud sám uvádí, že souhlas účastníků je odpovědností uživatele.</li>
+    <li><b>Dávej agentovi co nejméně dat.</b> Posílej shrnutí, ne celé přepisy, a nenapojuj pracovní e-mail. PCPD 25. 8. 2026 vydal pokyny k agentní AI. Doporučuje dávat agentům jen nezbytně nutný přístup, omezovat doplňky a používat aktuální oficiální verze. Už v březnu 2026 úřad varoval, že agent může omylem smazat data a že neprověřené skilly a pluginy mohou obsahovat škodlivý kód. Proto instaluj jen skilly, které znáš, například ten z tohoto návodu.</li>
+    <li><b>Vědět, kudy data tečou.</b> Hermes běží u tebe a podle dokumentace neodesílá žádnou telemetrii; data jdou jen k poskytovateli modelu. Kimi i Z.ai (GLM) ve svých podmínkách pro API uvádějí, že vstupy z API nepoužívají k trénování modelů (u Z.ai pokud s tím výslovně nesouhlasíš). Obě firmy uvádějí zpracování v Singapuru. Plaud ukládá data asijských účtů v AWS Singapur a podle svého Trust Center na nich bez souhlasu netrénuje.</li>
+  </ol>
+  <p class="note">Tohle není právní poradenství. Vládní odpověď Legislativní radě z 14. 6. 2017 (LCQ17) k nahrávání rozhovoru jeho účastníkem jsem v plném znění neověřil. Sekundární zdroje ji citují tak, že zákon účastníkovi rozhovoru nahrávání nezakazuje.</p>
 </section>
 
 <section id="nakup">
   <div class="sec-head"><span class="sec-no">03</span><h2>Co pořídit</h2></div>
-  {{SHOPPING}}
+  <div class="tbl"><table>
+    <thead><tr><th>Položka</th><th>Doporučení</th><th>Cena</th></tr></thead>
+    <tbody>
+      <tr><td><b>Plaud Note Pro</b></td><td>Pro architekta lepší volba: nahrává schůzky u stolu i telefonáty a hovor pozná sám. Výdrž podle výrobce až 50 h v režimu Endurance. Nositelný NotePin S hovory nenahrává.</td><td class="num">HK$1,399<br><small>oficiální HK web</small></td></tr>
+      <tr><td><b>Plaud plán</b></td><td>Zdarma je Starter s 300 minutami přepisu měsíčně (5 h), to stačí na zkoušku. Při mnoha schůzkách Pro (1 200 min/měsíc) nebo Unlimited.</td><td class="num">Pro US$99.99/rok<br>Unlimited US$239.99/rok</td></tr>
+      <tr><td><b>Hermes Agent</b></td><td>Open source (licence MIT), Desktop aplikace i příkazový řádek.</td><td class="num">zdarma</td></tr>
+      <tr><td><b>Model: Kimi</b> (doporučeno)</td><td>Placení podle spotřeby, předplacený kredit. Model <code>kimi-k3</code>, pro který má Kimi oficiální návod k Hermes.</td><td class="num">vstup $3 / výstup $15<br><small>za 1 mil. tokenů; kredit od $1</small></td></tr>
+      <tr><td><b>Model: GLM</b> (levnější alternativa)</td><td>Z.ai, model <code>glm-5.3</code>, platba kartou přes Stripe.</td><td class="num">vstup $1.40 / výstup $4.40<br><small>za 1 mil. tokenů</small></td></tr>
+      <tr><td><b>Telegram</b></td><td>Aplikace v telefonu, přes ni s agentem mluvíš.</td><td class="num">zdarma</td></tr>
+      <tr><td><b>Počítač</b></td><td>Mac s Apple Silicon (M1 a novější) nebo Windows PC, ideálně osobní.</td><td class="num">už máš</td></tr>
+    </tbody>
+  </table></div>
+  <div class="note">
+    <p><b>Kolik bude stát model měsíčně?</b> Hrubý odhad: předpokládám asi 3 miliony vstupních a 0,3 milionu výstupních tokenů měsíčně (denní uzávěrky, pátky a průběžné zápisy). Bez slev za cache vychází Kimi K3 na zhruba $13,5 a GLM-5.3 na zhruba $5,5 měsíčně. Je to výpočet z předpokladu, ne měření. Skutečnou spotřebu ukáže v Hermes příkaz <code>/usage</code> nebo <code>/insights</code>. Předplacený kredit funguje jako strop: víc, než nabiješ, se neutratí.</p>
+  </div>
+  <p class="warn"><b>GLM Coding Plan nekupuj.</b> Podmínky Z.ai ho omezují na oficiálně podporované nástroje a Hermes v jejich seznamu není. Při porušení hrozí omezení nebo zablokování účtu. Pro Hermes použij běžný API klíč s placením podle spotřeby.</p>
 </section>
 
 <section id="setup">
@@ -202,7 +223,11 @@ footer{margin-top:20px;font-size:.85rem;color:var(--muted)}
         <li>Kdykoli později: <b>Settings → Providers</b> (API klíče) a <b>Settings → Model → Main model</b>: vyber poskytovatele a model a klikni na <b>Apply</b>. Tenhle hlavní model používají i plánované úlohy.</li>
         <li>Napiš do chatu: <i>Reply with OK and today's date.</i> Když odpoví, základ funguje.</li>
       </ol>
-      {{MODEL}}
+      <div class="note">
+        <p><b>Kimi podle oficiálního návodu Kimi pro Hermes:</b> zaregistruj se na mezinárodní platformě <b>platform.kimi.ai</b>, nabij kredit (minimum $1) a vytvoř API klíč. V Hermes zvol <b>Kimi / Moonshot</b> a v podnabídce první položku (v Hermes v0.18.2 se jmenuje „Kimi / Kimi Coding Plan“; podle Kimi je to zároveň vestavěná volba pro globální Moonshot API). Když <code>kimi-k3</code> v seznamu není, zvol „Enter custom model name“ a napiš <code>kimi-k3</code> bez předpony <code>moonshot/</code>. Hermes má hlásit adresu <code>https://api.moonshot.ai/v1</code>.</p>
+        <p><b>Pozor:</b> klíče z čínské platformy (platform.kimi.com, api.moonshot.cn) a z mezinárodní platformy nejsou zaměnitelné. V oficiálních seznamech podporovaných regionů jsem Hongkong ani u Kimi, ani u Z.ai nenašel výslovně uvedený. Jedna stránka nápovědy Kimi uvádí, že přístup mimo pevninskou Čínu nemusí být stabilní. Začni proto nejmenším nabitím a ověř, že registrace i platba z Hongkongu projdou.</p>
+        <p><b>GLM:</b> registrace na z.ai, nabití kreditu, „Standard API Key“, v Hermes poskytovatel <b>Z.AI</b>, model <code>glm-5.3</code>. Hermes si správnou adresu pro klíč najde sám.</p>
+      </div>
       <details><summary>Alternativa přes terminál</summary>
         <div class="code"><pre><code>curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 source ~/.zshrc
@@ -425,7 +450,48 @@ hermes cron run "Daily close"</code></pre></div>
 
 <section id="plaud">
   <div class="sec-head"><span class="sec-no">05</span><h2>Plaud: jak dostat schůzky k agentovi</h2></div>
-  {{PLAUD}}
+  <h3>Nastavení přepisu</h3>
+  <ul>
+    <li><b>Jazyk:</b> Plaud přepisuje vždy v jednom jazyce na nahrávku. U smíšených schůzek (angličtina a kantonština) vyber převažující jazyk; pasáže v druhém jazyce budou méně přesné. Podle nápovědy Plaud podporuje přes 112 jazyků včetně kantonštiny.</li>
+    <li><b>Mluvčí:</b> Plaud automaticky pozná jen tvůj hlas (po nastavení hlasového profilu). Ostatní označí jako Speaker 1, 2 a jména jim doplníš ručně. Shrnutí vytvořené před přejmenováním je potřeba vygenerovat znovu.</li>
+    <li><b>Online schůzky:</b> Plaud Desktop (Mac a Windows) nahraje Teams, Zoom nebo Meet ze zvuku počítače, bez bota ve schůzce. Vyžaduje spárované zařízení Plaud.</li>
+  </ul>
+
+  <h3>Pokyn pro shrnutí, které se hodí do výkazu</h3>
+  <p>V nahrávce zvol <b>Generate → Custom generation</b> a vlož tento pokyn. Výsledné shrnutí je krátké, věcné a agent z něj umí vytáhnout čas, projekt a výsledek.</p>
+  <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code>Summarise this meeting as a work-log entry in British English.
+Output exactly these fields:
+Date and start time:
+Duration (from the recording length):
+Project (name or code if mentioned):
+Participants (roles/companies, names only if stated):
+Purpose:
+Decisions made:
+Actions for me (owner = me):
+Actions for others:
+Issues I raised, caught or resolved (risks, errors, clashes):
+Notes for my timesheet (category: Design / Coordination / Review &amp; QA / Support for others / Site / Admin):
+Do not invent anything that was not said. Mark uncertain items with "?".</code></pre></div>
+
+  <h3>Jak se shrnutí dostane k agentovi</h3>
+  <div class="levels">
+    <div class="lvl"><span class="tag">A · Start</span><b>Sdílení do Telegramu</b><p>V aplikaci Plaud exportuj shrnutí (TXT, Markdown, DOCX nebo PDF) a sdílej ho do chatu s botem. Dvě ťuknutí, funguje hned.</p></div>
+    <div class="lvl"><span class="tag">B · Automaticky</span><b>Plaud MCP</b><p>Agent si dnešní shrnutí stáhne sám při denní uzávěrce. Nastavení je níže.</p></div>
+    <div class="lvl"><span class="tag">C · Archiv</span><b>AutoFlow e-mail</b><p>Plaud po přepisu sám pošle přepis nebo shrnutí na zvolenou adresu. Hodí se jako záloha do tvé schránky.</p></div>
+  </div>
+
+  <details><summary>Varianta B: napojení Plaud MCP (po prvním týdnu)</summary>
+    <p>Plaud provozuje oficiální MCP server <code>https://mcp.plaud.ai/mcp</code>. Je jen pro čtení, vyžaduje zapnutý Plaud Cloud Sync a podle nápovědy Plaud je zdarma pro aktivní účty. Podle dokumentace Plaud jdou data přes server Plaud MCP v USA a po vyřízení požadavku se tam neukládají. Hermes umí vzdálené MCP servery s přihlášením OAuth. Do <code>~/.hermes/config.yaml</code> přidej:</p>
+    <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code>mcp_servers:
+  plaud:
+    url: "https://mcp.plaud.ai/mcp"
+    auth: oauth</code></pre></div>
+    <div class="code"><pre><code>hermes mcp login plaud     # otevře prohlížeč, přihlásíš se do Plaud</code></pre></div>
+    <p>Pak u denní uzávěrky (krok 8) uprav zadání:</p>
+    <div class="code"><button class="copy" type="button">Kopírovat</button><pre><code>hermes cron edit "Daily close" --prompt "DAILY CLOSE: First use the plaud MCP tools to list today's recordings and save each available summary to inbox/ (skip files already saved). Then use the worklog skill, procedure B, for today's date. Work only inside the WorkLog folder. Reply in English, under 120 words, and end with the Gaps questions."</code></pre></div>
+    <p class="warn">Tuhle kombinaci jsem nemohl vyzkoušet. Dokumentace Hermes upozorňuje, že někteří poskytovatelé MCP vyžadují vlastní OAuth aplikaci. Když přihlášení selže, zůstaň u varianty A, která funguje vždy.</p>
+  </details>
+  <p>AutoFlow (varianta C) se nastavuje jen v mobilní aplikaci Plaud: u „Send email“ zvolíš adresu a co posílat. Spouští se jen u nahrávek nad 200 slov (asi 5 minut řeči) a minuty se odečítají z tarifu.</p>
 </section>
 
 <section id="rytmus">
@@ -481,7 +547,27 @@ hermes cron run "Daily close"</code></pre></div>
 
 <section id="zdroje">
   <div class="sec-head"><span class="sec-no">10</span><h2>Video a pár zdrojů</h2></div>
-  {{SOURCES}}
+  <h3>Na začátek, do 30 minut</h3>
+  <ul class="src">
+    <li><span class="d"><b>Video: Hermes Agent Masterclass: Installation, Setup, Basic Commands</b> (kanál Onchain AI Garage). Odkazuje na něj přímo oficiální quickstart Hermes jako video průvodce instalací.</span>
+      <a href="https://www.youtube.com/watch?v=R3YOGfTBcQg" target="_blank" rel="noopener">https://www.youtube.com/watch?v=R3YOGfTBcQg</a></li>
+    <li><span class="d"><b>Video: Hermes Agent Full Tutorial for Beginners | Setup Guide</b> (Tech With Tim, 23. 4. 2026). Instalace, Telegram, skilly, plánované úlohy. Existenci a datum jsem ověřil jen přes výpisy třetích stran.</span>
+      <a href="https://www.youtube.com/watch?v=1ve4Atbqmoo" target="_blank" rel="noopener">https://www.youtube.com/watch?v=1ve4Atbqmoo</a></li>
+    <li><span class="d"><b>Julia Evans: Get your work recognized: write a brag document.</b> Krátký, čtivý článek o tom, proč si vést seznam vlastní práce. Z téhle myšlenky vychází impact log.</span>
+      <a href="https://jvns.ca/blog/brag-documents/" target="_blank" rel="noopener">https://jvns.ca/blog/brag-documents/</a></li>
+  </ul>
+  <h3>Reference, když je potřeba</h3>
+  <ul class="src">
+    <li><span class="d">Oficiální quickstart Hermes Agent</span><a href="https://hermes-agent.nousresearch.com/docs/getting-started/quickstart" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/getting-started/quickstart</a></li>
+    <li><span class="d">Hermes Desktop: nastavení modelu, Telegramu a úloh v aplikaci</span><a href="https://hermes-agent.nousresearch.com/docs/user-guide/desktop" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/user-guide/desktop</a></li>
+    <li><span class="d">Hermes: automatizace přes plánované úlohy (cron)</span><a href="https://hermes-agent.nousresearch.com/docs/guides/automate-with-cron" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/guides/automate-with-cron</a></li>
+    <li><span class="d">Hermes: bezpečný provoz na osobním nebo pracovním počítači</span><a href="https://hermes-agent.nousresearch.com/docs/guides/secure-hermes-on-a-work-machine" target="_blank" rel="noopener">https://hermes-agent.nousresearch.com/docs/guides/secure-hermes-on-a-work-machine</a></li>
+    <li><span class="d">Kimi: oficiální návod k použití Kimi v Hermes Agent</span><a href="https://platform.kimi.ai/docs/guide/use-kimi-in-hermes-agent" target="_blank" rel="noopener">https://platform.kimi.ai/docs/guide/use-kimi-in-hermes-agent</a></li>
+    <li><span class="d">Plaud: dokumentace k Plaud MCP</span><a href="https://docs.plaud.ai/plaud-mcp-cli/mcp" target="_blank" rel="noopener">https://docs.plaud.ai/plaud-mcp-cli/mcp</a></li>
+    <li><span class="d">PCPD: pokyny k ochraně soukromí při používání agentní AI (25. 8. 2026, PDF)</span><a href="https://www.pcpd.org.hk/english/resources_centre/publications/files/pcpd_use_of_agentic_ai.pdf" target="_blank" rel="noopener">https://www.pcpd.org.hk/english/resources_centre/publications/files/pcpd_use_of_agentic_ai.pdf</a></li>
+    <li><span class="d">PCPD: checklist pro firemní pravidla používání generativní AI zaměstnanci (31. 3. 2025)</span><a href="https://www.pcpd.org.hk/english/news_events/media_statements/press_20250331.html" target="_blank" rel="noopener">https://www.pcpd.org.hk/english/news_events/media_statements/press_20250331.html</a></li>
+    <li><span class="d">PCPD: případová poznámka 2020E02 o nahrávání zvuku bez souhlasu</span><a href="https://www.pcpd.org.hk/english/enforcement/case_notes/casenotes_2.php?id=2020E02" target="_blank" rel="noopener">https://www.pcpd.org.hk/english/enforcement/case_notes/casenotes_2.php?id=2020E02</a></li>
+  </ul>
 </section>
 
 <footer>
